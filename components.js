@@ -409,6 +409,44 @@ function renderMobileCTA() {
   document.body.appendChild(bar);
 }
 
+/* ── Blog: Email Signup CTA ────────────────────────────────── */
+function injectBlogEmailSignup() {
+  const path = window.location.pathname;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  // Find the article content section (second <section> in main, after the header)
+  const sections = main.querySelectorAll('section');
+  const articleSection = sections[1]; // The main article body section
+  if (!articleSection) return;
+
+  const signup = document.createElement('div');
+  signup.style.cssText = 'max-width:800px;margin:0 auto;padding:0 24px 48px';
+  signup.innerHTML = `
+    <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border:1.5px solid rgba(0,191,165,0.2);border-radius:16px;padding:36px 32px;text-align:center">
+      <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:0.03em">FREE RESOURCE</div>
+      <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Get the HIPAA IT Compliance Checklist</h3>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto">15 critical technical safeguards every dental practice needs. Free PDF — straight to your inbox.</p>
+      <form action="https://formspree.io/f/xdawvyyr" method="POST" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="hidden" name="_subject" value="HIPAA Checklist — Blog Signup" />
+        <input type="hidden" name="_source" value="blog-email-signup" />
+        <input type="email" name="email" placeholder="Your work email" required
+          style="flex:1;min-width:200px;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);border-radius:8px;font-size:0.95rem;color:#fff;outline:none;font-family:inherit;box-sizing:border-box" />
+        <button type="submit"
+          style="padding:12px 24px;background:var(--color-teal);color:#fff;font-weight:700;border:none;border-radius:8px;font-size:0.9rem;cursor:pointer;transition:background 0.2s;font-family:inherit;white-space:nowrap">
+          Download Free
+        </button>
+      </form>
+      <p style="font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:12px">No spam. Unsubscribe anytime.</p>
+    </div>
+  `;
+
+  // Insert after the article content section
+  articleSection.after(signup);
+}
+
 /* ── Blog: Service Area Links ──────────────────────────────── */
 function injectBlogServiceAreas() {
   // Only on blog post pages (not the blog index)
@@ -512,5 +550,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initExitIntent();
   injectBreadcrumbSchema();
+  injectBlogEmailSignup();
   injectBlogServiceAreas();
 });

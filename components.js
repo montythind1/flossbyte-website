@@ -26,10 +26,9 @@ if (SITE.gaId && SITE.gaId !== 'G-XXXXXXXXXX') {
 
 /* ── Helper: resolve relative paths ─────────────────────── */
 function rootPath(path) {
-  // Detect how many levels deep we are
-  const depth = (window.location.pathname.match(/\//g) || []).length - 1;
-  const prefix = depth > 1 ? '../'.repeat(depth - 1) : '';
-  return prefix + path;
+  // Use absolute paths from the site root for reliability across all hosting platforms
+  const base = document.querySelector('base')?.href || '/';
+  return '/' + path;
 }
 
 /* ── Navigation HTML ─────────────────────────────────────── */

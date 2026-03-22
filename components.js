@@ -255,7 +255,7 @@ function initExitIntent() {
       <div style="text-align:center">
         <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px;letter-spacing:0.02em">FREE DOWNLOAD</div>
         <h2 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;color:var(--color-navy);margin-bottom:4px">Before You Go — Grab This Free Checklist</h2>
-        <p style="color:var(--color-text-muted);font-size:0.875rem;margin-bottom:20px">15 critical HIPAA IT safeguards every dental practice needs. Takes 30 seconds — free PDF straight to your inbox.</p>
+        <p style="color:var(--color-text-muted);font-size:0.875rem;margin-bottom:20px">15 critical HIPAA IT safeguards every dental practice needs. Takes 30 seconds — instant PDF download.</p>
         <form id="exit-popup-form" style="text-align:left">
           <input type="hidden" name="_source" value="exit-intent-checklist" />
           <input type="text" name="name" placeholder="Your Name" required
@@ -268,11 +268,6 @@ function initExitIntent() {
             Download Free Checklist
           </button>
         </form>
-        <div id="exit-popup-success" style="display:none;padding:20px 0">
-          <div style="font-size:2rem;margin-bottom:8px">&#10003;</div>
-          <p style="font-weight:700;color:var(--color-navy);font-size:1.1rem;margin-bottom:4px">Check your inbox!</p>
-          <p style="color:var(--color-text-muted);font-size:0.875rem">Your HIPAA IT Checklist is on the way.</p>
-        </div>
         <div style="margin-top:14px;display:flex;flex-direction:column;align-items:center;gap:6px">
           <div style="display:flex;align-items:center;gap:6px">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -403,7 +398,7 @@ function createSignupCTA(source) {
     <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border:1.5px solid rgba(0,191,165,0.2);border-radius:16px;padding:36px 32px;text-align:center">
       <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:0.03em">FREE RESOURCE</div>
       <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Get the HIPAA IT Compliance Checklist</h3>
-      <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto">15 critical technical safeguards every dental practice needs. Free PDF — straight to your inbox.</p>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto">15 critical technical safeguards every dental practice needs. Free PDF — instant download.</p>
       <form class="checklist-form" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
         <input type="hidden" name="_subject" value="HIPAA Checklist — Blog Signup" />
         <input type="hidden" name="_source" value="${source}" />

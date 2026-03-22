@@ -55,16 +55,6 @@ function renderNav() {
         <a href="${r('about.html')}" id="nav-about">About</a>
         <a href="${r('why-flossbyte.html')}" id="nav-why">Why FlossByte</a>
         <div class="nav-dropdown">
-          <span class="nav-dropdown-toggle">Locations
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </span>
-          <div class="nav-dropdown-menu">
-            <a href="${r('locations/peninsula.html')}">Peninsula & SF</a>
-            <a href="${r('locations/east-bay.html')}">East Bay</a>
-            <a href="${r('locations/south-bay.html')}">South Bay</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
           <span class="nav-dropdown-toggle">Resources
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </span>
@@ -94,10 +84,6 @@ function renderNav() {
       <a href="${r('pricing.html')}">Pricing</a>
       <a href="${r('about.html')}">About</a>
       <a href="${r('why-flossbyte.html')}">Why FlossByte</a>
-      <div class="mobile-divider"></div>
-      <a href="${r('locations/peninsula.html')}">Peninsula & SF</a>
-      <a href="${r('locations/east-bay.html')}">East Bay</a>
-      <a href="${r('locations/south-bay.html')}">South Bay</a>
       <div class="mobile-divider"></div>
       <a href="${r('blog/index.html')}">Blog</a>
       <a href="${r('hipaa-compliance.html')}">HIPAA Compliance</a>
@@ -267,37 +253,37 @@ function initExitIntent() {
     <div id="exit-popup">
       <button id="exit-popup-close" aria-label="Close popup">&times;</button>
       <div style="text-align:center">
-        <div style="display:inline-block;background:rgba(239,68,68,0.1);color:#dc2626;font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px;letter-spacing:0.02em">Only 3 spots left for ${new Date().toLocaleString('en-US',{month:'long'})}</div>
-        <h2 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;color:var(--color-navy);margin-bottom:4px">Get Your Free IT Assessment</h2>
-        <p style="color:var(--color-text-muted);font-size:0.875rem;margin-bottom:20px">Find out if your dental practice is HIPAA-compliant in 30 minutes. No commitment.</p>
+        <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:12px;letter-spacing:0.02em">FREE DOWNLOAD</div>
+        <h2 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;color:var(--color-navy);margin-bottom:4px">Before You Go — Grab This Free Checklist</h2>
+        <p style="color:var(--color-text-muted);font-size:0.875rem;margin-bottom:20px">15 critical HIPAA IT safeguards every dental practice needs. Takes 30 seconds — free PDF straight to your inbox.</p>
         <form id="exit-popup-form" style="text-align:left">
+          <input type="hidden" name="_source" value="exit-intent-checklist" />
           <input type="text" name="name" placeholder="Your Name" required
             style="width:100%;padding:12px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.95rem;margin-bottom:10px;outline:none;transition:border-color 0.2s;font-family:inherit;box-sizing:border-box" />
-          <input type="tel" name="phone" placeholder="Phone Number" required
-            style="width:100%;padding:12px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.95rem;margin-bottom:10px;outline:none;transition:border-color 0.2s;font-family:inherit;box-sizing:border-box" />
-          <input type="email" name="email" placeholder="Email (optional)"
+          <input type="email" name="email" placeholder="Work Email" required
             style="width:100%;padding:12px 14px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:0.95rem;margin-bottom:16px;outline:none;transition:border-color 0.2s;font-family:inherit;box-sizing:border-box" />
           <button type="submit"
             style="width:100%;padding:14px;background:var(--color-teal);color:#fff;font-weight:700;border:none;border-radius:8px;font-size:1rem;cursor:pointer;transition:background 0.2s;font-family:inherit">
-            Book My Free Assessment
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;vertical-align:middle;margin-right:6px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Free Checklist
           </button>
         </form>
         <div id="exit-popup-success" style="display:none;padding:20px 0">
           <div style="font-size:2rem;margin-bottom:8px">&#10003;</div>
-          <p style="font-weight:700;color:var(--color-navy);font-size:1.1rem;margin-bottom:4px">We'll be in touch shortly!</p>
-          <p style="color:var(--color-text-muted);font-size:0.875rem">Expect a call within 1 business day.</p>
+          <p style="font-weight:700;color:var(--color-navy);font-size:1.1rem;margin-bottom:4px">Check your inbox!</p>
+          <p style="color:var(--color-text-muted);font-size:0.875rem">Your HIPAA IT Checklist is on the way.</p>
         </div>
         <div style="margin-top:14px;display:flex;flex-direction:column;align-items:center;gap:6px">
           <div style="display:flex;align-items:center;gap:6px">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="font-size:0.75rem;color:var(--color-text-muted)">10+ years of dental IT expertise</span>
+            <span style="font-size:0.75rem;color:var(--color-text-muted)">Used by dental practices across the Bay Area</span>
           </div>
           <div style="display:flex;align-items:center;gap:6px">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="font-size:0.75rem;color:var(--color-text-muted)">HIPAA-compliant &amp; dental-software certified</span>
+            <span style="font-size:0.75rem;color:var(--color-text-muted)">Covers encryption, backups, access controls &amp; more</span>
           </div>
         </div>
-        <p style="margin-top:10px;font-size:0.8125rem;color:var(--color-text-muted)">Prefer to call? <a href="tel:6692372264" style="color:var(--color-teal);font-weight:600">(669) 237-2264</a></p>
+        <p style="margin-top:10px;font-size:0.8125rem;color:var(--color-text-muted)">Want a full assessment instead? <a href="${r('contact.html')}" style="color:var(--color-teal);font-weight:600">Book free IT assessment</a></p>
       </div>
     </div>
   `;
@@ -376,7 +362,7 @@ function initExitIntent() {
   let idleTimer = null;
   function resetIdle() {
     clearTimeout(idleTimer);
-    idleTimer = setTimeout(showPopup, 15000);
+    idleTimer = setTimeout(showPopup, 45000);
   }
   ['mousemove', 'scroll', 'click', 'keydown', 'touchstart'].forEach(evt => {
     document.addEventListener(evt, resetIdle, { passive: true });
@@ -410,28 +396,17 @@ function renderMobileCTA() {
 }
 
 /* ── Blog: Email Signup CTA ────────────────────────────────── */
-function injectBlogEmailSignup() {
-  const path = window.location.pathname;
-  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
-
-  const main = document.querySelector('main');
-  if (!main) return;
-
-  // Find the article content section (second <section> in main, after the header)
-  const sections = main.querySelectorAll('section');
-  const articleSection = sections[1]; // The main article body section
-  if (!articleSection) return;
-
-  const signup = document.createElement('div');
-  signup.style.cssText = 'max-width:800px;margin:0 auto;padding:0 24px 48px';
-  signup.innerHTML = `
+function createSignupCTA(source) {
+  const div = document.createElement('div');
+  div.style.cssText = 'max-width:800px;margin:32px auto;padding:0 24px';
+  div.innerHTML = `
     <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border:1.5px solid rgba(0,191,165,0.2);border-radius:16px;padding:36px 32px;text-align:center">
       <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:0.03em">FREE RESOURCE</div>
       <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Get the HIPAA IT Compliance Checklist</h3>
       <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto">15 critical technical safeguards every dental practice needs. Free PDF — straight to your inbox.</p>
       <form action="https://formspree.io/f/xdawvyyr" method="POST" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
         <input type="hidden" name="_subject" value="HIPAA Checklist — Blog Signup" />
-        <input type="hidden" name="_source" value="blog-email-signup" />
+        <input type="hidden" name="_source" value="${source}" />
         <input type="email" name="email" placeholder="Your work email" required
           style="flex:1;min-width:200px;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);border-radius:8px;font-size:0.95rem;color:#fff;outline:none;font-family:inherit;box-sizing:border-box" />
         <button type="submit"
@@ -442,9 +417,34 @@ function injectBlogEmailSignup() {
       <p style="font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:12px">No spam. Unsubscribe anytime.</p>
     </div>
   `;
+  return div;
+}
 
-  // Insert after the article content section
-  articleSection.after(signup);
+function injectBlogEmailSignup() {
+  const path = window.location.pathname;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  // Find the article content container
+  const content = main.querySelector('.blog-post-content');
+  if (!content) return;
+  const articleSection = content.closest('section');
+  if (!articleSection) return;
+
+  // INLINE: inject after the 3rd paragraph within the article
+  const paragraphs = content.querySelectorAll(':scope > p');
+  if (paragraphs.length >= 3) {
+    const inlineCTA = createSignupCTA('blog-inline-signup');
+    inlineCTA.style.cssText = 'margin:32px 0;padding:0';
+    paragraphs[2].after(inlineCTA);
+  }
+
+  // BOTTOM: inject after the article section (keep as a second touchpoint)
+  const bottomCTA = createSignupCTA('blog-bottom-signup');
+  bottomCTA.style.cssText = 'max-width:800px;margin:0 auto;padding:0 24px 48px';
+  articleSection.after(bottomCTA);
 }
 
 /* ── Blog: Service Area Links ──────────────────────────────── */

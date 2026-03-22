@@ -9,7 +9,7 @@ const SITE = {
   email: 'hello@flossbyte.com',
   emailHref: 'mailto:hello@flossbyte.com',
   year: new Date().getFullYear(),
-  gaId: 'G-XXXXXXXXXX', // Replace with your Google Analytics Measurement ID
+  gaId: 'G-37X7JZG0KY',
 };
 
 /* ── Google Analytics ──────────────────────────────────────── */
@@ -332,8 +332,8 @@ function initExitIntent() {
       const action = contactForm ? contactForm.action : 'https://formspree.io/f/xdawvyyr';
       await fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
     } catch (err) { /* still show success — we'll get the data */ }
-    form.style.display = 'none';
-    overlay.querySelector('#exit-popup-success').style.display = 'block';
+    // Redirect to thank-you/download page
+    window.location.href = '/thank-you.html';
   });
 
   function showPopup() {
@@ -407,6 +407,7 @@ function createSignupCTA(source) {
       <form action="https://formspree.io/f/xdawvyyr" method="POST" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
         <input type="hidden" name="_subject" value="HIPAA Checklist — Blog Signup" />
         <input type="hidden" name="_source" value="${source}" />
+        <input type="hidden" name="_next" value="https://flossbyte.com/thank-you.html" />
         <input type="email" name="email" placeholder="Your work email" required
           style="flex:1;min-width:200px;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);border-radius:8px;font-size:0.95rem;color:#fff;outline:none;font-family:inherit;box-sizing:border-box" />
         <button type="submit"

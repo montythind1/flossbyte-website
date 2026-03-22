@@ -404,10 +404,9 @@ function createSignupCTA(source) {
       <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:0.03em">FREE RESOURCE</div>
       <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Get the HIPAA IT Compliance Checklist</h3>
       <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto">15 critical technical safeguards every dental practice needs. Free PDF — straight to your inbox.</p>
-      <form action="https://formspree.io/f/xdawvyyr" method="POST" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+      <form class="checklist-form" style="display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
         <input type="hidden" name="_subject" value="HIPAA Checklist — Blog Signup" />
         <input type="hidden" name="_source" value="${source}" />
-        <input type="hidden" name="_next" value="https://flossbyte.com/thank-you.html" />
         <input type="email" name="email" placeholder="Your work email" required
           style="flex:1;min-width:200px;padding:12px 16px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.05);border-radius:8px;font-size:0.95rem;color:#fff;outline:none;font-family:inherit;box-sizing:border-box" />
         <button type="submit"
@@ -447,6 +446,25 @@ function injectBlogEmailSignup() {
   bottomCTA.style.cssText = 'max-width:800px;margin:0 auto;padding:0 24px 48px';
   articleSection.after(bottomCTA);
 }
+
+/* ── Checklist Form Handler (JS redirect since Formspree free plan doesn't support _next) ── */
+document.addEventListener('submit', async (e) => {
+  const form = e.target;
+  if (!form.classList.contains('checklist-form') && form.id !== 'lead-magnet-form') return;
+  e.preventDefault();
+  const btn = form.querySelector('button[type="submit"]');
+  const origText = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    await fetch('https://formspree.io/f/xdawvyyr', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+  } catch (err) { /* redirect anyway */ }
+  window.location.href = '/thank-you.html';
+});
 
 /* ── Blog: Service Area Links ──────────────────────────────── */
 function injectBlogServiceAreas() {

@@ -41,7 +41,7 @@ function renderNav() {
     <div class="nav-inner">
       <a class="nav-logo" href="${r('index.html')}" aria-label="FlossByte Home"
          style="display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;">
-        <img src="${r('assets/logo-icon.png')}" alt="" width="38" height="49" aria-hidden="true" style="flex-shrink:0;object-fit:contain;" />
+        <img src="${r('assets/logo-icon.png')}" alt="" width="38" height="49" aria-hidden="true" loading="eager" style="flex-shrink:0;object-fit:contain;" />
         <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.85rem;
                      letter-spacing:-0.03em;line-height:1;color:#ffffff;">
           Floss<span style="color:#00BFA5;">Byte</span>
@@ -54,6 +54,16 @@ function renderNav() {
         <a href="${r('pricing.html')}" id="nav-pricing">Pricing</a>
         <a href="${r('about.html')}" id="nav-about">About</a>
         <a href="${r('why-flossbyte.html')}" id="nav-why">Why FlossByte</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Locations
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+          <div class="nav-dropdown-menu">
+            <a href="${r('locations/peninsula.html')}">Peninsula & SF</a>
+            <a href="${r('locations/east-bay.html')}">East Bay</a>
+            <a href="${r('locations/south-bay.html')}">South Bay</a>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <span class="nav-dropdown-toggle">Resources
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -84,6 +94,10 @@ function renderNav() {
       <a href="${r('pricing.html')}">Pricing</a>
       <a href="${r('about.html')}">About</a>
       <a href="${r('why-flossbyte.html')}">Why FlossByte</a>
+      <div class="mobile-divider"></div>
+      <a href="${r('locations/peninsula.html')}">Peninsula & SF</a>
+      <a href="${r('locations/east-bay.html')}">East Bay</a>
+      <a href="${r('locations/south-bay.html')}">South Bay</a>
       <div class="mobile-divider"></div>
       <a href="${r('blog/index.html')}">Blog</a>
       <a href="${r('hipaa-compliance.html')}">HIPAA Compliance</a>
@@ -143,7 +157,7 @@ function renderFooter() {
         <!-- Brand -->
         <div class="footer-brand">
           <a href="${r('index.html')}" style="display:inline-block;text-decoration:none;margin-bottom:12px;">
-            <img src="${r('assets/logo-icon.png')}" alt="FlossByte" width="42" height="54" style="object-fit:contain;" />
+            <img src="${r('assets/logo-icon.png')}" alt="FlossByte" width="42" height="54" loading="lazy" style="object-fit:contain;" />
           </a>
           <p class="footer-tagline">HIPAA-compliant managed IT services built exclusively for dental practices across the Peninsula, East Bay, and South Bay.</p>
           <div class="footer-contact">
@@ -395,6 +409,100 @@ function renderMobileCTA() {
   document.body.appendChild(bar);
 }
 
+/* ── Blog: Service Area Links ──────────────────────────────── */
+function injectBlogServiceAreas() {
+  // Only on blog post pages (not the blog index)
+  const path = window.location.pathname;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+
+  const r = rootPath;
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  const section = document.createElement('section');
+  section.style.cssText = 'padding:0 0 48px';
+  section.innerHTML = `
+    <div class="container" style="max-width:800px">
+      <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:16px">Dental IT Support Across the Bay Area</h2>
+      <p style="color:var(--color-text-muted);font-size:0.95rem;margin-bottom:20px">FlossByte serves dental practices throughout the Bay Area. Find IT support near you:</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="${r('locations/peninsula.html')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Peninsula & SF
+        </a>
+        <a href="${r('locations/east-bay.html')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          East Bay
+        </a>
+        <a href="${r('locations/south-bay.html')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          South Bay
+        </a>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;font-size:0.85rem">
+        <a href="${r('services.html')}" style="color:var(--color-teal);text-decoration:none;font-weight:600">View All Services →</a>
+        <a href="${r('pricing.html')}" style="color:var(--color-teal);text-decoration:none;font-weight:600">See Pricing →</a>
+      </div>
+    </div>
+  `;
+
+  // Insert before the last section (author/CTA) in main
+  const lastSection = main.querySelector('section.section-light:last-of-type');
+  if (lastSection) {
+    main.insertBefore(section, lastSection);
+  } else {
+    main.appendChild(section);
+  }
+}
+
+/* ── BreadcrumbList Schema ──────────────────────────────────── */
+function injectBreadcrumbSchema() {
+  // Match breadcrumb nav by class or by aria-label, or by content pattern (Home › ...)
+  const breadcrumbNav = document.querySelector('.page-hero-breadcrumb')
+    || document.querySelector('nav[aria-label="Breadcrumb"]')
+    || Array.from(document.querySelectorAll('nav')).find(n => {
+         const text = n.textContent;
+         return text.includes('›') && text.includes('Home') && !n.classList.contains('site-nav');
+       });
+  if (!breadcrumbNav) return;
+
+  const items = [];
+  const children = breadcrumbNav.childNodes;
+  let position = 0;
+
+  for (const node of children) {
+    if (node.nodeType === Node.TEXT_NODE) continue;
+    if (node.tagName === 'SPAN' && node.textContent.trim() === '›') continue;
+
+    position++;
+    if (node.tagName === 'A') {
+      items.push({
+        '@type': 'ListItem',
+        'position': position,
+        'name': node.textContent.trim(),
+        'item': new URL(node.getAttribute('href'), window.location.href).href
+      });
+    } else if (node.tagName === 'SPAN') {
+      items.push({
+        '@type': 'ListItem',
+        'position': position,
+        'name': node.textContent.trim()
+      });
+    }
+  }
+
+  if (items.length < 2) return;
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': items
+  });
+  document.head.appendChild(script);
+}
+
 /* ── Init ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   renderNav();
@@ -403,4 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initAccordions();
   initExitIntent();
+  injectBreadcrumbSchema();
+  injectBlogServiceAreas();
 });

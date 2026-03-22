@@ -1,0 +1,17 @@
+# 301 Redirects: WordPress blog URLs → new static site URLs
+# Works on Netlify and Cloudflare Pages
+
+# Blog posts (WordPress used /slug/, new site uses /blog/slug.html)
+/dental-it-support-bay-area-outage/          /blog/dental-it-support-bay-area-outage.html          301
+/dental-it-support-bay-area-practice-smooth/ /blog/dental-it-support-bay-area-practice-smooth.html 301
+/dental-cybersecurity-antivirus/             /blog/dental-cybersecurity-antivirus.html             301
+/dental-data-backup-cost-risks/              /blog/dental-data-backup-cost-risks.html              301
+/dental-downtime-revenue-loss/               /blog/dental-downtime-revenue-loss.html               301
+/managed-it-services-for-dental-clinics/     /blog/managed-it-services-for-dental-clinics.html     301
+/hipaa-compliance-for-dental-practices/      /blog/hipaa-compliance-for-dental-practices.html      301
+/dental-it-support-common-issues/            /blog/dental-it-support-common-issues.html            301
+/dental-clinics-need-specialized-it-support/ /blog/dental-clinics-need-specialized-it-support.html 301
+
+# WordPress default paths that might be indexed
+/blog/                                       /blog/index.html                                     301
+/blogs/                                      /blog/index.html                                     301

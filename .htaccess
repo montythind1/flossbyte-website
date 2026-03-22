@@ -1,0 +1,19 @@
+# 301 Redirects: WordPress blog URLs → new static site URLs
+# Works on Apache / cPanel / traditional hosting
+
+RewriteEngine On
+
+# Blog post redirects (WordPress /slug/ → /blog/slug.html)
+RewriteRule ^dental-it-support-bay-area-outage/?$ /blog/dental-it-support-bay-area-outage.html [R=301,L]
+RewriteRule ^dental-it-support-bay-area-practice-smooth/?$ /blog/dental-it-support-bay-area-practice-smooth.html [R=301,L]
+RewriteRule ^dental-cybersecurity-antivirus/?$ /blog/dental-cybersecurity-antivirus.html [R=301,L]
+RewriteRule ^dental-data-backup-cost-risks/?$ /blog/dental-data-backup-cost-risks.html [R=301,L]
+RewriteRule ^dental-downtime-revenue-loss/?$ /blog/dental-downtime-revenue-loss.html [R=301,L]
+RewriteRule ^managed-it-services-for-dental-clinics/?$ /blog/managed-it-services-for-dental-clinics.html [R=301,L]
+RewriteRule ^hipaa-compliance-for-dental-practices/?$ /blog/hipaa-compliance-for-dental-practices.html [R=301,L]
+RewriteRule ^dental-it-support-common-issues/?$ /blog/dental-it-support-common-issues.html [R=301,L]
+RewriteRule ^dental-clinics-need-specialized-it-support/?$ /blog/dental-clinics-need-specialized-it-support.html [R=301,L]
+
+# WordPress default paths
+RewriteRule ^blog/?$ /blog/index.html [R=301,L]
+RewriteRule ^blogs/?$ /blog/index.html [R=301,L]

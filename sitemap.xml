@@ -147,7 +147,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Peninsula & SF City Pages (16) -->
+  <!-- Peninsula & SF City Pages (15) -->
   <url><loc>https://flossbyte.com/locations/peninsula/san-francisco.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://flossbyte.com/locations/peninsula/daly-city.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://flossbyte.com/locations/peninsula/south-san-francisco.html</loc><lastmod>2026-03-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

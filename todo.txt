@@ -1,0 +1,63 @@
+FlossByte Website — TODO List
+================================
+Date: 2026-03-22
+
+
+=== SEO FIXES ===
+
+[DONE]     Add OG + Twitter tags to 42 location pages (3 region hubs + 39 city pages) ✓ 2026-03-25
+[DONE]     Add twitter:card tag to all 11 blog posts ✓ 2026-03-25
+[DONE]     Add OG + Twitter tags to blog/index.html ✓ 2026-03-25
+[DONE]     Fix schema "url" on 42 location pages (currently points to homepage instead of own page URL) ✓ 2026-03-25
+[DONE]     Add <meta name="robots" content="noindex"> to thank-you.html ✓ already had it
+[DONE]     Add <meta name="robots" content="noindex"> to 404.html ✓ already had it
+[DONE]     Fix sitemap comment — says 16 peninsula cities but there are 15 ✓ 2026-03-25
+
+
+=== NEW CITY PAGES TO CREATE ===
+
+Peninsula (5):
+  - Atherton
+  - Woodside
+  - Portola Valley
+  - Half Moon Bay
+  - Pacifica
+
+East Bay (15):
+  - Alameda
+  - Castro Valley
+  - San Ramon
+  - Danville
+  - Antioch
+  - Pittsburg
+  - Richmond
+  - El Cerrito
+  - Brentwood
+  - Emeryville
+  - Dublin
+  - Livermore
+  - San Leandro
+  - Newark
+  - Union City
+
+South Bay (5):
+  - Mountain View
+  - Morgan Hill
+  - Gilroy
+  - Los Altos Hills
+  - Monte Sereno
+
+
+=== OTHER PENDING TASKS ===
+
+- Create Terms & Conditions page
+- Create Privacy Policy page
+- Create dedicated service pages: Dentrix Support, Eaglesoft Support, Open Dental Support
+- Write new blog posts targeting missing keywords (Dentrix troubleshooting, ransomware, dental network setup, cloud migration)
+- Enrich location pages with unique city-specific content (local landmarks, dental associations, neighborhoods)
+- Replace partner logo text with actual logo images
+- Add real photos to About page and blog posts
+- Collect Google reviews from first clients
+- Set up online scheduling tool (Calendly) for free assessments
+- Resubmit sitemap in Google Search Console
+- Request re-indexing for key pages in Search Console

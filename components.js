@@ -50,7 +50,22 @@ function renderNav() {
 
       <div class="nav-links" id="nav-links">
         <a href="${r('index.html')}" id="nav-home">Home</a>
-        <a href="${r('services.html')}" id="nav-services">Services</a>
+        <div class="nav-dropdown">
+          <a href="${r('services.html')}" id="nav-services" class="nav-dropdown-toggle">Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="${r('services/dental-vcio.html')}">Technology Strategy &amp; vCIO</a>
+            <a href="${r('services/ai-dental-technology.html')}">AI Integration</a>
+            <a href="${r('services/dental-cybersecurity.html')}">Cybersecurity</a>
+            <a href="${r('services/dental-data-backup.html')}">Backup &amp; Recovery</a>
+            <a href="${r('services/dentrix-support.html')}">Dentrix Support</a>
+            <a href="${r('services/eaglesoft-support.html')}">Eaglesoft Support</a>
+            <a href="${r('services/open-dental-support.html')}">Open Dental Support</a>
+            <a href="${r('services/dso-multi-location.html')}">DSO &amp; Multi-Location</a>
+            <a href="${r('services.html')}">All Services →</a>
+          </div>
+        </div>
         <a href="${r('pricing.html')}" id="nav-pricing">Pricing</a>
         <a href="${r('about.html')}" id="nav-about">About</a>
         <a href="${r('why-flossbyte.html')}" id="nav-why">Why FlossByte</a>
@@ -80,7 +95,11 @@ function renderNav() {
     <!-- Mobile Navigation -->
     <div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
       <a href="${r('index.html')}">Home</a>
-      <a href="${r('services.html')}">Services</a>
+      <a href="${r('services.html')}">All Services</a>
+      <a href="${r('services/dental-vcio.html')}" style="padding-left:24px;font-size:0.875rem">Technology Strategy &amp; vCIO</a>
+      <a href="${r('services/ai-dental-technology.html')}" style="padding-left:24px;font-size:0.875rem">AI Integration</a>
+      <a href="${r('services/dental-cybersecurity.html')}" style="padding-left:24px;font-size:0.875rem">Cybersecurity</a>
+      <a href="${r('services/dso-multi-location.html')}" style="padding-left:24px;font-size:0.875rem">DSO &amp; Multi-Location</a>
       <a href="${r('pricing.html')}">Pricing</a>
       <a href="${r('about.html')}">About</a>
       <a href="${r('why-flossbyte.html')}">Why FlossByte</a>
@@ -90,7 +109,7 @@ function renderNav() {
       <a href="${r('faqs.html')}">FAQs</a>
       <div class="mobile-divider"></div>
       <a href="${SITE.phoneHref}" style="color: var(--color-teal)">${SITE.phone}</a>
-      <a class="mobile-cta" href="${r('contact.html')}">📋 Get Free IT Assessment</a>
+      <a class="mobile-cta" href="${r('contact.html')}">Get Free Technology Assessment</a>
     </div>
   `;
   document.body.insertBefore(nav, document.body.firstChild);
@@ -173,9 +192,12 @@ function renderFooter() {
           <p class="footer-heading">Services</p>
           <div class="footer-links">
             <a href="${r('services.html')}">All Services</a>
+            <a href="${r('services/dental-vcio.html')}">Technology Strategy &amp; vCIO</a>
+            <a href="${r('services/ai-dental-technology.html')}">AI Integration</a>
+            <a href="${r('services/dental-cybersecurity.html')}">Cybersecurity</a>
+            <a href="${r('services/dso-multi-location.html')}">DSO &amp; Multi-Location</a>
             <a href="${r('hipaa-compliance.html')}">HIPAA Compliance</a>
             <a href="${r('pricing.html')}">Pricing</a>
-            <a href="${r('faqs.html')}">FAQs</a>
           </div>
         </div>
 

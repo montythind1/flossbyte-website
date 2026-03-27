@@ -1183,7 +1183,6 @@ section { padding: var(--space-20) 0; }
   border-radius: var(--radius-xl);
   padding: var(--space-10);
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }

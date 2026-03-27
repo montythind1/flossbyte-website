@@ -1,63 +1,286 @@
 FlossByte Website — TODO List
 ================================
-Date: 2026-03-22
+Last updated: 2026-03-27
 
 
-=== SEO FIXES ===
+=== COMPLETED ===
 
-[DONE]     Add OG + Twitter tags to 42 location pages (3 region hubs + 39 city pages) ✓ 2026-03-25
-[DONE]     Add twitter:card tag to all 11 blog posts ✓ 2026-03-25
-[DONE]     Add OG + Twitter tags to blog/index.html ✓ 2026-03-25
-[DONE]     Fix schema "url" on 42 location pages (currently points to homepage instead of own page URL) ✓ 2026-03-25
-[DONE]     Add <meta name="robots" content="noindex"> to thank-you.html ✓ already had it
-[DONE]     Add <meta name="robots" content="noindex"> to 404.html ✓ already had it
-[DONE]     Fix sitemap comment — says 16 peninsula cities but there are 15 ✓ 2026-03-25
-
-
-=== NEW CITY PAGES TO CREATE ===
-
-Peninsula (5):
-  - Atherton
-  - Woodside
-  - Portola Valley
-  - Half Moon Bay
-  - Pacifica
-
-East Bay (15):
-  - Alameda
-  - Castro Valley
-  - San Ramon
-  - Danville
-  - Antioch
-  - Pittsburg
-  - Richmond
-  - El Cerrito
-  - Brentwood
-  - Emeryville
-  - Dublin
-  - Livermore
-  - San Leandro
-  - Newark
-  - Union City
-
-South Bay (5):
-  - Mountain View
-  - Morgan Hill
-  - Gilroy
-  - Los Altos Hills
-  - Monte Sereno
+[DONE] Add OG + Twitter tags to 42 location pages (3 region hubs + 39 city pages)
+[DONE] Add twitter:card tag to all 11 blog posts
+[DONE] Add OG + Twitter tags to blog/index.html
+[DONE] Fix schema "url" on 42 location pages (pointed to homepage instead of own page URL)
+[DONE] Add <meta name="robots" content="noindex"> to thank-you.html
+[DONE] Add <meta name="robots" content="noindex"> to 404.html
+[DONE] Fix sitemap comment — 16 peninsula cities changed to 15
+[DONE] Create Dentrix Support page (/services/dentrix-support.html)
+[DONE] Create Eaglesoft Support page (/services/eaglesoft-support.html)
+[DONE] Create Open Dental Support page (/services/open-dental-support.html)
+[DONE] Create Cybersecurity service page (/services/dental-cybersecurity.html)
+[DONE] Create Data Backup / Disaster Recovery page (/services/dental-data-backup.html)
+[DONE] Create AI Integration page (/services/ai-dental-technology.html)
+[DONE] Create vCIO page (/services/dental-vcio.html)
+[DONE] Create DSO & Multi-Location page (/services/dso-multi-location.html)
+[DONE] Write "How Much Does Dental IT Support Cost?" blog post
+[DONE] Write "Dental Office Ransomware: Prevention & Response Guide" blog post
+[DONE] Write "Best Dental IT Companies in the Bay Area (2026)" blog post
+[DONE] Write "What Is a Dental vCIO?" blog post
+[DONE] Write "How AI Is Transforming Dental Practices in 2026" blog post
+[DONE] Write "Technology Roadmap for Dental Practices" blog post
 
 
-=== OTHER PENDING TASKS ===
+=== CURRENT SEARCH VISIBILITY (March 2026 Audit) ===
 
-- Create Terms & Conditions page
-- Create Privacy Policy page
-- Create dedicated service pages: Dentrix Support, Eaglesoft Support, Open Dental Support
-- Write new blog posts targeting missing keywords (Dentrix troubleshooting, ransomware, dental network setup, cloud migration)
-- Enrich location pages with unique city-specific content (local landmarks, dental associations, neighborhoods)
-- Replace partner logo text with actual logo images
-- Add real photos to About page and blog posts
-- Collect Google reviews from first clients
-- Set up online scheduling tool (Calendly) for free assessments
-- Resubmit sitemap in Google Search Console
-- Request re-indexing for key pages in Search Console
+FlossByte ranking positions:
+  - "dental IT support Bay Area" — ~3rd-5th (blog post ranks, not homepage)
+  - "dental IT support San Jose" — ~5th (Zenith #1, CEC #2, Veltec #3)
+  - "dental IT services San Jose" — ~5th
+  - "HIPAA compliance dental Bay Area" — NOT ranking
+  - "dental cybersecurity California" — ~6th
+  - "dental managed IT services" (national) — NOT ranking
+  - "flossbyte dental IT" (branded) — #1
+
+Top competitors by threat level:
+  1. Pact-One (23yr domain) — #1 "dental IT Bay Area", 30+ blogs, lead magnets
+  2. SRS Networks (28yr domain) — #1 "dental IT San Jose", Bay Area city pages
+  3. Zenith Dental IT (15yr) — 100+ programmatic city pages, 12+ service pages
+  4. Darkhorse Tech (14yr) — Owns "best dental IT companies" listicle nationally
+  5. Veltec Networks (19yr) — General MSP but Bay Area domain authority
+  6. CEC / Computer Experts Corp (30yr) — Bay Area dental, massive authority
+  7. DMI Networking (50yr) — Bay Area dental IT veteran
+  8. ACE Computer Systems — Bay Area dental IT, page 1 presence
+
+FlossByte advantages over competitors:
+  + 39 location pages (more granular than any competitor)
+  + 8 dedicated service sub-pages (now competitive with Zenith's 12)
+  + Pricing transparency page (most competitors hide pricing)
+  + Dedicated FAQ page (no competitor has one)
+  + AI integration page (NO competitor has this — first-mover advantage)
+  + Dental-only focus (unlike Veltec/SRS who serve multiple verticals)
+  + Memorable brand name
+  + "Technology Partner" positioning (competitors still say "MSP" / "IT company")
+
+
+===============================================================================
+  🔴 CRITICAL — FIX THIS WEEK
+===============================================================================
+
+--- TRUST & CONVERSION (Biggest gaps vs. competitors) ---
+
+[TODO] Add 2-3 client testimonials to homepage
+       — Every single competitor has testimonials; FlossByte has zero
+       — Even short quotes like "FlossByte fixed our Dentrix issue in 20 min" help
+       — Place between "Why FlossByte" and "Pain Points" sections on homepage
+       — Also add to: services.html, why-flossbyte.html
+
+[TODO] Replace text partner logos with actual logo images on homepage
+       — "Microsoft 365", "Dell", "Ubiquiti" etc. are plain text spans
+       — Visual logos are 10x more impactful for trust (hero section, partner-strip)
+       — Save as optimized PNGs/SVGs in assets/ folder
+
+[TODO] Add Dentrix, Eaglesoft, Carestream logos near top of homepage
+       — Dental software logos instantly validate expertise to visiting dentists
+       — Place in or near the partner-logos strip
+
+--- SEO — META & CONTENT ---
+
+[DONE] Trim homepage meta description from 244 chars to ~155 chars
+       — File: index.html line 7
+       — Google truncates it — you lose control of your search snippet
+
+[DONE] Trim 36 city page meta descriptions from 194-197 chars to ~155 chars
+       — Files: all locations/*/*.html
+       — Same truncation issue
+
+[DONE] Rename "Hidden Fees" H3 heading to "Zero Hidden Fees" or "$0 Surprise Bills"
+       — File: why-flossbyte.html
+       — Current heading reads like you HAVE hidden fees at first glance
+       — The body says you don't — but the heading sends the wrong signal
+
+[DONE] Update HIPAA blog post title/content from "2025" to "2026"
+       — File: blog/hipaa-compliance-for-dental-practices.html
+       — Stale year hurts perceived relevance in search results
+
+[DONE] Change FAQs page title from "Dental IT FAQ" to "Dental Technology FAQ"
+       — File: faqs.html
+       — Minor brand consistency — every other page says "Technology", not "IT"
+
+
+===============================================================================
+  🟡 HIGH PRIORITY — FIX WITHIN 2 WEEKS
+===============================================================================
+
+--- SOCIAL PROOF ---
+
+[TODO] Add team photos and bios to About page
+       — about.html claims "People-Centered Support" and "Real humans"
+       — But shows zero human faces — this is a trust gap
+       — At minimum: founder photo + bio, plus team section
+
+[TODO] Add a founding story / "our story" section to About page
+       — Competitors flaunt "20+ years" — your "10+ years" stat needs backing
+       — When was FlossByte founded? By whom? Why dental?
+
+[TODO] Collect Google reviews from clients
+       — Prospects Google you before calling — zero reviews = red flag
+       — Even 3-5 reviews dramatically improve trust
+
+[TODO] Create 1-2 case study pages
+       — "How we saved X practice from Y" — real ROI proof
+       — Blog post format is fine initially
+
+--- PERFORMANCE & TECHNICAL SEO ---
+
+[TODO] Compress logo images — currently 342-350KB each, should be <50KB
+       — Files: assets/ folder
+       — Massive page speed hit
+
+[TODO] Minify CSS/JS
+       — index.css (39KB), components.js (31KB) — 20-30% savings possible
+       — Use a build tool or online minifier
+
+[TODO] Fix Google Fonts render-blocking @import
+       — File: index.css line 1
+       — Switch to <link rel="preload"> + font-display: swap in HTML <head>
+       — Improves First Contentful Paint (FCP) score
+
+[TODO] Verify FAQ page content renders for search engine bots
+       — faqs.html — FAQ content may be JS-loaded
+       — Check Google Search Console → URL Inspection → "View Crawled Page"
+       — If Google can't see the FAQs, the FAQ schema markup is wasted
+
+[TODO] Add CollectionPage JSON-LD schema to blog/index.html
+
+[DONE] Add og:site_name meta tag to 8 core pages
+       — index, about, contact, services, pricing, faqs, hipaa, why-flossbyte
+
+--- CONTENT & INTERNAL LINKING ---
+
+[TODO] Improve blog-to-location cross-linking
+       — Only 2 of 17 blog posts link to location/city pages
+       — Each blog post should link to 1-2 relevant city or region pages
+       — Example: ransomware post → link to "dental cybersecurity Bay Area" city pages
+
+[TODO] Add direct links from services.html cards to their dedicated sub-pages
+       — Currently cards on /services.html describe services but don't link to
+         /services/dentrix-support.html etc. — links only in nav dropdown
+
+[TODO] Add location modifiers (Bay Area, San Jose) to HIPAA page subheadings
+       — hipaa-compliance.html — helps local SEO without keyword stuffing
+
+
+===============================================================================
+  🟢 MEDIUM PRIORITY — FIX WITHIN 1 MONTH
+===============================================================================
+
+--- REMAINING SERVICE PAGES TO CREATE ---
+
+[TODO] Create Managed IT Support page (/services/managed-it-support.html)
+       — Core service without its own landing page
+
+[TODO] Create Network Setup / Infrastructure page (/services/dental-network-setup.html)
+       — Listed on services.html but no dedicated page
+
+[TODO] Create VoIP / Communications page (/services/dental-voip.html)
+       — Listed on services.html but no dedicated page
+
+[TODO] Create Hardware & Software Management page (/services/hardware-software.html)
+       — Listed on services.html but no dedicated page
+
+--- BLOG POSTS TO WRITE ---
+
+[TODO] "Dentrix Slow on Network? Common Fixes" — problem-solving intent, captures users
+[TODO] "Dentrix Not Connecting to Server: Troubleshooting Guide" — high urgency keyword
+[TODO] "Switching Your Dental IT Provider: What to Know" — Zenith owns this, you don't
+[TODO] "IT Setup Guide for New Dental Practices" — Darkhorse does 75+ startups/yr
+[TODO] "7 Signs Your Dental Office Needs Better IT Support" — classic lead-gen format
+[TODO] "HIPAA Risk Assessment for Dental Practices: Complete Guide" — #1 HIPAA citation
+[TODO] "Eaglesoft Cloud Migration Guide for Dental Practices" — commercial intent
+[TODO] "Dentrix vs Eaglesoft vs Open Dental: Which Is Best?" — high traffic comparison
+[TODO] "In-House IT vs Outsourced IT for Dental Practices" — research-phase keyword
+[TODO] "Cloud vs On-Premise Dental Software: Pros & Cons" — research-phase keyword
+[TODO] "Dental Office Disaster Recovery Plan Template" — linkable asset
+[TODO] "Dental Cyber Insurance: What Bay Area Practices Need to Know" — emerging topic
+[TODO] "HIPAA Compliant Email for Dental Practices" — practical, commercial
+
+--- UX & CONVERSION IMPROVEMENTS ---
+
+[TODO] Add Calendly or scheduling embed to Contact page
+       — "Book a 30-minute assessment" should have inline calendar
+       — Reduces friction vs. form-fill-and-wait
+
+[TODO] Add sticky header / floating nav on scroll
+       — Keeps primary CTA visible at all times during long pages
+       — Especially important for homepage and services page
+
+[TODO] Add live chat widget (Crisp, Intercom, or Tidio)
+       — Captures high-intent emergency leads ("my server is down RIGHT NOW")
+
+[TODO] Add a feature comparison table to pricing page
+       — Side-by-side Essentials vs Professional vs Strategic (✅/❌ grid)
+       — Helps buyers self-select faster
+
+--- LEGAL & MISC ---
+
+[TODO] Create Terms & Conditions page
+[TODO] Create Privacy Policy page
+[TODO] Set up online scheduling tool (Calendly) for free assessments
+[TODO] Start video content (talking-head videos on dental IT topics)
+[TODO] Consider dental IT newsletter for email nurture
+
+
+===============================================================================
+  🔵 LOW PRIORITY — FIX WITHIN 2-4 MONTHS
+===============================================================================
+
+--- ADDITIONAL CONTENT ---
+
+[TODO] Create specialty-specific pages (orthodontic IT, oral surgery IT) — Pact-One model
+[TODO] Write "Dental Office VoIP Phone System Guide" blog post
+[TODO] Write "CBCT Scanner Network Setup for Dental Practices" blog post
+[TODO] Write "Dental Office WiFi Setup: Patient & Practice Networks" blog post
+[TODO] Write "Digital X-Ray Network Requirements for Dental Offices" blog post
+[TODO] Write "DSO & Multi-Location Dental IT Infrastructure Guide" blog post
+[TODO] Write "Dental Practice Hardware Refresh: When to Replace Equipment" blog post
+[TODO] Write "Buying a Dental Practice? IT Checklist" blog post
+[TODO] Write "Windows 11 Upgrade Guide for Dental Practices" blog post
+[TODO] Write "Dexis Imaging Troubleshooting Guide" blog post
+
+--- NEW CITY PAGES ---
+
+Peninsula (5): Atherton, Woodside, Portola Valley, Half Moon Bay, Pacifica
+East Bay (15): Alameda, Castro Valley, San Ramon, Danville, Antioch, Pittsburg,
+               Richmond, El Cerrito, Brentwood, Emeryville, Dublin, Livermore,
+               San Leandro, Newark, Union City
+South Bay (5): Mountain View, Morgan Hill, Gilroy, Los Altos Hills, Monte Sereno
+
+[TODO] Expand 36 existing city pages with unique local content
+       — Currently 400-500 words (borderline thin)
+       — Add: local landmarks, dental associations, neighborhoods, city-specific context
+
+--- BACKLINK & AUTHORITY BUILDING ---
+
+[TODO] Get listed on dental industry directories (ADA, CDA, local dental societies)
+[TODO] Get listed on Bay Area business directories
+[TODO] Get listed on dental association resource pages
+[TODO] Pursue guest posts on dental industry blogs
+[TODO] Create linkable assets (tools, calculators, comprehensive guides)
+
+--- INTERACTIVE TOOLS (First-mover advantage — no competitor has these) ---
+
+[TODO] Build Dental IT Cost Calculator — enter practice size, get estimate
+[TODO] Build HIPAA Compliance Self-Assessment Quiz — generates report, captures email
+
+--- LEAD MAGNETS ---
+
+[TODO] Create "The Dental Office IT Checklist: 10 Things Every Practice Needs" (PDF)
+[TODO] Create "HIPAA Compliance Checklist for Dental Practices 2026" (PDF)
+[TODO] Create "How Much Should Your Dental Practice Spend on IT?" (PDF)
+
+--- TECHNICAL POLISH ---
+
+[TODO] Add explicit Twitter title/description/image tags (OG fallback works but not optimal)
+[TODO] Add rel="nofollow" to external links (LinkedIn, Google Business)
+[TODO] Replace partner logo text with actual logo images on all pages (not just homepage)
+[TODO] Add real photos to About page and blog posts
+[TODO] Resubmit sitemap in Google Search Console after all changes
+[TODO] Request re-indexing for key pages in Search Console

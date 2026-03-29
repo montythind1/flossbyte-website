@@ -9,43 +9,43 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services.html</loc>
+    <loc>https://flossbyte.com/services</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/pricing.html</loc>
+    <loc>https://flossbyte.com/pricing</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/about.html</loc>
+    <loc>https://flossbyte.com/about</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/why-flossbyte.html</loc>
+    <loc>https://flossbyte.com/why-flossbyte</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/contact.html</loc>
+    <loc>https://flossbyte.com/contact</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/hipaa-compliance.html</loc>
+    <loc>https://flossbyte.com/hipaa-compliance</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/faqs.html</loc>
+    <loc>https://flossbyte.com/faqs</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -53,49 +53,49 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://flossbyte.com/services/dental-vcio.html</loc>
+    <loc>https://flossbyte.com/services/dental-vcio</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/ai-dental-technology.html</loc>
+    <loc>https://flossbyte.com/services/ai-dental-technology</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/dental-cybersecurity.html</loc>
+    <loc>https://flossbyte.com/services/dental-cybersecurity</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/dental-data-backup.html</loc>
+    <loc>https://flossbyte.com/services/dental-data-backup</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/dentrix-support.html</loc>
+    <loc>https://flossbyte.com/services/dentrix-support</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/eaglesoft-support.html</loc>
+    <loc>https://flossbyte.com/services/eaglesoft-support</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/open-dental-support.html</loc>
+    <loc>https://flossbyte.com/services/open-dental-support</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/services/dso-multi-location.html</loc>
+    <loc>https://flossbyte.com/services/dso-multi-location</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -103,7 +103,7 @@
 
   <!-- Blog Index -->
   <url>
-    <loc>https://flossbyte.com/blog/index.html</loc>
+    <loc>https://flossbyte.com/blog/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -111,67 +111,67 @@
 
   <!-- Blog Posts (all 11) -->
   <url>
-    <loc>https://flossbyte.com/blog/hipaa-compliance-dental-practices-bay-area.html</loc>
+    <loc>https://flossbyte.com/blog/hipaa-compliance-dental-practices-bay-area</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-it-support-why-general-it-fails-dentists.html</loc>
+    <loc>https://flossbyte.com/blog/dental-it-support-why-general-it-fails-dentists</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-it-support-bay-area-outage.html</loc>
+    <loc>https://flossbyte.com/blog/dental-it-support-bay-area-outage</loc>
     <lastmod>2025-09-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-it-support-bay-area-practice-smooth.html</loc>
+    <loc>https://flossbyte.com/blog/dental-it-support-bay-area-practice-smooth</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-cybersecurity-antivirus.html</loc>
+    <loc>https://flossbyte.com/blog/dental-cybersecurity-antivirus</loc>
     <lastmod>2025-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-data-backup-cost-risks.html</loc>
+    <loc>https://flossbyte.com/blog/dental-data-backup-cost-risks</loc>
     <lastmod>2025-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-downtime-revenue-loss.html</loc>
+    <loc>https://flossbyte.com/blog/dental-downtime-revenue-loss</loc>
     <lastmod>2025-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/managed-it-services-for-dental-clinics.html</loc>
+    <loc>https://flossbyte.com/blog/managed-it-services-for-dental-clinics</loc>
     <lastmod>2025-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/hipaa-compliance-for-dental-practices.html</loc>
+    <loc>https://flossbyte.com/blog/hipaa-compliance-for-dental-practices</loc>
     <lastmod>2025-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-it-support-common-issues.html</loc>
+    <loc>https://flossbyte.com/blog/dental-it-support-common-issues</loc>
     <lastmod>2025-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/blog/dental-clinics-need-specialized-it-support.html</loc>
+    <loc>https://flossbyte.com/blog/dental-clinics-need-specialized-it-support</loc>
     <lastmod>2025-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -179,64 +179,64 @@
 
   <!-- Region Hub Pages -->
   <url>
-    <loc>https://flossbyte.com/locations/peninsula.html</loc>
+    <loc>https://flossbyte.com/locations/peninsula</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/locations/east-bay.html</loc>
+    <loc>https://flossbyte.com/locations/east-bay</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flossbyte.com/locations/south-bay.html</loc>
+    <loc>https://flossbyte.com/locations/south-bay</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Peninsula & SF City Pages (15) -->
-  <url><loc>https://flossbyte.com/locations/peninsula/san-francisco.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/daly-city.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/south-san-francisco.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/brisbane.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/millbrae.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/colma.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/san-bruno.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/burlingame.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/san-mateo.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/foster-city.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/belmont.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/san-carlos.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/redwood-city.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/menlo-park.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/peninsula/palo-alto.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/san-francisco</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/daly-city</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/south-san-francisco</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/brisbane</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/millbrae</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/colma</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/san-bruno</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/burlingame</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/san-mateo</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/foster-city</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/belmont</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/san-carlos</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/redwood-city</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/menlo-park</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/peninsula/palo-alto</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- East Bay City Pages (12) -->
-  <url><loc>https://flossbyte.com/locations/east-bay/oakland.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/fremont.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/hayward.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/pleasanton.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/walnut-creek.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/concord.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/berkeley.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/san-leandro.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/dublin.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/livermore.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/union-city.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/east-bay/newark.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/oakland</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/fremont</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/hayward</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/pleasanton</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/walnut-creek</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/concord</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/berkeley</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/san-leandro</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/dublin</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/livermore</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/union-city</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/east-bay/newark</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- South Bay City Pages (9) -->
-  <url><loc>https://flossbyte.com/locations/south-bay/san-jose.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/santa-clara.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/sunnyvale.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/cupertino.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/milpitas.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/campbell.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/los-gatos.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/saratoga.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://flossbyte.com/locations/south-bay/los-altos.html</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/san-jose</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/santa-clara</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/sunnyvale</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/cupertino</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/milpitas</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/campbell</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/los-gatos</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/saratoga</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flossbyte.com/locations/south-bay/los-altos</loc><lastmod>2026-03-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

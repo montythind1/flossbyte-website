@@ -1,6 +1,6 @@
 FlossByte Website — TODO List
 ================================
-Last updated: 2026-03-27
+Last updated: 2026-03-29
 
 
 === COMPLETED ===
@@ -63,6 +63,21 @@ FlossByte advantages over competitors:
 ===============================================================================
   🔴 CRITICAL — FIX THIS WEEK
 ===============================================================================
+
+--- INDEXING (Sitemap + redirects fixed 2026-03-29 — do this NOW) ---
+
+[DONE] Resubmit sitemap in Google Search Console → Sitemaps tab
+       — sitemap.xml was updated today (all .html removed, clean URLs)
+       — Go to: Search Console → Sitemaps → submit https://flossbyte.com/sitemap.xml
+
+[TODO] Request indexing for 8 service sub-pages in Search Console → URL Inspection
+       — /services/dental-vcio, /services/ai-dental-technology, /services/dental-cybersecurity
+       — /services/dental-data-backup, /services/dentrix-support, /services/eaglesoft-support
+       — /services/open-dental-support, /services/dso-multi-location
+       — These are the highest-revenue pages and NONE are indexed yet
+
+[TODO] Request indexing for /why-flossbyte + 3 region hubs
+       — /locations/peninsula, /locations/east-bay, /locations/south-bay
 
 --- TRUST & CONVERSION (Biggest gaps vs. competitors) ---
 
@@ -130,9 +145,9 @@ FlossByte advantages over competitors:
 
 --- PERFORMANCE & TECHNICAL SEO ---
 
-[TODO] Compress logo images — currently 342-350KB each, should be <50KB
+[DONE] Compress logo images — resized and optimized, now 25-37KB each
        — Files: assets/ folder
-       — Massive page speed hit
+       — Icons: 800x800 → 200x200, Logos: 831x792 → 200px width
 
 [TODO] Minify CSS/JS
        — index.css (39KB), components.js (31KB) — 20-30% savings possible
@@ -160,9 +175,9 @@ FlossByte advantages over competitors:
        — Each blog post should link to 1-2 relevant city or region pages
        — Example: ransomware post → link to "dental cybersecurity Bay Area" city pages
 
-[TODO] Add direct links from services.html cards to their dedicated sub-pages
-       — Currently cards on /services.html describe services but don't link to
-         /services/dentrix-support.html etc. — links only in nav dropdown
+[DONE] Add direct links from services.html cards to their dedicated sub-pages
+       — Added "Learn More" links to vCIO, AI, Cybersecurity, Backup, Dentrix,
+         Eaglesoft, Open Dental, and DSO service blocks
 
 [TODO] Add location modifiers (Bay Area, San Jose) to HIPAA page subheadings
        — hipaa-compliance.html — helps local SEO without keyword stuffing
@@ -197,10 +212,22 @@ FlossByte advantages over competitors:
 [TODO] "Eaglesoft Cloud Migration Guide for Dental Practices" — commercial intent
 [TODO] "Dentrix vs Eaglesoft vs Open Dental: Which Is Best?" — high traffic comparison
 [TODO] "In-House IT vs Outsourced IT for Dental Practices" — research-phase keyword
+[TODO] "Carestream vs Dexis Imaging: IT Requirements Compared" — software longtail, competitors miss this
+[TODO] "Dental Office Moving? Your Complete IT Checklist" — high-converting scenario keyword
 [TODO] "Cloud vs On-Premise Dental Software: Pros & Cons" — research-phase keyword
 [TODO] "Dental Office Disaster Recovery Plan Template" — linkable asset
 [TODO] "Dental Cyber Insurance: What Bay Area Practices Need to Know" — emerging topic
 [TODO] "HIPAA Compliant Email for Dental Practices" — practical, commercial
+
+--- CONTENT DEPTH ---
+
+[DONE] Expand all 8 service sub-pages to 1,500+ word pillar content
+       — All 4 key pages already 1,500+ words (vCIO: 1578, Cyber: 1950, Dentrix: 1684, AI: 1687)
+       — Added FAQPage schema to vCIO, Cybersecurity, Dentrix, and AI pages
+
+[TODO] Add stats counter to homepage ("X+ practices served", "X+ years experience")
+       — Zenith shows "900+ practices, 4,000+ workstations, 650TB+ backed up"
+       — FlossByte has no equivalent social proof numbers — add ASAP
 
 --- UX & CONVERSION IMPROVEMENTS ---
 
@@ -221,8 +248,8 @@ FlossByte advantages over competitors:
 
 --- LEGAL & MISC ---
 
-[TODO] Create Terms & Conditions page
-[TODO] Create Privacy Policy page
+[DONE] Create Terms & Conditions page — /terms.html
+[DONE] Create Privacy Policy page — /privacy.html
 [TODO] Set up online scheduling tool (Calendly) for free assessments
 [TODO] Start video content (talking-head videos on dental IT topics)
 [TODO] Consider dental IT newsletter for email nurture
@@ -282,5 +309,3 @@ South Bay (5): Mountain View, Morgan Hill, Gilroy, Los Altos Hills, Monte Sereno
 [TODO] Add rel="nofollow" to external links (LinkedIn, Google Business)
 [TODO] Replace partner logo text with actual logo images on all pages (not just homepage)
 [TODO] Add real photos to About page and blog posts
-[TODO] Resubmit sitemap in Google Search Console after all changes
-[TODO] Request re-indexing for key pages in Search Console

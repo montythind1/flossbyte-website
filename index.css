@@ -3,8 +3,7 @@
    Target: Dental IT Managed Services | Bay Area, CA
    ============================================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+/* --- Google Fonts — loaded via <link> in HTML <head> for performance --- */
 
 /* --- CSS Custom Properties --- */
 :root {

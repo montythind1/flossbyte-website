@@ -31,7 +31,10 @@
   </script>
   <link rel="icon" type="image/png" href="../assets/favicon.png" />
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-  <link rel="stylesheet" href="../index.css?v=3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="../index.min.css?v=4" />
 </head>
 <body>
 <main>
@@ -166,6 +169,39 @@
   </div>
 </section>
 
+<!-- WHY FLOSSBYTE -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-eyebrow">The FlossByte Difference</div>
+      <h2 class="section-title">Why Dental Practices Trust FlossByte for <em>Data Backup</em></h2>
+    </div>
+    <div class="grid-3 fade-up">
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3 class="card-title">Dental Software Expertise</h3>
+        <p class="card-body">Generic backup solutions often miss critical dental data — Dentrix databases, Eaglesoft SQL files, Open Dental MySQL dumps, and imaging archives stored in non-standard locations. FlossByte builds backup configurations specifically for dental practice management systems, ensuring every patient record, X-ray, and treatment plan is captured and recoverable.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        </div>
+        <h3 class="card-title">Verified Recovery, Not Just Backup</h3>
+        <p class="card-body">A backup is only as good as your ability to restore from it. FlossByte performs regular restore tests — actually recovering your data to verify it works — not just checking that a backup job completed. Many practices discover their backups were silently failing only when disaster strikes. We catch those failures before they matter.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h3 class="card-title">HIPAA-Compliant by Design</h3>
+        <p class="card-body">Every backup we deploy meets HIPAA requirements from day one — AES-256 encryption in transit and at rest, SOC 2 certified storage, signed Business Associate Agreements, and documented retention policies. When auditors ask about your data protection strategy, you'll have the documentation ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="section-light">
   <div class="container" style="max-width:840px">
@@ -190,7 +226,31 @@
         <button class="accordion-trigger"><span class="accordion-question">What happens if our current backup has been failing without us knowing?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
         <div class="accordion-body">This is more common than you'd think — and it's one of the first things we check during our backup audit. Many practices have backup systems that appear to be running but are actually failing silently, backing up the wrong files, or producing corrupted archives. We'll assess your current backup integrity, identify any failures, and deploy a monitored solution with automated alerts so a failed backup never goes unnoticed again. <a href="../contact.html" style="color:var(--color-teal)">Request a free backup audit to find out where you stand</a>.</div>
       </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-question">How much does dental data backup cost?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+        <div class="accordion-body">Dental backup costs depend on the amount of data being protected and whether you need local-only, cloud-only, or hybrid backup. Most single-location dental practices invest between $200-500/month for a fully managed, HIPAA-compliant backup solution that covers databases, imaging, and disaster recovery planning. FlossByte includes backup monitoring and management in our managed IT plans. <a href="../pricing.html" style="color:var(--color-teal)">View our pricing</a> for details.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-question">How often should a dental practice back up its data?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+        <div class="accordion-body">At minimum, dental practices should perform daily backups of all patient data, databases, and imaging files. For practices with high transaction volumes or multiple providers, we recommend more frequent incremental backups throughout the day — so you never lose more than a few hours of work in a worst-case scenario. FlossByte configures automated backup schedules tailored to your practice's data volume and recovery time requirements.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger"><span class="accordion-question">What is the 3-2-1 backup rule and do we need it?</span><span class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+        <div class="accordion-body">The 3-2-1 rule means keeping three copies of your data, on two different media types, with one copy stored offsite. Yes, every dental practice needs this. A single backup on an external hard drive sitting next to your server provides zero protection against fire, flood, theft, or ransomware that encrypts everything on your local network. FlossByte implements the 3-2-1 strategy with local fast-recovery copies and encrypted offsite cloud storage — protecting you against every realistic disaster scenario.</div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- SERVING BAY AREA -->
+<section>
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-eyebrow">Local Backup Experts</div>
+      <h2 class="section-title">Dental Data Backup Across the <em>Bay Area</em></h2>
+      <p class="section-subtitle centered">FlossByte provides managed backup and disaster recovery services for dental practices throughout the San Francisco Bay Area.</p>
+    </div>
+    <p style="text-align:center;font-size:0.9375rem;color:var(--color-text-muted);line-height:1.7;max-width:720px;margin:0 auto" class="fade-up">From <a href="../locations/south-bay/sunnyvale.html" style="color:var(--color-teal)">Sunnyvale</a> to <a href="../locations/peninsula/redwood-city.html" style="color:var(--color-teal)">Redwood City</a> and across the <a href="../locations/east-bay.html" style="color:var(--color-teal)">East Bay</a>, Bay Area dental practices trust FlossByte to protect their patient data with HIPAA-compliant backup solutions designed specifically for dental software. We provide on-site setup for local backup hardware and remote management for cloud backup monitoring — ensuring your practice is always protected.</p>
   </div>
 </section>
 
@@ -239,6 +299,6 @@
 </div>
 
 </main>
-<script src="../components.js"></script>
+<script src="../components.min.js"></script>
 </body>
 </html>

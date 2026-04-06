@@ -645,9 +645,28 @@ section { padding: var(--space-20) 0; }
 .partner-logo-item:hover {
   color: rgba(255,255,255,0.7);
 }
+.partner-logo-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: auto;
+  padding: 8px 12px;
+}
+.partner-logo-image img {
+  height: 100%;
+  max-width: 140px;
+  object-fit: contain;
+  filter: brightness(0.9) contrast(1.1);
+  transition: filter 0.2s;
+}
+.partner-logo-image:hover img {
+  filter: brightness(1) contrast(1.15);
+}
 @media (max-width: 768px) {
   .partner-logos { gap: 16px 24px; }
   .partner-logo-item { font-size: 0.8rem; }
+  .partner-logo-image { height: 50px; }
 }
 
 .stat-strip {

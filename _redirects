@@ -64,3 +64,87 @@
 /2026/*                                      /blog/                                           301
 /2024/*                                      /blog/                                           301
 /2023/*                                      /blog/                                           301
+
+# Old URL: /privacy-policy/ → /privacy
+/privacy-policy                              /privacy                                         301
+/privacy-policy/                             /privacy                                         301
+
+# Old city page URLs: /dental-it-support-{city}/ → /locations/{region}/{city}
+# Peninsula & SF
+/dental-it-support-san-francisco             /locations/peninsula/san-francisco                301
+/dental-it-support-san-francisco/            /locations/peninsula/san-francisco                301
+/dental-it-support-daly-city                 /locations/peninsula/daly-city                    301
+/dental-it-support-daly-city/                /locations/peninsula/daly-city                    301
+/dental-it-support-south-san-francisco       /locations/peninsula/south-san-francisco          301
+/dental-it-support-south-san-francisco/      /locations/peninsula/south-san-francisco          301
+/dental-it-support-brisbane                  /locations/peninsula/brisbane                     301
+/dental-it-support-brisbane/                 /locations/peninsula/brisbane                     301
+/dental-it-support-millbrae                  /locations/peninsula/millbrae                     301
+/dental-it-support-millbrae/                 /locations/peninsula/millbrae                     301
+/dental-it-support-colma                     /locations/peninsula/colma                        301
+/dental-it-support-colma/                    /locations/peninsula/colma                        301
+/dental-it-support-san-bruno                 /locations/peninsula/san-bruno                    301
+/dental-it-support-san-bruno/                /locations/peninsula/san-bruno                    301
+/dental-it-support-burlingame                /locations/peninsula/burlingame                   301
+/dental-it-support-burlingame/               /locations/peninsula/burlingame                   301
+/dental-it-support-san-mateo                 /locations/peninsula/san-mateo                    301
+/dental-it-support-san-mateo/                /locations/peninsula/san-mateo                    301
+/dental-it-support-foster-city               /locations/peninsula/foster-city                  301
+/dental-it-support-foster-city/              /locations/peninsula/foster-city                  301
+/dental-it-support-belmont                   /locations/peninsula/belmont                      301
+/dental-it-support-belmont/                  /locations/peninsula/belmont                      301
+/dental-it-support-san-carlos                /locations/peninsula/san-carlos                   301
+/dental-it-support-san-carlos/               /locations/peninsula/san-carlos                   301
+/dental-it-support-redwood-city              /locations/peninsula/redwood-city                 301
+/dental-it-support-redwood-city/             /locations/peninsula/redwood-city                 301
+/dental-it-support-menlo-park                /locations/peninsula/menlo-park                   301
+/dental-it-support-menlo-park/               /locations/peninsula/menlo-park                   301
+/dental-it-support-palo-alto                 /locations/peninsula/palo-alto                    301
+/dental-it-support-palo-alto/                /locations/peninsula/palo-alto                    301
+
+# East Bay
+/dental-it-support-oakland                   /locations/east-bay/oakland                       301
+/dental-it-support-oakland/                  /locations/east-bay/oakland                       301
+/dental-it-support-fremont                   /locations/east-bay/fremont                       301
+/dental-it-support-fremont/                  /locations/east-bay/fremont                       301
+/dental-it-support-hayward                   /locations/east-bay/hayward                       301
+/dental-it-support-hayward/                  /locations/east-bay/hayward                       301
+/dental-it-support-pleasanton                /locations/east-bay/pleasanton                    301
+/dental-it-support-pleasanton/               /locations/east-bay/pleasanton                    301
+/dental-it-support-walnut-creek              /locations/east-bay/walnut-creek                  301
+/dental-it-support-walnut-creek/             /locations/east-bay/walnut-creek                  301
+/dental-it-support-concord                   /locations/east-bay/concord                       301
+/dental-it-support-concord/                  /locations/east-bay/concord                       301
+/dental-it-support-berkeley                  /locations/east-bay/berkeley                      301
+/dental-it-support-berkeley/                 /locations/east-bay/berkeley                      301
+/dental-it-support-san-leandro               /locations/east-bay/san-leandro                   301
+/dental-it-support-san-leandro/              /locations/east-bay/san-leandro                   301
+/dental-it-support-dublin                    /locations/east-bay/dublin                        301
+/dental-it-support-dublin/                   /locations/east-bay/dublin                        301
+/dental-it-support-livermore                 /locations/east-bay/livermore                     301
+/dental-it-support-livermore/                /locations/east-bay/livermore                     301
+/dental-it-support-union-city                /locations/east-bay/union-city                    301
+/dental-it-support-union-city/               /locations/east-bay/union-city                    301
+/dental-it-support-newark                    /locations/east-bay/newark                        301
+/dental-it-support-newark/                   /locations/east-bay/newark                        301
+
+# South Bay
+/dental-it-support-san-jose                  /locations/south-bay/san-jose                     301
+/dental-it-support-san-jose/                 /locations/south-bay/san-jose                     301
+/dental-it-support-santa-clara               /locations/south-bay/santa-clara                  301
+/dental-it-support-santa-clara/              /locations/south-bay/santa-clara                  301
+/dental-it-support-sunnyvale                 /locations/south-bay/sunnyvale                    301
+/dental-it-support-sunnyvale/                /locations/south-bay/sunnyvale                    301
+/dental-it-support-cupertino                 /locations/south-bay/cupertino                    301
+/dental-it-support-cupertino/                /locations/south-bay/cupertino                    301
+/dental-it-support-milpitas                  /locations/south-bay/milpitas                     301
+/dental-it-support-milpitas/                 /locations/south-bay/milpitas                     301
+/dental-it-support-campbell                  /locations/south-bay/campbell                     301
+/dental-it-support-campbell/                 /locations/south-bay/campbell                     301
+/dental-it-support-los-gatos                 /locations/south-bay/los-gatos                    301
+/dental-it-support-los-gatos/                /locations/south-bay/los-gatos                    301
+/dental-it-support-saratoga                  /locations/south-bay/saratoga                     301
+/dental-it-support-saratoga/                 /locations/south-bay/saratoga                     301
+/dental-it-support-los-altos                 /locations/south-bay/los-altos                    301
+/dental-it-support-los-altos/                /locations/south-bay/los-altos                    301
+

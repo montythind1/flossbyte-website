@@ -58,3 +58,9 @@
 /wp-register.php                             /                                                301
 /trackback/*                                 /                                                301
 /wp-cron.php                                 /                                                301
+
+# WordPress date archives (e.g. /2025/08/06/)
+/2025/*                                      /blog/                                           301
+/2026/*                                      /blog/                                           301
+/2024/*                                      /blog/                                           301
+/2023/*                                      /blog/                                           301

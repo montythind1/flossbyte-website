@@ -57,8 +57,12 @@ function renderNav() {
           <div class="nav-dropdown-menu">
             <a href="${r('services/dental-vcio.html')}">Technology Strategy &amp; vCIO</a>
             <a href="${r('services/ai-dental-technology.html')}">AI Integration</a>
+            <a href="${r('services/managed-it-support.html')}">Managed IT Support</a>
             <a href="${r('services/dental-cybersecurity.html')}">Cybersecurity</a>
             <a href="${r('services/dental-data-backup.html')}">Backup &amp; Recovery</a>
+            <a href="${r('services/dental-network-infrastructure.html')}">Network &amp; Infrastructure</a>
+            <a href="${r('services/dental-voip-phone-systems.html')}">VoIP &amp; Phone Systems</a>
+            <a href="${r('services/dental-hardware-management.html')}">Hardware Management</a>
             <a href="${r('services/dentrix-support.html')}">Dentrix Support</a>
             <a href="${r('services/eaglesoft-support.html')}">Eaglesoft Support</a>
             <a href="${r('services/open-dental-support.html')}">Open Dental Support</a>
@@ -98,7 +102,11 @@ function renderNav() {
       <a href="${r('services.html')}">All Services</a>
       <a href="${r('services/dental-vcio.html')}" style="padding-left:24px;font-size:0.875rem">Technology Strategy &amp; vCIO</a>
       <a href="${r('services/ai-dental-technology.html')}" style="padding-left:24px;font-size:0.875rem">AI Integration</a>
+      <a href="${r('services/managed-it-support.html')}" style="padding-left:24px;font-size:0.875rem">Managed IT Support</a>
       <a href="${r('services/dental-cybersecurity.html')}" style="padding-left:24px;font-size:0.875rem">Cybersecurity</a>
+      <a href="${r('services/dental-network-infrastructure.html')}" style="padding-left:24px;font-size:0.875rem">Network &amp; Infrastructure</a>
+      <a href="${r('services/dental-voip-phone-systems.html')}" style="padding-left:24px;font-size:0.875rem">VoIP &amp; Phone Systems</a>
+      <a href="${r('services/dental-hardware-management.html')}" style="padding-left:24px;font-size:0.875rem">Hardware Management</a>
       <a href="${r('services/dso-multi-location.html')}" style="padding-left:24px;font-size:0.875rem">DSO &amp; Multi-Location</a>
       <a href="${r('pricing.html')}">Pricing</a>
       <a href="${r('about.html')}">About</a>
@@ -228,6 +236,8 @@ function renderFooter() {
           <a href="${r('blog/index.html')}">Blog</a>
           <a href="${r('hipaa-compliance.html')}">HIPAA</a>
           <a href="${r('contact.html')}">Contact</a>
+          <a href="${r('privacy.html')}">Privacy Policy</a>
+          <a href="${r('terms.html')}">Terms</a>
         </div>
       </div>
     </div>

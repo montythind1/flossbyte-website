@@ -134,7 +134,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts (all 18) -->
+  <!-- Blog Posts (all 19) -->
   <url>
     <loc>https://flossbyte.com/blog/hipaa-compliance-dental-practices-bay-area</loc>
     <lastmod>2026-05-06</lastmod>
@@ -242,6 +242,12 @@
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flossbyte.com/blog/dentrix-vs-eaglesoft-vs-open-dental</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Region Hub Pages -->

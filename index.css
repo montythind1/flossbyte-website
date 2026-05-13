@@ -1247,7 +1247,8 @@ section { padding: var(--space-20) 0; }
   border-radius: var(--radius-lg);
   padding: var(--space-8);
 }
-.testimonial-stars { color: var(--color-teal); margin-bottom: var(--space-4); font-size: 1.125rem; letter-spacing: 2px; }
+.testimonial-stars { display: flex; gap: 4px; margin-bottom: var(--space-4); }
+.testimonial-stars svg { width: 18px; height: 18px; color: var(--color-teal); flex-shrink: 0; }
 .testimonial-text {
   font-size: 1rem;
   color: rgba(255,255,255,0.75);
@@ -1326,10 +1327,15 @@ section { padding: var(--space-20) 0; }
    TESTIMONIALS
    ============================================================ */
 .testimonial-stars {
-  color: var(--color-teal);
+  display: flex;
+  gap: 4px;
   margin-bottom: var(--space-4);
-  font-size: 1.125rem;
-  letter-spacing: 2px;
+}
+.testimonial-stars svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-teal);
+  flex-shrink: 0;
 }
 .testimonial-quote {
   margin: var(--space-4) 0 var(--space-5);

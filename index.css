@@ -1323,6 +1323,52 @@ section { padding: var(--space-20) 0; }
 }
 
 /* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonial-stars {
+  color: var(--color-teal);
+  margin-bottom: var(--space-4);
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+}
+.testimonial-quote {
+  margin: var(--space-4) 0 var(--space-5);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 0.9375rem;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+.testimonial-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-navy);
+  font-size: 0.9375rem;
+}
+.testimonial-practice {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ============================================================
    RESPONSIVE MEDIA
    ============================================================ */
 @media (max-width: 480px) {

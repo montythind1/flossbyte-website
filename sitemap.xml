@@ -134,7 +134,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts (all 17) -->
+  <!-- Blog Posts (all 18) -->
   <url>
     <loc>https://flossbyte.com/blog/hipaa-compliance-dental-practices-bay-area</loc>
     <lastmod>2026-05-06</lastmod>
@@ -234,6 +234,12 @@
   <url>
     <loc>https://flossbyte.com/blog/what-is-dental-vcio</loc>
     <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flossbyte.com/blog/new-dental-practice-it-setup-checklist</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

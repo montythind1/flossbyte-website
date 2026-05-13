@@ -35,6 +35,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" />
   <link rel="stylesheet" href="../index.min.css?v=5" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is dental cloud backup HIPAA compliant?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All cloud backups we deploy are fully HIPAA compliant. Data is encrypted with AES-256 both in transit and at rest, stored in SOC 2 Type II certified data centers, and protected by a signed Business Associate Agreement (BAA). We ensure your backup solution meets every HIPAA requirement for electronic protected health information (ePHI) storage and transmission."}},
+      {"@type": "Question", "name": "How long does it take to restore data after a disaster?", "acceptedAnswer": {"@type": "Answer", "text": "Recovery time depends on the scope of the issue and the amount of data involved. For most dental practices, we can restore critical databases and get your practice management system operational within a few hours. Full restoration including patient images, X-rays, and all historical data is typically completed within the same business day."}},
+      {"@type": "Question", "name": "What data does FlossByte back up for dental practices?", "acceptedAnswer": {"@type": "Answer", "text": "We back up everything — practice management databases, patient images, X-rays, intraoral photos, scanned documents, treatment plans, and application configurations. Dental imaging files are often the largest and most overlooked part of a backup strategy. We ensure your imaging data is fully protected and recoverable alongside your Dentrix, Eaglesoft, or Open Dental database."}},
+      {"@type": "Question", "name": "How often should a dental practice run backups?", "acceptedAnswer": {"@type": "Answer", "text": "At minimum, dental practices should perform daily backups of all patient data, databases, and imaging files. For practices with high transaction volumes or multiple providers, we recommend more frequent incremental backups throughout the day. FlossByte configures automated backup schedules tailored to your practice's data volume and recovery time requirements."}},
+      {"@type": "Question", "name": "What is the 3-2-1 backup rule and does my practice need it?", "acceptedAnswer": {"@type": "Answer", "text": "The 3-2-1 rule means keeping three copies of your data, on two different media types, with one copy stored offsite. Every dental practice needs this. A single backup on an external hard drive next to your server provides zero protection against fire, flood, theft, or ransomware. FlossByte implements the 3-2-1 strategy with local fast-recovery copies and encrypted offsite cloud storage."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 <main>

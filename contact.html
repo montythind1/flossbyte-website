@@ -21,68 +21,35 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="index.min.css?v=8" />
+  <link rel="stylesheet" href="index.min.css?v=2" />
 </head>
 <body>
 <main>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="container page-hero-content">
     <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Contact</span></nav>
-    <h1 class="page-hero-title">Book a Free <em style="color:var(--color-teal)">30-Minute Assessment</em></h1>
-    <p class="page-hero-subtitle">Pick a time that works for you — we'll review your current IT setup, HIPAA posture, and give you an honest action plan. No sales pressure, no commitment.</p>
+    <h1 class="page-hero-title">Let's Talk About <em style="color:var(--color-teal)">Your Practice</em></h1>
+    <p class="page-hero-subtitle">Send us a message and we'll respond within one business day. Or scroll down to book a free 30-minute call directly on our calendar.</p>
     <div class="flex-center mt-8" style="gap:16px;flex-wrap:wrap">
-      <a class="btn btn-primary btn-lg" href="#book-now">Book a Call Instantly ↓</a>
-      <a class="btn btn-outline btn-lg" href="#send-message">Send a Message Instead</a>
+      <a class="btn btn-primary btn-lg" href="#send-message">Send a Message ↓</a>
+      <a class="btn btn-outline btn-lg" href="#book-now">Book a Call Instead</a>
     </div>
   </div>
 </section>
 
-<!-- BOOKING EMBED -->
-<section id="book-now" style="padding:64px 0;background:var(--color-gray-50)">
-  <div class="container" style="max-width:900px">
-    <div style="text-align:center;margin-bottom:32px">
-      <div class="section-eyebrow">Instant Scheduling</div>
-      <h2 class="section-title">Pick a Time That Works for You</h2>
-      <p class="section-subtitle centered" style="margin-top:12px">Choose any open slot — 30 minutes, no commitment. We'll audit your Dentrix setup, HIPAA posture, cybersecurity gaps, and backup reliability, then give you a clear action plan.</p>
-    </div>
-    <div style="background:#fff;border:1px solid var(--color-gray-200);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
-      <iframe
-        src="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled"
-        width="100%"
-        height="620"
-        frameborder="0"
-        scrolling="yes"
-        title="Book a Free Dental IT Assessment with FlossByte"
-        style="display:block"
-        loading="lazy">
-      </iframe>
-    </div>
-    <p style="text-align:center;margin-top:16px;font-size:0.875rem;color:var(--color-text-muted)">
-      Having trouble loading? <a href="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled" target="_blank" rel="noopener" style="color:var(--color-teal);font-weight:600">Open booking page directly →</a>
-    </p>
-  </div>
-</section>
-
-<!-- DIVIDER -->
-<div style="text-align:center;padding:40px 24px 0">
-  <div style="display:inline-flex;align-items:center;gap:16px">
-    <div style="height:1px;width:80px;background:var(--color-gray-200)"></div>
-    <span style="font-size:0.875rem;color:var(--color-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.08em">Or send us a message</span>
-    <div style="height:1px;width:80px;background:var(--color-gray-200)"></div>
-  </div>
-</div>
-
-<section id="send-message">
+<!-- FORM + SIDEBAR -->
+<section id="send-message" style="padding:72px 0">
   <div class="container">
     <div class="two-col" style="align-items:start;gap:64px">
 
       <!-- Contact Form -->
       <div class="fade-up">
-        <div class="section-eyebrow">Get in Touch</div>
-        <h2 class="section-title" style="margin-bottom:8px">Send Us a Message</h2>
-        <p class="section-subtitle" style="margin-bottom:32px">Fill out the form and we'll respond within one business day. For urgent matters, call us directly.</p>
+        <div class="section-eyebrow">Free Assessment</div>
+        <h2 class="section-title" style="margin-bottom:8px">Tell Us About Your Practice</h2>
+        <p class="section-subtitle" style="margin-bottom:32px">Fill out the form and we'll respond within one business day with an honest assessment — no sales pressure, no commitment.</p>
 
         <form id="contact-form" action="https://formspree.io/f/xdawvyyr" method="POST" novalidate>
           <input type="hidden" name="_subject" value="New Contact from FlossByte Website" />
@@ -158,7 +125,6 @@
           </button>
           <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
 
-          <!-- Success / Error messages (shown via JS) -->
           <div id="form-success" style="display:none;margin-top:16px;padding:16px 20px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:8px;color:#065f46;font-weight:600;">
             ✓ Message sent! We'll be in touch within one business day.
           </div>
@@ -168,12 +134,12 @@
         </form>
       </div>
 
-      <!-- Contact Info Sidebar -->
+      <!-- Sidebar -->
       <div class="fade-up fade-up-delay-2">
         <div class="section-eyebrow">Direct Contact</div>
         <h2 class="section-title" style="font-size:1.75rem;margin-bottom:24px">Prefer to reach out directly?</h2>
 
-        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:40px">
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px">
           <a href="tel:6692372264" class="card" style="text-decoration:none;display:flex;align-items:center;gap:16px;padding:20px 24px;">
             <div class="card-icon" style="margin:0;flex-shrink:0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -194,7 +160,15 @@
           </a>
         </div>
 
-        <div class="card" style="background:var(--color-navy);border-color:rgba(255,255,255,0.08);padding:28px">
+        <!-- Book a call nudge -->
+        <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border-radius:16px;padding:28px;margin-bottom:24px;text-align:center">
+          <div style="font-size:1.75rem;margin-bottom:8px">📅</div>
+          <div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:#fff;margin-bottom:6px">Want to talk sooner?</div>
+          <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);margin-bottom:16px">Skip the wait — book a free 30-minute call directly on our calendar.</p>
+          <a href="#book-now" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.9rem;color:#fff">Book a Call Instantly →</a>
+        </div>
+
+        <div class="card" style="background:var(--color-navy);border-color:rgba(255,255,255,0.08);padding:28px;margin-bottom:16px">
           <div style="font-family:var(--font-heading);font-size:1.0625rem;font-weight:700;color:#fff;margin-bottom:16px">Service Areas</div>
           <div class="location-areas" style="grid-template-columns:1fr">
             <a href="/locations/peninsula.html" class="location-area-item" style="text-decoration:none;color:inherit">Peninsula & SF</a>
@@ -203,7 +177,7 @@
           </div>
         </div>
 
-        <div class="card section-light mt-4" style="padding:24px">
+        <div class="card section-light" style="padding:24px">
           <div style="font-family:var(--font-heading);font-size:0.9375rem;font-weight:700;color:var(--color-navy);margin-bottom:12px">What to Expect</div>
           <div class="process-steps" style="gap:12px">
             <div class="process-step">
@@ -216,13 +190,48 @@
             </div>
             <div class="process-step">
               <div class="process-step-num" style="width:36px;height:36px;font-size:0.9375rem">3</div>
-              <div><div class="process-step-title" style="font-size:0.9rem">Free technology assessment</div><div class="process-step-text" style="font-size:0.8125rem">We review your setup, technology roadmap, and give honest recommendations</div></div>
+              <div><div class="process-step-title" style="font-size:0.9rem">Free technology assessment</div><div class="process-step-text" style="font-size:0.8125rem">We review your setup and give honest recommendations</div></div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div style="text-align:center;padding:16px 24px 0">
+  <div style="display:inline-flex;align-items:center;gap:16px">
+    <div style="height:1px;width:80px;background:var(--color-gray-200)"></div>
+    <span style="font-size:0.875rem;color:var(--color-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.08em">Or book a call directly</span>
+    <div style="height:1px;width:80px;background:var(--color-gray-200)"></div>
+  </div>
+</div>
+
+<!-- BOOKING EMBED -->
+<section id="book-now" style="padding:48px 0 72px;background:var(--color-gray-50)">
+  <div class="container" style="max-width:900px">
+    <div style="text-align:center;margin-bottom:32px">
+      <div class="section-eyebrow">Instant Scheduling</div>
+      <h2 class="section-title">Pick a Time That Works for You</h2>
+      <p class="section-subtitle centered" style="margin-top:12px">30 minutes, no commitment. We'll review your Dentrix setup, HIPAA posture, cybersecurity gaps, and backup reliability — then give you a clear action plan.</p>
+    </div>
+    <div style="background:#fff;border:1px solid var(--color-gray-200);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-md)">
+      <iframe
+        src="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled"
+        width="100%"
+        height="620"
+        frameborder="0"
+        scrolling="yes"
+        title="Book a Free Dental IT Assessment with FlossByte"
+        style="display:block"
+        loading="lazy">
+      </iframe>
+    </div>
+    <p style="text-align:center;margin-top:16px;font-size:0.875rem;color:var(--color-text-muted)">
+      Having trouble loading? <a href="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled" target="_blank" rel="noopener" style="color:var(--color-teal);font-weight:600">Open booking page directly →</a>
+    </p>
   </div>
 </section>
 
@@ -230,7 +239,6 @@
 
 <script src="components.min.js?v=2" defer></script>
 <script>
-  // Handle Formspree AJAX submission
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
   const errorMsg = document.getElementById('form-error');

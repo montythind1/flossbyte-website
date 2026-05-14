@@ -32,7 +32,8 @@
   <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"></noscript>
   <link rel="stylesheet" href="../index.min.css?v=6" />
   <style>
     .blog-header { background:var(--color-navy); padding: calc(var(--nav-height) + 64px) 0 64px; }
@@ -242,6 +243,6 @@
 </section>
 
 </main>
-<script src="../components.min.js"></script>
+<script src="../components.min.js" defer></script>
 </body>
 </html>

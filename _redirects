@@ -1,0 +1,138 @@
+# ============================================================
+# FlossByte — Cloudflare Pages Redirects
+# ============================================================
+
+# ------------------------------------------------------------
+# Wrong paths Google has crawled
+# ------------------------------------------------------------
+/blogs/                                         /blog/                                          301
+/blogs                                          /blog/                                          301
+/dental-downtime-revenue-loss/                  /blog/dental-downtime-revenue-loss              301
+/dental-downtime-revenue-loss                   /blog/dental-downtime-revenue-loss              301
+
+# ------------------------------------------------------------
+# Trailing slashes → clean URLs (except homepage and /blog/)
+# ------------------------------------------------------------
+/about/                                         /about                                          301
+/services/                                      /services                                       301
+/pricing/                                       /pricing                                        301
+/contact/                                       /contact                                        301
+/faqs/                                          /faqs                                           301
+/hipaa-compliance/                              /hipaa-compliance                               301
+/why-flossbyte/                                 /why-flossbyte                                  301
+/privacy/                                       /privacy                                        301
+/terms/                                         /terms                                          301
+
+# ------------------------------------------------------------
+# .html → clean URLs — core pages
+# ------------------------------------------------------------
+/index.html                                     /                                               301
+/about.html                                     /about                                          301
+/services.html                                  /services                                       301
+/pricing.html                                   /pricing                                        301
+/contact.html                                   /contact                                        301
+/faqs.html                                      /faqs                                           301
+/hipaa-compliance.html                          /hipaa-compliance                               301
+/why-flossbyte.html                             /why-flossbyte                                  301
+/privacy.html                                   /privacy                                        301
+/terms.html                                     /terms                                          301
+/thank-you.html                                 /thank-you                                      301
+/404.html                                       /                                               301
+
+# ------------------------------------------------------------
+# .html → clean URLs — service pages
+# ------------------------------------------------------------
+/services/managed-it-support.html               /services/managed-it-support                    301
+/services/dental-cybersecurity.html             /services/dental-cybersecurity                  301
+/services/dental-data-backup.html               /services/dental-data-backup                    301
+/services/dental-network-infrastructure.html    /services/dental-network-infrastructure         301
+/services/dental-hardware-management.html       /services/dental-hardware-management            301
+/services/dental-voip-phone-systems.html        /services/dental-voip-phone-systems             301
+/services/dental-vcio.html                      /services/dental-vcio                           301
+/services/ai-dental-technology.html             /services/ai-dental-technology                  301
+/services/dentrix-support.html                  /services/dentrix-support                       301
+/services/eaglesoft-support.html                /services/eaglesoft-support                     301
+/services/open-dental-support.html              /services/open-dental-support                   301
+/services/dso-multi-location.html               /services/dso-multi-location                    301
+
+# ------------------------------------------------------------
+# .html → clean URLs — location hubs
+# ------------------------------------------------------------
+/locations/peninsula.html                       /locations/peninsula                            301
+/locations/east-bay.html                        /locations/east-bay                             301
+/locations/south-bay.html                       /locations/south-bay                            301
+
+# ------------------------------------------------------------
+# .html → clean URLs — Peninsula cities
+# ------------------------------------------------------------
+/locations/peninsula/san-francisco.html         /locations/peninsula/san-francisco              301
+/locations/peninsula/palo-alto.html             /locations/peninsula/palo-alto                  301
+/locations/peninsula/san-mateo.html             /locations/peninsula/san-mateo                  301
+/locations/peninsula/redwood-city.html          /locations/peninsula/redwood-city               301
+/locations/peninsula/burlingame.html            /locations/peninsula/burlingame                 301
+/locations/peninsula/menlo-park.html            /locations/peninsula/menlo-park                 301
+/locations/peninsula/south-san-francisco.html   /locations/peninsula/south-san-francisco        301
+/locations/peninsula/daly-city.html             /locations/peninsula/daly-city                  301
+/locations/peninsula/san-bruno.html             /locations/peninsula/san-bruno                  301
+/locations/peninsula/san-carlos.html            /locations/peninsula/san-carlos                 301
+/locations/peninsula/belmont.html               /locations/peninsula/belmont                    301
+/locations/peninsula/foster-city.html           /locations/peninsula/foster-city                301
+/locations/peninsula/millbrae.html              /locations/peninsula/millbrae                   301
+/locations/peninsula/brisbane.html              /locations/peninsula/brisbane                   301
+/locations/peninsula/colma.html                 /locations/peninsula/colma                      301
+
+# ------------------------------------------------------------
+# .html → clean URLs — East Bay cities
+# ------------------------------------------------------------
+/locations/east-bay/oakland.html                /locations/east-bay/oakland                     301
+/locations/east-bay/fremont.html                /locations/east-bay/fremont                     301
+/locations/east-bay/berkeley.html               /locations/east-bay/berkeley                    301
+/locations/east-bay/concord.html                /locations/east-bay/concord                     301
+/locations/east-bay/hayward.html                /locations/east-bay/hayward                     301
+/locations/east-bay/walnut-creek.html           /locations/east-bay/walnut-creek                301
+/locations/east-bay/pleasanton.html             /locations/east-bay/pleasanton                  301
+/locations/east-bay/dublin.html                 /locations/east-bay/dublin                      301
+/locations/east-bay/livermore.html              /locations/east-bay/livermore                   301
+/locations/east-bay/san-leandro.html            /locations/east-bay/san-leandro                 301
+/locations/east-bay/union-city.html             /locations/east-bay/union-city                  301
+/locations/east-bay/newark.html                 /locations/east-bay/newark                      301
+
+# ------------------------------------------------------------
+# .html → clean URLs — South Bay cities
+# ------------------------------------------------------------
+/locations/south-bay/san-jose.html              /locations/south-bay/san-jose                   301
+/locations/south-bay/santa-clara.html           /locations/south-bay/santa-clara                301
+/locations/south-bay/sunnyvale.html             /locations/south-bay/sunnyvale                  301
+/locations/south-bay/cupertino.html             /locations/south-bay/cupertino                  301
+/locations/south-bay/campbell.html              /locations/south-bay/campbell                   301
+/locations/south-bay/milpitas.html              /locations/south-bay/milpitas                   301
+/locations/south-bay/los-altos.html             /locations/south-bay/los-altos                  301
+/locations/south-bay/los-gatos.html             /locations/south-bay/los-gatos                  301
+/locations/south-bay/saratoga.html              /locations/south-bay/saratoga                   301
+
+# ------------------------------------------------------------
+# .html → clean URLs — blog posts
+# ------------------------------------------------------------
+/blog/index.html                                /blog/                                          301
+/blog/dentrix-it-support-guide.html             /blog/dentrix-it-support-guide                  301
+/blog/hipaa-it-requirements-dental-offices.html /blog/hipaa-it-requirements-dental-offices       301
+/blog/dental-data-backup-recovery-guide.html    /blog/dental-data-backup-recovery-guide         301
+/blog/dentrix-vs-eaglesoft-vs-open-dental.html  /blog/dentrix-vs-eaglesoft-vs-open-dental        301
+/blog/new-dental-practice-it-setup-checklist.html /blog/new-dental-practice-it-setup-checklist  301
+/blog/what-is-dental-vcio.html                  /blog/what-is-dental-vcio                       301
+/blog/ai-transforming-dental-practices-2026.html /blog/ai-transforming-dental-practices-2026    301
+/blog/best-dental-it-companies-bay-area.html    /blog/best-dental-it-companies-bay-area         301
+/blog/dental-it-support-cost-2026.html          /blog/dental-it-support-cost-2026               301
+/blog/dental-office-ransomware-prevention.html  /blog/dental-office-ransomware-prevention        301
+/blog/dental-practice-technology-roadmap.html   /blog/dental-practice-technology-roadmap        301
+/blog/hipaa-compliance-dental-practices-bay-area.html /blog/hipaa-compliance-dental-practices-bay-area 301
+/blog/dental-it-support-why-general-it-fails-dentists.html /blog/dental-it-support-why-general-it-fails-dentists 301
+/blog/dental-it-support-bay-area-outage.html    /blog/dental-it-support-bay-area-outage         301
+/blog/dental-it-support-bay-area-practice-smooth.html /blog/dental-it-support-bay-area-practice-smooth 301
+/blog/dental-cybersecurity-antivirus.html       /blog/dental-cybersecurity-antivirus            301
+/blog/dental-data-backup-cost-risks.html        /blog/dental-data-backup-cost-risks             301
+/blog/dental-downtime-revenue-loss.html         /blog/dental-downtime-revenue-loss              301
+/blog/managed-it-services-for-dental-clinics.html /blog/managed-it-services-for-dental-clinics  301
+/blog/hipaa-compliance-for-dental-practices.html /blog/hipaa-compliance-for-dental-practices    301
+/blog/dental-it-support-common-issues.html      /blog/dental-it-support-common-issues           301
+/blog/dental-clinics-need-specialized-it-support.html /blog/dental-clinics-need-specialized-it-support 301

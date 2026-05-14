@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIPAA IT Requirements for Dental Offices: Technical Safeguards Checklist 2026 — FlossByte</title>
+  <meta name="description" content="The complete HIPAA IT checklist for dental offices — encryption, access controls, backup, audit logs, workstation security, and what HIPAA-compliant IT support actually looks like." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="HIPAA IT Requirements for Dental Offices: Technical Safeguards Checklist 2026" />
+  <meta property="og:description" content="The complete HIPAA IT checklist for dental offices — encryption, access controls, backup, audit logs, workstation security, and what HIPAA-compliant IT support actually looks like." />
+  <meta property="og:url" content="https://flossbyte.com/blog/hipaa-it-requirements-dental-offices" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://flossbyte.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="FlossByte" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://flossbyte.com/blog/hipaa-it-requirements-dental-offices" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "HIPAA IT Requirements for Dental Offices: Technical Safeguards Checklist 2026",
+    "description": "The complete HIPAA IT checklist for dental offices — encryption, access controls, backup, audit logs, workstation security, and what HIPAA-compliant IT support actually looks like.",
+    "author": {"@type": "Organization", "name": "FlossByte"},
+    "publisher": {"@type": "Organization", "name": "FlossByte", "logo": {"@type": "ImageObject", "url": "https://flossbyte.com/assets/favicon.png"}},
+    "datePublished": "2026-05-13",
+    "dateModified": "2026-05-13",
+    "url": "https://flossbyte.com/blog/hipaa-it-requirements-dental-offices",
+    "keywords": ["hipaa it requirements dental", "hipaa compliant it support dentists", "hipaa technical safeguards dental", "hipaa compliance dental office", "dental office hipaa risk assessment", "does hipaa apply to dentists"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does HIPAA apply to dental offices?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dental practices are covered entities under HIPAA because they create, receive, and transmit protected health information (PHI) — including patient records, X-rays, and insurance claims. All HIPAA Privacy, Security, and Breach Notification Rules apply to dental offices."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the HIPAA technical safeguard requirements for dental offices?",
+        "acceptedAnswer": {"@type": "Answer", "text": "HIPAA's Security Rule requires dental offices to implement: unique user identification (no shared logins), automatic logoff on workstations, encryption of ePHI in transit and at rest, audit controls to track access to patient data, and integrity controls to prevent unauthorized alteration of records."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is a HIPAA security risk assessment for a dental office?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A HIPAA security risk assessment identifies where your dental practice creates, receives, maintains, or transmits ePHI, evaluates threats and vulnerabilities to that data, and documents safeguards in place. It is a required annual activity under HIPAA's Security Rule (45 CFR § 164.308(a)(1))."}
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a dental office fails a HIPAA audit?",
+        "acceptedAnswer": {"@type": "Answer", "text": "HIPAA penalties range from $100 to $50,000 per violation, with an annual cap of $1.5 million per violation category. The Office for Civil Rights (OCR) considers the nature and extent of the violation, prior history, and financial condition of the practice when setting penalties."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do dentists need HIPAA-compliant IT support?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Any IT provider that manages, accesses, or supports systems containing patient data is a business associate under HIPAA and must sign a Business Associate Agreement (BAA). A HIPAA-compliant IT provider understands the specific technical safeguards required and can document them for your risk assessment."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flossbyte.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://flossbyte.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "HIPAA IT Requirements for Dental Offices", "item": "https://flossbyte.com/blog/hipaa-it-requirements-dental-offices"}
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../index.min.css?v=2" />
+  <style>
+    .blog-header { background:var(--color-navy); padding: calc(var(--nav-height) + 64px) 0 64px; }
+    .blog-meta-bar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+    .blog-reading-time { display:flex; align-items:center; gap:6px; font-size:0.875rem; color:rgba(255,255,255,0.5); }
+    .checklist-item { display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid #e5e7eb; }
+    .checklist-item:last-child { border-bottom:none; }
+    .check-icon { width:22px; height:22px; background:rgba(0,191,165,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+  </style>
+</head>
+<body>
+<main>
+
+<!-- Blog Post Header -->
+<header class="blog-header" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(0,191,165,0.08) 0%,transparent 70%)"></div>
+  <div class="container" style="position:relative;z-index:2;max-width:800px">
+    <nav style="display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
+      <a href="../index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
+      <span>›</span>
+      <a href="index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
+      <span>›</span>
+      <span style="color:var(--color-teal)">HIPAA IT Requirements for Dental Offices</span>
+    </nav>
+    <div class="blog-meta-bar">
+      <span class="badge badge-teal">HIPAA Compliance</span>
+      <span class="blog-reading-time">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        10 min read
+      </span>
+    </div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px">HIPAA IT Requirements for Dental Offices: Technical Safeguards Checklist (2026)</h1>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Most dental HIPAA violations aren't caused by bad intentions — they're caused by IT systems that were never properly configured. Here's exactly what your technology needs to do to be HIPAA-compliant.</p>
+  </div>
+</header>
+
+<!-- Blog Content -->
+<section style="padding:64px 0">
+  <div class="blog-post-content">
+
+    <p>HIPAA compliance for a dental office is largely an IT problem. The Privacy Rule governs your policies and procedures, but the <strong>Security Rule</strong> — the part that triggers the most violations and fines — is entirely about how your technology handles patient data.</p>
+
+    <p>Most dental practices have IT systems that were set up by a general IT company with no dental HIPAA experience. The result: shared login credentials, unencrypted laptops, backup systems that haven't been tested in years, and no audit logs. All of it is a HIPAA violation waiting to happen.</p>
+
+    <p>This guide covers every IT requirement HIPAA places on dental offices, organized as a practical checklist your practice can act on today.</p>
+
+    <h2>Does HIPAA Apply to Dental Offices?</h2>
+
+    <p>Yes — completely. Dental practices are <strong>covered entities</strong> under HIPAA because they create, receive, maintain, and transmit protected health information (PHI). This includes:</p>
+
+    <ul>
+      <li>Patient demographics, medical histories, and treatment records</li>
+      <li>Digital X-rays, CBCT scans, and intraoral photos</li>
+      <li>Insurance claims and electronic remittance advice</li>
+      <li>Appointment scheduling systems that contain patient data</li>
+      <li>Any email or messaging that includes patient information</li>
+    </ul>
+
+    <p>The HIPAA Security Rule (45 CFR Part 164) applies to all <strong>electronic PHI (ePHI)</strong> — anything stored or transmitted digitally. For a modern dental office running Dentrix, Eaglesoft, or Open Dental with digital imaging, virtually every system touches ePHI and falls under HIPAA's requirements.</p>
+
+    <h2>The 3 Categories of HIPAA Technical Safeguards</h2>
+
+    <p>HIPAA's Security Rule organizes IT requirements into three categories of safeguards. Here's what each means in practical terms for a dental office:</p>
+
+    <h3>1. Administrative Safeguards</h3>
+    <p>Policies, procedures, and training — not purely technical, but your IT provider must support them:</p>
+    <ul>
+      <li>Annual security risk assessment (required, not optional)</li>
+      <li>Documented workforce training on HIPAA security policies</li>
+      <li>Business Associate Agreements with every vendor who handles ePHI (including your IT company)</li>
+      <li>Contingency plan: data backup, disaster recovery, and emergency mode procedures</li>
+    </ul>
+
+    <h3>2. Physical Safeguards</h3>
+    <p>Controls over physical access to systems and devices:</p>
+    <ul>
+      <li>Locked server rooms or equipment cabinets</li>
+      <li>Workstation placement that prevents unauthorized viewing of patient data</li>
+      <li>Device and media disposal procedures (wiping hard drives before disposal)</li>
+      <li>Policies for mobile devices that access ePHI</li>
+    </ul>
+
+    <h3>3. Technical Safeguards</h3>
+    <p>The IT controls that protect ePHI in your systems — this is where most dental practices have gaps:</p>
+    <ul>
+      <li>Unique user identification (individual logins for every staff member)</li>
+      <li>Automatic logoff on all workstations</li>
+      <li>Encryption of ePHI at rest and in transit</li>
+      <li>Audit controls to log who accessed what data and when</li>
+      <li>Integrity controls to prevent unauthorized alteration of records</li>
+      <li>Transmission security for any ePHI sent over a network</li>
+    </ul>
+
+    <!-- Inline CTA -->
+    <div style="margin:40px 0;padding:32px;background:linear-gradient(135deg,var(--color-navy) 0%,#1a304f 100%);border-radius:16px;text-align:center">
+      <p style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px">Not Sure Where Your Practice Stands?</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte conducts free HIPAA IT assessments for Bay Area dental practices — we identify every gap and give you a clear remediation plan.</p>
+      <a class="btn btn-primary" href="../contact.html" style="font-size:0.95rem;color:#fff">Get Your Free HIPAA IT Assessment →</a>
+    </div>
+
+    <h2>The HIPAA IT Checklist for Dental Offices (2026)</h2>
+
+    <p>Use this checklist to audit your practice's current IT posture. Every item marked "Required" is a HIPAA mandate — not a recommendation.</p>
+
+    <h3>Access Controls</h3>
+    <div style="background:var(--color-gray-50);border-radius:12px;padding:8px 20px;margin:16px 0">
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Unique logins for every user</strong> — No shared passwords or shared accounts. Every staff member who accesses patient data needs their own credentials. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Role-based access controls</strong> — Front desk staff should not have access to clinical records they don't need. Configure permissions in Dentrix/Eaglesoft to limit access by role. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Automatic logoff</strong> — Workstations must automatically lock after a period of inactivity (typically 5–15 minutes). Leaving a screen open with patient data visible is a HIPAA violation. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Emergency access procedure</strong> — A documented process to access ePHI in case of emergency when normal access controls can't be used. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+    </div>
+
+    <h3>Encryption</h3>
+    <div style="background:var(--color-gray-50);border-radius:12px;padding:8px 20px;margin:16px 0">
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Hard drive encryption on all workstations and laptops</strong> — BitLocker (Windows) or FileVault (Mac) should be enabled on every device that accesses patient data. An unencrypted lost laptop = a reportable HIPAA breach. <em style="color:var(--color-text-muted);font-size:0.875rem">(Addressable — strongly recommended)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Encrypted backup storage</strong> — All backup copies of ePHI must be encrypted. An external hard drive sitting in a drawer with unencrypted patient data is non-compliant. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Encrypted email for patient communication</strong> — Standard Gmail or Outlook without encryption is not HIPAA-compliant for sending patient records, treatment plans, or X-rays. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Encrypted network transmission</strong> — All data traveling across your network (including your Wi-Fi) must use secure protocols (TLS, HTTPS). No ePHI should ever travel over an unencrypted connection. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+    </div>
+
+    <h3>Audit Controls</h3>
+    <div style="background:var(--color-gray-50);border-radius:12px;padding:8px 20px;margin:16px 0">
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Activity logging in your practice management software</strong> — Dentrix, Eaglesoft, and Open Dental all have audit log capabilities. They must be enabled to record who accessed, modified, or deleted patient records and when. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>System-level audit logs</strong> — Your server and workstations should log login attempts, failed access, and system events. These logs must be retained and reviewed periodically. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Regular log review</strong> — Someone at your practice (or your IT provider) must periodically review audit logs for unusual access patterns. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+    </div>
+
+    <h3>Network Security</h3>
+    <div style="background:var(--color-gray-50);border-radius:12px;padding:8px 20px;margin:16px 0">
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Separate guest Wi-Fi</strong> — Patient-facing Wi-Fi must be completely isolated from the network carrying ePHI. Never let patients or visitors on the same network as your Dentrix server. <em style="color:var(--color-text-muted);font-size:0.875rem">(Best practice / Required for compliance)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Business-grade firewall</strong> — A consumer router from Best Buy is not sufficient. A managed firewall with intrusion detection, content filtering, and regular firmware updates is required. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Endpoint protection on all devices</strong> — Every workstation, laptop, and server needs business-grade antivirus/anti-malware — not the free consumer version. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Regular patching and updates</strong> — Operating systems and software must be kept updated. Unpatched systems are the primary entry point for ransomware attacks on dental offices. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+    </div>
+
+    <h3>Backup and Recovery</h3>
+    <div style="background:var(--color-gray-50);border-radius:12px;padding:8px 20px;margin:16px 0">
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Automated daily backups of all ePHI</strong> — Including Dentrix/Eaglesoft databases, imaging data, and scanned documents. Manual backups don't meet HIPAA's contingency plan requirements. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Offsite or cloud backup</strong> — A local-only backup doesn't protect against fire, flood, or ransomware. At least one backup copy must be stored offsite or in a HIPAA-compliant cloud with a signed BAA. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+      <div class="checklist-item">
+        <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <div><strong>Regular backup testing</strong> — HIPAA requires testing your disaster recovery procedures. A backup you've never tested is not a backup. <em style="color:var(--color-text-muted);font-size:0.875rem">(Required)</em></div>
+      </div>
+    </div>
+
+    <h2>What Is a HIPAA Security Risk Assessment for a Dental Office?</h2>
+
+    <p>The annual <strong>HIPAA Security Risk Assessment (SRA)</strong> is one of the most commonly skipped requirements — and one of the first things OCR asks for during an audit. Under 45 CFR § 164.308(a)(1), it is a required implementation specification.</p>
+
+    <p>A proper risk assessment for a dental office covers:</p>
+
+    <ol>
+      <li><strong>Inventory of ePHI:</strong> Where does patient data live? (Dentrix server, imaging software, cloud services, laptops, phones)</li>
+      <li><strong>Threat identification:</strong> What could go wrong? (Ransomware, hardware failure, theft, employee error, vendor breach)</li>
+      <li><strong>Vulnerability assessment:</strong> What weaknesses exist in your current IT setup?</li>
+      <li><strong>Current safeguards review:</strong> What do you already have in place?</li>
+      <li><strong>Risk rating:</strong> Which gaps pose the highest risk to patient data?</li>
+      <li><strong>Remediation plan:</strong> What needs to be fixed, in what order, by when?</li>
+    </ol>
+
+    <div class="blog-callout">
+      <p>⚠️ <strong>Important:</strong> The HHS SRA Tool (free from the government) helps document a risk assessment but is not the same as having a qualified IT professional audit your actual systems. Most dental practices need both.</p>
+    </div>
+
+    <h2>What HIPAA-Compliant IT Support for Dentists Actually Means</h2>
+
+    <p>Any IT provider who accesses your systems — even remotely — is a <strong>business associate</strong> under HIPAA and must sign a Business Associate Agreement (BAA). But a signed BAA is the minimum, not the whole picture.</p>
+
+    <p>A truly HIPAA-compliant IT provider for a dental office should:</p>
+
+    <ul>
+      <li>Understand Dentrix, Eaglesoft, and Open Dental's data structures and security settings</li>
+      <li>Configure audit logging in your practice management software</li>
+      <li>Manage encryption on all workstations and backup systems</li>
+      <li>Conduct or support your annual security risk assessment with documented findings</li>
+      <li>Monitor your network for threats and unusual activity</li>
+      <li>Manage patching and updates across your entire environment</li>
+      <li>Test your backup restoration quarterly — not just assume it works</li>
+      <li>Provide documentation you can show an OCR auditor</li>
+    </ul>
+
+    <p>A general IT company that "also does healthcare" is not the same as a dental-specific IT provider. HIPAA compliance for a dental office requires understanding the specific workflows, software, and compliance obligations that general IT providers aren't familiar with.</p>
+
+    <h2>Most Common HIPAA IT Violations in Dental Offices</h2>
+
+    <p>Based on OCR enforcement actions and our own audits of new dental clients, these are the most frequent IT-related HIPAA violations we find:</p>
+
+    <ul>
+      <li><strong>Shared login credentials:</strong> Multiple staff members using the same username and password — eliminates audit trail and accountability</li>
+      <li><strong>Unencrypted laptops:</strong> A laptop used for patient scheduling or remote access to Dentrix without BitLocker enabled</li>
+      <li><strong>No automatic screen lock:</strong> Workstations left logged in and visible in patient areas or during lunch breaks</li>
+      <li><strong>Backup never tested:</strong> Practice believes they're backed up, but restoration has never been verified</li>
+      <li><strong>Consumer email for patient records:</strong> Sending X-rays or treatment plans via standard Gmail without a Google Workspace BAA</li>
+      <li><strong>No BAA with IT provider:</strong> IT company has full access to patient data but never signed a BAA</li>
+      <li><strong>Outdated software:</strong> Windows 10 end-of-life or Dentrix versions no longer receiving security updates</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">Does HIPAA apply to dental offices?</button>
+        <div class="accordion-content">
+          <p>Yes. Dental practices are covered entities under HIPAA because they create, receive, and transmit protected health information — including patient records, X-rays, and insurance claims. All three HIPAA rules (Privacy, Security, and Breach Notification) apply in full.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">What are the HIPAA technical safeguard requirements for dental offices?</button>
+        <div class="accordion-content">
+          <p>HIPAA's Security Rule requires: unique user logins (no sharing), automatic workstation logoff, encryption of ePHI at rest and in transit, audit logs tracking who accessed patient data and when, and integrity controls preventing unauthorized modification of records.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is a HIPAA security risk assessment for a dental office?</button>
+        <div class="accordion-content">
+          <p>An annual required process to identify where ePHI lives in your practice, what threats and vulnerabilities exist, and what safeguards you have in place. It must be documented and updated whenever significant changes occur. OCR routinely requests this during investigations.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Do dentists need HIPAA-compliant IT support?</button>
+        <div class="accordion-content">
+          <p>Yes. Any IT provider who accesses systems containing patient data is a business associate under HIPAA and must sign a BAA. Beyond the BAA, a dental-specific IT provider understands how to configure Dentrix, Eaglesoft, and dental imaging systems to meet HIPAA's technical safeguard requirements.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">What happens if a dental office fails a HIPAA audit?</button>
+        <div class="accordion-content">
+          <p>HIPAA penalties range from $100 to $50,000 per violation, with annual caps up to $1.5 million per violation category. Beyond financial penalties, practices may be required to implement a corrective action plan monitored by OCR for multiple years.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>How FlossByte Helps Bay Area Dental Offices Achieve HIPAA IT Compliance</h2>
+
+    <p>FlossByte is built exclusively for dental practices. Every client engagement includes:</p>
+
+    <ul>
+      <li><strong>HIPAA IT assessment:</strong> We audit your current systems against every technical safeguard requirement and produce a written report you can use for your risk assessment documentation.</li>
+      <li><strong>Encryption deployment:</strong> BitLocker on all workstations, encrypted backups, and secure email configuration — handled for you.</li>
+      <li><strong>Audit log configuration:</strong> We enable and configure audit logging in Dentrix, Eaglesoft, or Open Dental and review logs monthly.</li>
+      <li><strong>Compliant backup:</strong> Automated daily backups with HIPAA-compliant cloud storage and a signed BAA included.</li>
+      <li><strong>Signed BAA:</strong> We provide a Business Associate Agreement as standard — no asking required.</li>
+      <li><strong>Ongoing compliance monitoring:</strong> Patch management, threat monitoring, and quarterly backup testing — documented for your records.</li>
+    </ul>
+
+    <p>We serve dental practices across <a href="../locations/peninsula.html" style="color:var(--color-teal);font-weight:600">the Peninsula</a>, <a href="../locations/east-bay.html" style="color:var(--color-teal);font-weight:600">East Bay</a>, and <a href="../locations/south-bay.html" style="color:var(--color-teal);font-weight:600">South Bay</a>. If you're not sure your IT setup meets HIPAA's requirements, start with a free assessment — no commitment needed.</p>
+
+  </div>
+</section>
+
+<!-- Related Articles -->
+<section style="padding:0 0 48px">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:20px">Related Articles</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="hipaa-compliance-for-dental-practices.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">HIPAA Compliance for Dental Practices in 2026</span>
+      </a>
+      <a href="dental-data-backup-recovery-guide.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery: The Complete Guide</span>
+      </a>
+      <a href="dental-cybersecurity-antivirus.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Cybersecurity: Why Antivirus Alone Isn't Enough</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-light" style="padding:48px 0">
+  <div class="container" style="max-width:800px">
+    <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border-radius:16px;padding:40px 32px;text-align:center">
+      <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.03em">FREE IT ASSESSMENT</div>
+      <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:12px">Is Your Dental Office IT Actually HIPAA-Compliant?</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">FlossByte audits your IT setup against every HIPAA technical safeguard — encryption, access controls, backups, audit logs, and more. Free assessment, no commitment.</p>
+      <a class="btn btn-primary" href="../contact.html" style="color:#fff;font-size:1rem">Get Your Free HIPAA IT Assessment →</a>
+      <p style="margin-top:16px;font-size:0.8125rem;color:rgba(255,255,255,0.35)">Serving San Jose · San Francisco · East Bay · Peninsula</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="../components.min.js?v=2" defer></script>
+</body>
+</html>

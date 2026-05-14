@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dentrix IT Support Guide: Server Migration, Performance & Troubleshooting (2026) — FlossByte</title>
+  <meta name="description" content="The complete Dentrix IT support guide for dental practices — server migration, slow performance fixes, database errors, network setup, backup, and when to call your IT provider." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Dentrix IT Support Guide: Server Migration, Performance & Troubleshooting (2026)" />
+  <meta property="og:description" content="The complete Dentrix IT support guide for dental practices — server migration, slow performance fixes, database errors, network setup, backup, and when to call your IT provider." />
+  <meta property="og:url" content="https://flossbyte.com/blog/dentrix-it-support-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://flossbyte.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="FlossByte" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://flossbyte.com/blog/dentrix-it-support-guide" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Dentrix IT Support Guide: Server Migration, Performance & Troubleshooting (2026)",
+    "description": "The complete Dentrix IT support guide for dental practices — server migration, slow performance fixes, database errors, network setup, backup, and when to call your IT provider.",
+    "author": {"@type": "Organization", "name": "FlossByte"},
+    "publisher": {"@type": "Organization", "name": "FlossByte", "logo": {"@type": "ImageObject", "url": "https://flossbyte.com/assets/favicon.png"}},
+    "datePublished": "2026-05-14",
+    "dateModified": "2026-05-14",
+    "url": "https://flossbyte.com/blog/dentrix-it-support-guide",
+    "keywords": ["dentrix it support", "dentrix server migration", "dentrix help", "dentrix software support", "dentrix slow performance", "dentrix database error", "dentrix enterprise support", "remote dentrix support"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is Dentrix running slow?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The most common causes of slow Dentrix performance are an aging server with insufficient RAM, a fragmented or corrupted database, too many workstations connected simultaneously, network bottlenecks, or antivirus software scanning Dentrix database files in real time. A Dentrix-experienced IT provider can diagnose the specific cause and fix it without disrupting your schedule."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I migrate Dentrix to a new server?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A Dentrix server migration involves: backing up the full Dentrix database and image files, installing Dentrix on the new server, restoring the database, reconfiguring all workstations to point to the new server, and verifying all data, images, and reports transferred correctly. This should be performed by an IT provider experienced with Dentrix — a failed migration can result in data loss or days of downtime."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does Dentrix require a dedicated server?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Dentrix G7 and later can run in a server-client configuration or in the cloud. For practices with 3 or more workstations, a dedicated server (physical or virtual) is strongly recommended for performance and reliability. Henry Schein One also offers Dentrix cloud hosting options for practices that want to eliminate on-premise server hardware."}
+      },
+      {
+        "@type": "Question",
+        "name": "What are the Dentrix server hardware requirements?",
+        "acceptedAnswer": {"@type": "Answer", "text": "For Dentrix G7+, Henry Schein One recommends a server with a modern multi-core processor, minimum 16GB RAM (32GB recommended for larger practices), SSD storage, and Windows Server 2019 or later. Workstations require Windows 10 or 11 with 8GB RAM minimum. Running Dentrix on hardware below these specs is the most common cause of performance issues."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can Dentrix be accessed remotely?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Dentrix can be accessed remotely via a secure remote desktop connection (RDP) or VPN to your office server, or through Dentrix cloud hosting. Remote access must be secured with multi-factor authentication and encrypted connections to remain HIPAA-compliant."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is Dentrix Enterprise?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Dentrix Enterprise is a version of Dentrix designed for large dental organizations, DSOs, and multi-location practices. It uses a centralized database that can be accessed across multiple locations, supports enterprise-level reporting, and integrates with DSO workflows. It has different IT infrastructure requirements than standard Dentrix."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flossbyte.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://flossbyte.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Dentrix IT Support Guide", "item": "https://flossbyte.com/blog/dentrix-it-support-guide"}
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../index.min.css?v=2" />
+  <style>
+    .blog-header { background:var(--color-navy); padding: calc(var(--nav-height) + 64px) 0 64px; }
+    .blog-meta-bar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+    .blog-reading-time { display:flex; align-items:center; gap:6px; font-size:0.875rem; color:rgba(255,255,255,0.5); }
+  </style>
+</head>
+<body>
+<main>
+
+<!-- Blog Post Header -->
+<header class="blog-header" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(0,191,165,0.08) 0%,transparent 70%)"></div>
+  <div class="container" style="position:relative;z-index:2;max-width:800px">
+    <nav style="display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
+      <a href="../index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
+      <span>›</span>
+      <a href="index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
+      <span>›</span>
+      <span style="color:var(--color-teal)">Dentrix IT Support Guide</span>
+    </nav>
+    <div class="blog-meta-bar">
+      <span class="badge badge-teal">Dental Software Support</span>
+      <span class="blog-reading-time">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        11 min read
+      </span>
+    </div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px">Dentrix IT Support Guide: Server Migration, Performance & Troubleshooting (2026)</h1>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Dentrix is the backbone of your practice. When it runs poorly — or stops running — everything stops. Here's everything an IT provider needs to know to keep Dentrix fast, stable, and HIPAA-compliant.</p>
+  </div>
+</header>
+
+<!-- Blog Content -->
+<section style="padding:64px 0">
+  <div class="blog-post-content">
+
+    <p>Dentrix powers more dental practices than any other practice management software in North America. It's reliable when properly configured and maintained — but it's also one of the most technically demanding applications in the dental office environment. Most Dentrix problems aren't Dentrix problems at all. They're IT problems: aging servers, misconfigured networks, improper backups, or software that hasn't been updated in years.</p>
+
+    <p>This guide covers the most common Dentrix IT issues, how to fix them, what a proper Dentrix server migration looks like, and when you need a dental-specialized IT provider rather than a general one.</p>
+
+    <h2>Dentrix System Requirements (2026)</h2>
+
+    <p>Running Dentrix on hardware that doesn't meet minimum requirements is the single most common cause of performance problems. Before troubleshooting anything else, verify your infrastructure meets these specs:</p>
+
+    <div style="overflow-x:auto;margin:24px 0">
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
+        <thead>
+          <tr style="background:var(--color-navy);color:#fff">
+            <th style="padding:12px 16px;text-align:left;border-radius:8px 0 0 0">Component</th>
+            <th style="padding:12px 16px;text-align:left">Minimum</th>
+            <th style="padding:12px 16px;text-align:left;border-radius:0 8px 0 0">Recommended</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Server OS</td>
+            <td style="padding:12px 16px">Windows Server 2016</td>
+            <td style="padding:12px 16px">Windows Server 2022</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Server RAM</td>
+            <td style="padding:12px 16px">16 GB</td>
+            <td style="padding:12px 16px">32 GB+</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Server Storage</td>
+            <td style="padding:12px 16px">HDD (7200 RPM)</td>
+            <td style="padding:12px 16px">SSD (NVMe)</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Workstation OS</td>
+            <td style="padding:12px 16px">Windows 10</td>
+            <td style="padding:12px 16px">Windows 11</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Workstation RAM</td>
+            <td style="padding:12px 16px">8 GB</td>
+            <td style="padding:12px 16px">16 GB</td>
+          </tr>
+          <tr style="background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Network</td>
+            <td style="padding:12px 16px">100 Mbps</td>
+            <td style="padding:12px 16px">Gigabit Ethernet</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>If your server is more than 5–7 years old, it likely falls below these specs — particularly in RAM and storage speed. Upgrading the server is often more cost-effective than spending hours troubleshooting performance on outdated hardware.</p>
+
+    <h2>Common Dentrix IT Problems (And How to Fix Them)</h2>
+
+    <h3>Dentrix Running Slow</h3>
+    <p>Slow Dentrix performance is the most common complaint we hear from new clients. The causes, in order of frequency:</p>
+
+    <ul>
+      <li><strong>Aging server hardware:</strong> A server bought in 2016 running a practice that has grown significantly is almost always underpowered. Check RAM usage on the server — if it's consistently above 85%, it's time for an upgrade.</li>
+      <li><strong>HDD instead of SSD:</strong> Dentrix's database is read-intensive. Moving from a traditional hard drive to an SSD can improve load times by 3–5x without any other changes.</li>
+      <li><strong>Antivirus scanning Dentrix files in real time:</strong> Many antivirus programs scan every file as it's accessed. For a database that opens hundreds of records per hour, this creates enormous overhead. Dentrix database directories should be excluded from real-time AV scanning (while still being scanned on schedule).</li>
+      <li><strong>Database fragmentation:</strong> The Dentrix database grows over years of use and can become fragmented. Regular database maintenance — available through Dentrix's built-in tools — compresses and optimizes the database.</li>
+      <li><strong>Network bottleneck:</strong> If your network is running on older switches or Wi-Fi instead of wired connections, workstation-to-server communication slows every Dentrix operation. Wired Gigabit Ethernet is strongly recommended for all Dentrix workstations.</li>
+    </ul>
+
+    <h3>Dentrix Won't Open / Crashes on Launch</h3>
+    <p>If Dentrix won't open or crashes immediately, check these in order:</p>
+    <ol>
+      <li>Verify the Dentrix server service is running (check Windows Services on the server)</li>
+      <li>Check if other workstations can open Dentrix — if only one machine is affected, the issue is local to that workstation</li>
+      <li>Review the Dentrix error log (located in the Dentrix program folder) for specific error codes</li>
+      <li>Ensure the workstation can reach the server by name and IP address</li>
+      <li>Verify Dentrix software is up to date — some crashes are caused by known bugs fixed in later releases</li>
+    </ol>
+
+    <h3>Dentrix Database Errors</h3>
+    <p>Database errors — "Database connection failed," "Cannot open database," or specific SQL error codes — usually indicate one of three things:</p>
+    <ul>
+      <li><strong>SQL Server service stopped:</strong> The underlying SQL Server that Dentrix depends on may have stopped. Restart the SQL Server service from Windows Services.</li>
+      <li><strong>Database corruption:</strong> Power failures, improper shutdowns, or storage issues can corrupt the Dentrix database. This requires database repair tools — do not attempt to repair a corrupted database without a current backup and professional assistance.</li>
+      <li><strong>Permission issues:</strong> Windows permission changes (from updates, new user accounts, or IT changes) can prevent Dentrix from accessing its database files.</li>
+    </ul>
+
+    <div class="blog-callout">
+      <p>⚠️ <strong>Never attempt database repair without a verified backup.</strong> If you're seeing database errors, take a full backup of the Dentrix data directory immediately before attempting any repair steps.</p>
+    </div>
+
+    <h3>Dentrix Images Not Loading</h3>
+    <p>If X-rays and patient images aren't displaying, the issue is usually with the imaging software path rather than Dentrix itself. Check:</p>
+    <ul>
+      <li>The image file path configured in Dentrix — it should point to the correct network location where images are stored</li>
+      <li>That the workstation has proper network access to the image folder</li>
+      <li>That the imaging integration (Dexis, Eaglesoft Imaging, Carestream, etc.) is properly configured on the affected workstation</li>
+    </ul>
+
+    <!-- Inline CTA -->
+    <div style="margin:40px 0;padding:32px;background:linear-gradient(135deg,var(--color-navy) 0%,#1a304f 100%);border-radius:16px;text-align:center">
+      <p style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px">Dentrix Problems Slowing Down Your Practice?</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte specializes in Dentrix IT support for Bay Area dental practices. We diagnose and fix performance issues, database errors, and server problems — fast.</p>
+      <a class="btn btn-primary" href="../services/dentrix-support.html" style="font-size:0.95rem;color:#fff">See Our Dentrix Support Services →</a>
+    </div>
+
+    <h2>Dentrix Server Migration: Step-by-Step Guide</h2>
+
+    <p>Migrating Dentrix to a new server is one of the highest-stakes IT projects a dental practice undertakes. Done correctly, it takes one evening and the practice opens the next morning without issues. Done incorrectly, it results in data loss, days of downtime, and corrupted patient records.</p>
+
+    <p>Here's what a proper Dentrix server migration involves:</p>
+
+    <h3>Phase 1: Pre-Migration Planning (1–2 Weeks Before)</h3>
+    <ul>
+      <li>Verify the new server meets Dentrix hardware requirements</li>
+      <li>Confirm Windows Server license and Dentrix license transferability</li>
+      <li>Document current server configuration: IP address, server name, share names, user permissions</li>
+      <li>Identify all Dentrix data locations — database files, image store, document archive, and any custom paths</li>
+      <li>Identify all workstations and verify they can reach the new server</li>
+      <li>Schedule migration for a low-volume day (typically a Friday evening)</li>
+    </ul>
+
+    <h3>Phase 2: Pre-Migration Backup (Same Day)</h3>
+    <ul>
+      <li>Run a full Dentrix database backup and verify it completes without errors</li>
+      <li>Copy all image files and document archives to a separate backup location</li>
+      <li>Confirm backup integrity — do not proceed without a verified, complete backup</li>
+      <li>Record the exact Dentrix version number on the old server</li>
+    </ul>
+
+    <h3>Phase 3: New Server Setup</h3>
+    <ul>
+      <li>Install and configure Windows Server on the new hardware</li>
+      <li>Install SQL Server (matching the version Dentrix requires)</li>
+      <li>Install the same version of Dentrix as the old server</li>
+      <li>Configure network shares with identical names and permissions as the old server</li>
+      <li>Restore the Dentrix database backup to the new SQL instance</li>
+      <li>Copy image files and document archives to the new server</li>
+      <li>Verify Dentrix opens correctly on the new server with all data intact</li>
+    </ul>
+
+    <h3>Phase 4: Workstation Reconfiguration</h3>
+    <ul>
+      <li>Update each workstation's Dentrix configuration to point to the new server</li>
+      <li>Map network drives to the new server shares</li>
+      <li>Update imaging software paths to point to the new image location</li>
+      <li>Test Dentrix on every workstation — open patient records, verify images load, run a test report</li>
+    </ul>
+
+    <h3>Phase 5: Post-Migration Verification</h3>
+    <ul>
+      <li>Verify the backup solution is capturing data from the new server</li>
+      <li>Confirm audit logs are enabled and working</li>
+      <li>Test patient check-in, treatment planning, and billing workflows</li>
+      <li>Keep the old server available (powered on, not decommissioned) for 30 days as a fallback</li>
+    </ul>
+
+    <div class="blog-callout">
+      <p>💡 <strong>Common migration mistake:</strong> Many IT providers migrate the Dentrix database but forget to update the imaging software paths on workstations. The practice opens the next morning, patient records load fine — but clicking on X-rays produces errors because the image path still points to the old server.</p>
+    </div>
+
+    <h2>Dentrix Backup: What You're Actually Backing Up</h2>
+
+    <p>Dentrix stores data in multiple locations that must all be captured in a complete backup:</p>
+
+    <ul>
+      <li><strong>Dentrix database (SQL Server):</strong> The core database containing all patient records, appointments, treatment histories, and billing data. Located in the SQL Server data directory.</li>
+      <li><strong>Dentrix document archive:</strong> Scanned documents, referral letters, and paper records that have been digitized. Often stored in a separate folder.</li>
+      <li><strong>Dental imaging data:</strong> X-rays and patient photos managed by your imaging software (Dexis, Carestream, etc.) — stored separately from the Dentrix database.</li>
+      <li><strong>Dentrix letters and forms:</strong> Custom letter templates and form configurations.</li>
+    </ul>
+
+    <p>A backup that only captures the SQL database but misses the imaging folder is incomplete. When we audit new clients, incomplete backup scope is one of the most common findings. Read our full <a href="dental-data-backup-recovery-guide.html" style="color:var(--color-teal);font-weight:600">dental data backup and recovery guide</a> for detailed backup requirements.</p>
+
+    <h2>Remote Dentrix Access: How to Do It Safely</h2>
+
+    <p>Dentrix can be accessed remotely — dentists checking schedules from home, office managers approving treatment plans, or IT providers troubleshooting issues. But remote access to a system containing ePHI must be configured securely:</p>
+
+    <ul>
+      <li><strong>VPN with MFA:</strong> Remote users should connect through a VPN with multi-factor authentication before accessing the Dentrix server. This encrypts the connection and verifies identity.</li>
+      <li><strong>Remote Desktop Protocol (RDP):</strong> RDP must never be exposed directly to the internet. It should only be accessible through the VPN, never on a public-facing port.</li>
+      <li><strong>Dentrix cloud hosting:</strong> Henry Schein One offers cloud-hosted Dentrix where the database lives in their data centers. This eliminates the need for a local server and makes remote access simpler — but requires evaluating cost and performance tradeoffs for your practice size.</li>
+      <li><strong>Session logging:</strong> All remote sessions accessing patient data should be logged for HIPAA audit purposes.</li>
+    </ul>
+
+    <h2>Dentrix Enterprise: IT Requirements for DSOs</h2>
+
+    <p>Dentrix Enterprise is a separate product from standard Dentrix, designed for dental service organizations (DSOs) and large multi-location groups. The IT requirements are significantly more complex:</p>
+
+    <ul>
+      <li><strong>Centralized SQL Server database:</strong> All locations share a single database, typically hosted in a data center or private cloud — not at an individual office.</li>
+      <li><strong>Site-to-site VPN or MPLS connectivity:</strong> Each location needs a reliable, secure connection to the central database. A consumer internet connection is usually insufficient.</li>
+      <li><strong>Dedicated DBA oversight:</strong> The SQL Server database supporting Dentrix Enterprise requires regular database administration — backup verification, index maintenance, performance tuning.</li>
+      <li><strong>Standardized workstation images:</strong> For consistent performance across locations, workstations should be deployed from a standardized image with identical Dentrix configuration.</li>
+    </ul>
+
+    <h2>When You Need a Dentrix-Specific IT Provider</h2>
+
+    <p>General IT providers can handle basic Windows server administration, but Dentrix support requires specific knowledge that most don't have:</p>
+
+    <ul>
+      <li>Understanding of Dentrix's SQL Server database structure and file locations</li>
+      <li>Experience with Dentrix server migrations without data loss</li>
+      <li>Knowledge of imaging software integration (Dexis, Carestream, Schick, etc.)</li>
+      <li>Familiarity with Henry Schein's Dentrix support escalation process</li>
+      <li>Understanding of HIPAA requirements as they apply to Dentrix configuration (audit logs, encryption, backup)</li>
+    </ul>
+
+    <p>If your IT provider has never performed a Dentrix migration, don't let your practice be the first. The cost of a failed migration — in downtime, data recovery, and staff time — far exceeds the cost of hiring someone who has done it before.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">Why is Dentrix running slow?</button>
+        <div class="accordion-content">
+          <p>The most common causes are an aging server with insufficient RAM, slow HDD storage (vs SSD), antivirus software scanning Dentrix files in real time, database fragmentation, or a network bottleneck. A Dentrix-experienced IT provider can identify the specific cause in a single diagnostic session.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">How do I migrate Dentrix to a new server?</button>
+        <div class="accordion-content">
+          <p>A Dentrix server migration requires: full backup and verification, installing Dentrix on the new server with matching version, restoring the database, migrating image and document files, reconfiguring all workstations, and thorough post-migration testing. This should be performed by an IT provider with Dentrix migration experience to avoid data loss or extended downtime.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Does Dentrix require a dedicated server?</button>
+        <div class="accordion-content">
+          <p>For practices with 3 or more workstations, a dedicated server is strongly recommended. Dentrix can technically run on a workstation acting as a server, but this causes significant performance issues as the practice grows. Henry Schein One also offers cloud-hosted Dentrix for practices that want to eliminate on-premise hardware.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Can Dentrix be accessed remotely?</button>
+        <div class="accordion-content">
+          <p>Yes — through a secure VPN with multi-factor authentication, or via Dentrix cloud hosting. Remote access must be encrypted and logged to meet HIPAA requirements. Never expose Dentrix's server directly to the internet without VPN protection.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is Dentrix Enterprise?</button>
+        <div class="accordion-content">
+          <p>Dentrix Enterprise is designed for DSOs and multi-location practices. It uses a centralized database accessible from all locations, with more advanced reporting and integration features than standard Dentrix. It requires more complex IT infrastructure — including centralized hosting, site-to-site connectivity, and dedicated database administration.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">What are the Dentrix server hardware requirements?</button>
+        <div class="accordion-content">
+          <p>For Dentrix G7+: Windows Server 2019 or later, 16GB RAM minimum (32GB recommended), SSD storage, and a modern multi-core processor. Workstations need Windows 10 or 11 with 8GB RAM minimum and Gigabit Ethernet connectivity to the server.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>FlossByte's Dentrix IT Support Services</h2>
+
+    <p>FlossByte provides dedicated <a href="../services/dentrix-support.html" style="color:var(--color-teal);font-weight:600">Dentrix IT support</a> for Bay Area dental practices — from ongoing performance monitoring to full server migrations:</p>
+
+    <ul>
+      <li><strong>Dentrix server migrations:</strong> We've performed dozens of Dentrix migrations across Bay Area practices. Same-night migrations with next-morning readiness.</li>
+      <li><strong>Performance optimization:</strong> Database maintenance, hardware assessment, antivirus configuration, and network tuning to keep Dentrix fast.</li>
+      <li><strong>Database error recovery:</strong> If your Dentrix database has errors or corruption, we have the tools and experience to repair it — with a backup in hand before we touch anything.</li>
+      <li><strong>HIPAA-compliant configuration:</strong> Audit log setup, workstation encryption, and backup configuration that meets HIPAA's technical safeguard requirements.</li>
+      <li><strong>Remote Dentrix support:</strong> Most Dentrix issues can be diagnosed and resolved remotely without an on-site visit — minimizing disruption to your schedule.</li>
+      <li><strong>Dentrix Enterprise support:</strong> IT infrastructure design and ongoing support for DSOs and multi-location practices running Dentrix Enterprise.</li>
+    </ul>
+
+    <p>We serve practices across <a href="../locations/peninsula.html" style="color:var(--color-teal);font-weight:600">the Peninsula</a>, <a href="../locations/east-bay.html" style="color:var(--color-teal);font-weight:600">East Bay</a>, and <a href="../locations/south-bay.html" style="color:var(--color-teal);font-weight:600">South Bay</a>. If you're dealing with a Dentrix issue right now or want to get ahead of a server migration, reach out for a free assessment.</p>
+
+  </div>
+</section>
+
+<!-- Related Articles -->
+<section style="padding:0 0 48px">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:20px">Related Articles</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="dentrix-vs-eaglesoft-vs-open-dental.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dentrix vs Eaglesoft vs Open Dental: Which Is Right for Your Practice?</span>
+      </a>
+      <a href="dental-data-backup-recovery-guide.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery: The Complete Guide</span>
+      </a>
+      <a href="hipaa-it-requirements-dental-offices.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">HIPAA IT Requirements for Dental Offices: Technical Safeguards Checklist</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-light" style="padding:48px 0">
+  <div class="container" style="max-width:800px">
+    <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border-radius:16px;padding:40px 32px;text-align:center">
+      <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.03em">DENTRIX SPECIALISTS</div>
+      <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:12px">Need Dentrix IT Support in the Bay Area?</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">Whether it's a slow server, an upcoming migration, database errors, or HIPAA configuration — FlossByte has the Dentrix experience to fix it right the first time.</p>
+      <a class="btn btn-primary" href="../contact.html" style="color:#fff;font-size:1rem">Get Free Dentrix Assessment →</a>
+      <p style="margin-top:16px;font-size:0.8125rem;color:rgba(255,255,255,0.35)">Serving San Jose · San Francisco · East Bay · Peninsula</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="../components.min.js?v=2" defer></script>
+</body>
+</html>

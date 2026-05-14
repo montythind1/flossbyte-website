@@ -23,7 +23,6 @@
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="index.min.css?v=2" />
   <style>
-    /* Option C — booking reveal */
     .booking-reveal {
       max-height: 0;
       overflow: hidden;
@@ -31,9 +30,6 @@
     }
     .booking-reveal.open {
       max-height: 760px;
-    }
-    .booking-reveal-inner {
-      padding-top: 24px;
     }
     .book-toggle-btn {
       display: flex;
@@ -51,7 +47,6 @@
       font-weight: 700;
       cursor: pointer;
       transition: opacity 0.2s ease, transform 0.2s ease;
-      text-decoration: none;
     }
     .book-toggle-btn:hover {
       opacity: 0.9;
@@ -60,13 +55,82 @@
     .book-toggle-btn .btn-arrow {
       transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       display: inline-block;
+      margin-left: auto;
     }
     .book-toggle-btn.active .btn-arrow {
       transform: rotate(180deg);
     }
     .book-toggle-btn.active {
-      background: linear-gradient(135deg, #0f172a, var(--color-navy));
       border-radius: 12px 12px 0 0;
+    }
+
+    /* Compact contact row */
+    .contact-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .contact-tile {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 18px 16px;
+      border: 1.5px solid var(--color-gray-200);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      background: #fff;
+    }
+    .contact-tile:hover {
+      border-color: var(--color-teal);
+      box-shadow: 0 4px 16px rgba(20,184,166,0.12);
+    }
+    .contact-tile-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--color-text-muted);
+    }
+    .contact-tile-value {
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      word-break: break-all;
+    }
+    .contact-tile-icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(20,184,166,0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+      color: var(--color-teal);
+    }
+
+    /* Trust signals */
+    .trust-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-gray-200);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    .trust-item svg {
+      flex-shrink: 0;
+      color: var(--color-teal);
     }
   </style>
 </head>
@@ -92,7 +156,7 @@
       <div class="fade-up">
         <div class="section-eyebrow">Free Assessment</div>
         <h2 class="section-title" style="margin-bottom:8px">Tell Us About Your Practice</h2>
-        <p class="section-subtitle" style="margin-bottom:32px">Fill out the form and we'll respond within one business day with an honest assessment — no sales pressure, no commitment.</p>
+        <p class="section-subtitle" style="margin-bottom:32px">We'll respond within one business day with honest recommendations — no sales pressure, no commitment.</p>
 
         <form id="contact-form" action="https://formspree.io/f/xdawvyyr" method="POST" novalidate>
           <input type="hidden" name="_subject" value="New Contact from FlossByte Website" />
@@ -179,89 +243,71 @@
 
       <!-- Sidebar -->
       <div class="fade-up fade-up-delay-2">
-        <div class="section-eyebrow">Direct Contact</div>
-        <h2 class="section-title" style="font-size:1.75rem;margin-bottom:24px">Prefer to reach out directly?</h2>
 
-        <!-- Phone + Email cards -->
-        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px">
-          <a href="tel:6692372264" class="card" style="text-decoration:none;display:flex;align-items:center;gap:16px;padding:20px 24px;">
-            <div class="card-icon" style="margin:0;flex-shrink:0">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <!-- Compact phone + email tiles -->
+        <div class="contact-row">
+          <a href="tel:6692372264" class="contact-tile">
+            <div class="contact-tile-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
-            <div>
-              <div style="font-size:0.8125rem;font-weight:700;color:var(--color-gray-400);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Call Us</div>
-              <div style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:var(--color-navy)">(669) 237-2264</div>
-            </div>
+            <div class="contact-tile-label">Call us</div>
+            <div class="contact-tile-value">(669) 237-2264</div>
           </a>
-          <a href="mailto:hello@flossbyte.com" class="card" style="text-decoration:none;display:flex;align-items:center;gap:16px;padding:20px 24px;">
-            <div class="card-icon" style="margin:0;flex-shrink:0">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <a href="mailto:hello@flossbyte.com" class="contact-tile">
+            <div class="contact-tile-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </div>
-            <div>
-              <div style="font-size:0.8125rem;font-weight:700;color:var(--color-gray-400);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px">Email Us</div>
-              <div style="font-family:var(--font-heading);font-size:1.125rem;font-weight:700;color:var(--color-navy)">hello@flossbyte.com</div>
-            </div>
+            <div class="contact-tile-label">Email us</div>
+            <div class="contact-tile-value">hello@flossbyte.com</div>
           </a>
         </div>
 
         <!-- Book a Call toggle -->
-        <div style="margin-bottom:24px">
-          <div style="font-family:var(--font-heading);font-size:0.875rem;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px">Want to talk sooner?</div>
+        <div style="margin-bottom:8px">
           <button class="book-toggle-btn" id="book-toggle" aria-expanded="false" aria-controls="booking-reveal">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
             Book a Free 30-Min Call
             <span class="btn-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </button>
 
-          <!-- Booking iframe — only loads src when opened -->
+          <!-- Booking iframe — lazy loads on first open -->
           <div class="booking-reveal" id="booking-reveal" style="background:var(--color-navy);border-radius:0 0 12px 12px;overflow:hidden">
-            <div class="booking-reveal-inner" style="padding:0">
-              <iframe
-                id="booking-iframe"
-                data-src="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled"
-                src="about:blank"
-                width="100%"
-                height="620"
-                frameborder="0"
-                scrolling="yes"
-                title="Book a Free Dental IT Assessment with FlossByte"
-                style="display:block">
-              </iframe>
-              <p style="text-align:center;padding:12px 16px;margin:0;font-size:0.8125rem;color:rgba(255,255,255,0.4)">
-                Having trouble? <a href="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled" target="_blank" rel="noopener" style="color:var(--color-teal);font-weight:600">Open directly →</a>
-              </p>
-            </div>
+            <iframe
+              id="booking-iframe"
+              data-src="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled"
+              src="about:blank"
+              width="100%"
+              height="620"
+              frameborder="0"
+              scrolling="yes"
+              title="Book a Free Dental IT Assessment with FlossByte"
+              style="display:block">
+            </iframe>
+            <p style="text-align:center;padding:10px 16px;margin:0;font-size:0.8125rem;color:rgba(255,255,255,0.4)">
+              Having trouble? <a href="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled" target="_blank" rel="noopener" style="color:var(--color-teal);font-weight:600">Open directly →</a>
+            </p>
           </div>
         </div>
 
-        <!-- Service Areas -->
-        <div class="card" style="background:var(--color-navy);border-color:rgba(255,255,255,0.08);padding:28px;margin-bottom:16px">
-          <div style="font-family:var(--font-heading);font-size:1.0625rem;font-weight:700;color:#fff;margin-bottom:16px">Service Areas</div>
-          <div class="location-areas" style="grid-template-columns:1fr">
-            <a href="/locations/peninsula.html" class="location-area-item" style="text-decoration:none;color:inherit">Peninsula & SF</a>
-            <a href="/locations/east-bay.html" class="location-area-item" style="text-decoration:none;color:inherit">East Bay</a>
-            <a href="/locations/south-bay.html" class="location-area-item" style="text-decoration:none;color:inherit">South Bay</a>
+        <!-- Trust signals -->
+        <div class="trust-list">
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Response within 1 business day — usually same day
           </div>
-        </div>
-
-        <!-- What to Expect -->
-        <div class="card section-light" style="padding:24px">
-          <div style="font-family:var(--font-heading);font-size:0.9375rem;font-weight:700;color:var(--color-navy);margin-bottom:12px">What to Expect</div>
-          <div class="process-steps" style="gap:12px">
-            <div class="process-step">
-              <div class="process-step-num" style="width:36px;height:36px;font-size:0.9375rem">1</div>
-              <div><div class="process-step-title" style="font-size:0.9rem">You reach out</div><div class="process-step-text" style="font-size:0.8125rem">Fill out the form or give us a call</div></div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num" style="width:36px;height:36px;font-size:0.9375rem">2</div>
-              <div><div class="process-step-title" style="font-size:0.9rem">We respond fast</div><div class="process-step-text" style="font-size:0.8125rem">Within 1 business day — usually sooner</div></div>
-            </div>
-            <div class="process-step">
-              <div class="process-step-num" style="width:36px;height:36px;font-size:0.9375rem">3</div>
-              <div><div class="process-step-title" style="font-size:0.9rem">Free technology assessment</div><div class="process-step-text" style="font-size:0.8125rem">We review your setup and give honest recommendations</div></div>
-            </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Honest assessment, no sales pitch
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Dental-only IT provider — we speak your language
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            No spam. Your info stays private.
           </div>
         </div>
 
@@ -311,9 +357,9 @@
   });
 
   /* ---- Booking toggle ---- */
-  const toggleBtn = document.getElementById('book-toggle');
-  const revealEl  = document.getElementById('booking-reveal');
-  const iframeEl  = document.getElementById('booking-iframe');
+  const toggleBtn  = document.getElementById('book-toggle');
+  const revealEl   = document.getElementById('booking-reveal');
+  const iframeEl   = document.getElementById('booking-iframe');
   let iframeLoaded = false;
 
   toggleBtn.addEventListener('click', () => {
@@ -321,13 +367,11 @@
     toggleBtn.classList.toggle('active', isOpen);
     toggleBtn.setAttribute('aria-expanded', isOpen);
 
-    // Lazy-load iframe src only on first open
     if (isOpen && !iframeLoaded) {
       iframeEl.src = iframeEl.dataset.src;
       iframeLoaded = true;
     }
 
-    // Scroll into view when opening
     if (isOpen) {
       setTimeout(() => {
         toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

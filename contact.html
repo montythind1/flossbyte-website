@@ -23,130 +23,50 @@
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="index.min.css?v=2" />
   <style>
-    /* Option B — choice card styles */
-    .contact-choice-section {
-      padding: 56px 0 72px;
+    /* Option C — booking reveal */
+    .booking-reveal {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .contact-choice-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 800px;
-      margin: 0 auto;
+    .booking-reveal.open {
+      max-height: 760px;
     }
-    .contact-choice-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 40px 32px;
-      border-radius: 20px;
-      border: 2px solid transparent;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      cursor: pointer;
+    .booking-reveal-inner {
+      padding-top: 24px;
     }
-    .contact-choice-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
-    }
-    .contact-choice-card.card-book {
-      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2e5a 100%);
-      border-color: rgba(255,255,255,0.1);
-    }
-    .contact-choice-card.card-book:hover {
-      border-color: var(--color-teal);
-    }
-    .contact-choice-card.card-message {
-      background: #fff;
-      border-color: var(--color-gray-200);
-    }
-    .contact-choice-card.card-message:hover {
-      border-color: var(--color-teal);
-    }
-    .choice-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+    .book-toggle-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .card-book .choice-icon {
-      background: rgba(255,255,255,0.1);
-    }
-    .card-message .choice-icon {
-      background: rgba(20,184,166,0.1);
-    }
-    .choice-title {
+      gap: 10px;
+      width: 100%;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, var(--color-navy), #1a2e5a);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
       font-family: var(--font-heading);
-      font-size: 1.375rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .card-book .choice-title { color: #fff; }
-    .card-message .choice-title { color: var(--color-navy); }
-
-    .choice-desc {
-      font-size: 0.9375rem;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-    .card-book .choice-desc { color: rgba(255,255,255,0.65); }
-    .card-message .choice-desc { color: var(--color-text-muted); }
-
-    .choice-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-size: 0.8125rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .card-book .choice-badge {
-      background: rgba(20,184,166,0.2);
-      color: #5eead4;
-    }
-    .card-message .choice-badge {
-      background: rgba(20,184,166,0.08);
-      color: var(--color-teal);
-    }
-
-    .choice-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 10px;
       font-size: 0.9375rem;
       font-weight: 700;
-      margin-top: auto;
-      transition: gap 0.2s ease;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
     }
-    .contact-choice-card:hover .choice-cta {
-      gap: 12px;
+    .book-toggle-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
     }
-    .card-book .choice-cta {
-      background: var(--color-teal);
-      color: #fff;
+    .book-toggle-btn .btn-arrow {
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
     }
-    .card-message .choice-cta {
-      background: var(--color-navy);
-      color: #fff;
+    .book-toggle-btn.active .btn-arrow {
+      transform: rotate(180deg);
     }
-
-    @media (max-width: 640px) {
-      .contact-choice-grid {
-        grid-template-columns: 1fr;
-        max-width: 440px;
-      }
-      .contact-choice-card {
-        padding: 32px 24px;
-      }
+    .book-toggle-btn.active {
+      background: linear-gradient(135deg, #0f172a, var(--color-navy));
+      border-radius: 12px 12px 0 0;
     }
   </style>
 </head>
@@ -158,94 +78,13 @@
   <div class="page-hero-bg"></div>
   <div class="container page-hero-content">
     <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>›</span> <span>Contact</span></nav>
-    <h1 class="page-hero-title">Get in Touch With <em style="color:var(--color-teal)">FlossByte</em></h1>
-    <p class="page-hero-subtitle">How would you like to connect? Choose the option that works best for you.</p>
+    <h1 class="page-hero-title">Let's Talk About <em style="color:var(--color-teal)">Your Practice</em></h1>
+    <p class="page-hero-subtitle">Send us a message or book a free 30-minute call — whichever is easier for you.</p>
   </div>
 </section>
-
-<!-- CHOICE CARDS -->
-<section class="contact-choice-section">
-  <div class="container">
-    <div class="contact-choice-grid">
-
-      <!-- Book a Call -->
-      <a class="contact-choice-card card-book fade-up" href="#book-now">
-        <div class="choice-icon">📅</div>
-        <div class="choice-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-          Available now
-        </div>
-        <div class="choice-title">Book a Free Call</div>
-        <p class="choice-desc">Pick a time on our calendar. 30 minutes, no commitment — we'll review your tech stack and give you an honest action plan.</p>
-        <span class="choice-cta">Pick a time →</span>
-      </a>
-
-      <!-- Send a Message -->
-      <a class="contact-choice-card card-message fade-up fade-up-delay-1" href="#send-message">
-        <div class="choice-icon">✉️</div>
-        <div class="choice-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-          Reply within 1 business day
-        </div>
-        <div class="choice-title">Send a Message</div>
-        <p class="choice-desc">Fill out a short form and we'll respond with specific recommendations for your practice. No sales pressure, ever.</p>
-        <span class="choice-cta">Send a message →</span>
-      </a>
-
-    </div>
-
-    <!-- Direct contact strip -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap">
-      <span style="font-size:0.875rem;color:var(--color-text-muted)">Or reach us directly:</span>
-      <a href="tel:6692372264" style="display:inline-flex;align-items:center;gap:8px;font-size:0.9375rem;font-weight:700;color:var(--color-navy);text-decoration:none">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-        (669) 237-2264
-      </a>
-      <a href="mailto:hello@flossbyte.com" style="display:inline-flex;align-items:center;gap:8px;font-size:0.9375rem;font-weight:700;color:var(--color-navy);text-decoration:none">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        hello@flossbyte.com
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING EMBED -->
-<section id="book-now" style="padding:64px 0;background:var(--color-navy)">
-  <div class="container" style="max-width:960px">
-    <div style="text-align:center;margin-bottom:36px">
-      <div class="section-eyebrow" style="color:var(--color-teal)">Instant Scheduling</div>
-      <h2 class="section-title" style="color:#fff">Pick a Time That Works for You</h2>
-      <p class="section-subtitle centered" style="margin-top:12px;color:rgba(255,255,255,0.6)">30 minutes, no commitment. We'll review your Dentrix setup, HIPAA posture, cybersecurity gaps, and backup reliability — then give you a clear action plan.</p>
-    </div>
-    <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.3)">
-      <iframe
-        src="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled"
-        width="100%"
-        height="620"
-        frameborder="0"
-        scrolling="yes"
-        title="Book a Free Dental IT Assessment with FlossByte"
-        style="display:block"
-        loading="lazy">
-      </iframe>
-    </div>
-    <p style="text-align:center;margin-top:16px;font-size:0.875rem;color:rgba(255,255,255,0.4)">
-      Having trouble loading? <a href="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled" target="_blank" rel="noopener" style="color:var(--color-teal);font-weight:600">Open booking page directly →</a>
-    </p>
-  </div>
-</section>
-
-<!-- DIVIDER -->
-<div style="text-align:center;padding:64px 24px 0">
-  <div style="display:inline-flex;align-items:center;gap:16px">
-    <div style="height:1px;width:80px;background:var(--color-gray-200)"></div>
-    <span style="font-size:0.875rem;color:var(--color-text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.08em">Or send us a message</span>
-    <div style="height:1px;width:80px;background:var(--color-gray-200)"></div>
-  </div>
-</div>
 
 <!-- FORM + SIDEBAR -->
-<section id="send-message" style="padding:48px 0 80px">
+<section id="contact" style="padding:72px 0 80px">
   <div class="container">
     <div class="two-col" style="align-items:start;gap:64px">
 
@@ -343,7 +182,8 @@
         <div class="section-eyebrow">Direct Contact</div>
         <h2 class="section-title" style="font-size:1.75rem;margin-bottom:24px">Prefer to reach out directly?</h2>
 
-        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px">
+        <!-- Phone + Email cards -->
+        <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px">
           <a href="tel:6692372264" class="card" style="text-decoration:none;display:flex;align-items:center;gap:16px;padding:20px 24px;">
             <div class="card-icon" style="margin:0;flex-shrink:0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -364,6 +204,39 @@
           </a>
         </div>
 
+        <!-- Book a Call toggle -->
+        <div style="margin-bottom:24px">
+          <div style="font-family:var(--font-heading);font-size:0.875rem;font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px">Want to talk sooner?</div>
+          <button class="book-toggle-btn" id="book-toggle" aria-expanded="false" aria-controls="booking-reveal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book a Free 30-Min Call
+            <span class="btn-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+
+          <!-- Booking iframe — only loads src when opened -->
+          <div class="booking-reveal" id="booking-reveal" style="background:var(--color-navy);border-radius:0 0 12px 12px;overflow:hidden">
+            <div class="booking-reveal-inner" style="padding:0">
+              <iframe
+                id="booking-iframe"
+                data-src="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled"
+                src="about:blank"
+                width="100%"
+                height="620"
+                frameborder="0"
+                scrolling="yes"
+                title="Book a Free Dental IT Assessment with FlossByte"
+                style="display:block">
+              </iframe>
+              <p style="text-align:center;padding:12px 16px;margin:0;font-size:0.8125rem;color:rgba(255,255,255,0.4)">
+                Having trouble? <a href="https://bookings.cloud.microsoft/book/FlossByteDentalITConsultation@flossbyte.com/?ismsaljsauthenabled" target="_blank" rel="noopener" style="color:var(--color-teal);font-weight:600">Open directly →</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Areas -->
         <div class="card" style="background:var(--color-navy);border-color:rgba(255,255,255,0.08);padding:28px;margin-bottom:16px">
           <div style="font-family:var(--font-heading);font-size:1.0625rem;font-weight:700;color:#fff;margin-bottom:16px">Service Areas</div>
           <div class="location-areas" style="grid-template-columns:1fr">
@@ -373,6 +246,7 @@
           </div>
         </div>
 
+        <!-- What to Expect -->
         <div class="card section-light" style="padding:24px">
           <div style="font-family:var(--font-heading);font-size:0.9375rem;font-weight:700;color:var(--color-navy);margin-bottom:12px">What to Expect</div>
           <div class="process-steps" style="gap:12px">
@@ -391,15 +265,16 @@
           </div>
         </div>
 
-      </div>
-    </div>
-  </div>
+      </div><!-- /sidebar -->
+    </div><!-- /two-col -->
+  </div><!-- /container -->
 </section>
 
 </main>
 
 <script src="components.min.js?v=2" defer></script>
 <script>
+  /* ---- Form submission ---- */
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
   const errorMsg = document.getElementById('form-error');
@@ -432,6 +307,31 @@
     } finally {
       btn.textContent = 'Send Message — Get Free Technology Assessment';
       btn.disabled = false;
+    }
+  });
+
+  /* ---- Booking toggle ---- */
+  const toggleBtn = document.getElementById('book-toggle');
+  const revealEl  = document.getElementById('booking-reveal');
+  const iframeEl  = document.getElementById('booking-iframe');
+  let iframeLoaded = false;
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = revealEl.classList.toggle('open');
+    toggleBtn.classList.toggle('active', isOpen);
+    toggleBtn.setAttribute('aria-expanded', isOpen);
+
+    // Lazy-load iframe src only on first open
+    if (isOpen && !iframeLoaded) {
+      iframeEl.src = iframeEl.dataset.src;
+      iframeLoaded = true;
+    }
+
+    // Scroll into view when opening
+    if (isOpen) {
+      setTimeout(() => {
+        toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
     }
   });
 </script>

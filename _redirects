@@ -114,6 +114,7 @@
 # .html → clean URLs — blog posts
 # ------------------------------------------------------------
 /blog/index.html                                /blog/                                          301
+/blog/dental-office-it-setup-case-study.html    /blog/dental-office-it-setup-case-study         301
 /blog/dentrix-it-support-guide.html             /blog/dentrix-it-support-guide                  301
 /blog/hipaa-it-requirements-dental-offices.html /blog/hipaa-it-requirements-dental-offices       301
 /blog/dental-data-backup-recovery-guide.html    /blog/dental-data-backup-recovery-guide         301

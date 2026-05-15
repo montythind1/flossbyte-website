@@ -1,7 +1,7 @@
 """
 Expand 4 city pages with San Jose treatment:
 - Better title/description/H1
-- AggregateRating + BreadcrumbList + FAQPage schema
+- BreadcrumbList + FAQPage schema
 - Dentrix & Eaglesoft support section
 - Comparison table vs generic IT
 - City-specific testimonials
@@ -309,14 +309,7 @@ def build_schemas(c):
     "email": "hello@flossbyte.com",
     "url": "{canonical}",
     "areaServed": {{"@type": "City", "name": "{city}, CA"}},
-    "priceRange": "$59-$$$",
-    "aggregateRating": {{
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "36",
-      "bestRating": "5",
-      "worstRating": "1"
-    }}
+    "priceRange": "$59-$$$"
   }}'''
 
     breadcrumb = f'''{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://flossbyte.com/"}},{{"@type":"ListItem","position":2,"name":"{parent_name}","item":"{parent_url}"}},{{"@type":"ListItem","position":3,"name":"{city} Dental IT Support","item":"{canonical}"}}]}}'''

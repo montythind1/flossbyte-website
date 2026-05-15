@@ -1,7 +1,7 @@
 """
 expand_all_cities.py
 Applies full San Jose treatment to 31 remaining thin city pages.
-Adds: updated title/H1, AggregateRating + BreadcrumbList + FAQPage schemas,
+Adds: updated title/H1, BreadcrumbList + FAQPage schemas,
 Dentrix/Eaglesoft cards, comparison table, 3 testimonials, 6-question FAQ,
 upgraded CTA banner.
 """
@@ -942,8 +942,6 @@ def schema_additions(city, region_path):
     )
     return (
         f'\n  <script type="application/ld+json">\n'
-        f'  {{"@context":"https://schema.org","@type":"AggregateRating","itemReviewed":{{"@type":"LocalBusiness","name":"FlossByte — {city["name"]} Dental IT Support"}},"ratingValue":"5","reviewCount":"{city["reviews"]}","bestRating":"5","worstRating":"1"}}\n'
-        f'  </script>\n'
         f'  <script type="application/ld+json">\n'
         f'  {{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":['
         f'{{"@type":"ListItem","position":1,"name":"Home","item":"https://flossbyte.com/"}},'
@@ -1031,13 +1029,6 @@ for city in CITIES:
         f'<h1 class="page-hero-title">Dental IT Support in <em style="color:var(--color-teal)">{city_name}, CA</em></h1>',
         html,
         flags=re.DOTALL
-    )
-
-    # ── 5. Add AggregateRating to existing LocalBusiness schema ────────
-    html = re.sub(
-        r'("priceRange":\s*"\$59-\$\$\$"\s*)\}(\s*</script>)',
-        r'\1,"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"' + str(city['reviews']) + r'","bestRating":"5","worstRating":"1"}}\2',
-        html
     )
 
     # ── 6. Insert BreadcrumbList + FAQPage schemas before </head> ──────

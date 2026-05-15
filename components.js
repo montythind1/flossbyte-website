@@ -19,9 +19,57 @@ if (SITE.gaId && SITE.gaId !== 'G-XXXXXXXXXX') {
   gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + SITE.gaId;
   document.head.appendChild(gs);
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', SITE.gaId);
+  window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+  window.gtag('js', new Date());
+  window.gtag('config', SITE.gaId);
+}
+
+function trackConversion(eventName, params = {}) {
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', eventName, {
+    page_path: window.location.pathname,
+    page_title: document.title,
+    ...params,
+  });
+}
+
+function setupConversionTracking() {
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('a, button');
+    if (!target) return;
+
+    const href = target.getAttribute('href') || '';
+    const text = target.textContent.trim().replace(/\s+/g, ' ').slice(0, 100);
+
+    if (href.startsWith('tel:')) {
+      trackConversion('phone_click', { link_url: href, link_text: text });
+      return;
+    }
+
+    if (href.startsWith('mailto:')) {
+      trackConversion('email_click', { link_url: href, link_text: text });
+      return;
+    }
+
+    if (href.includes('bookings.cloud.microsoft') || target.id === 'book-toggle') {
+      trackConversion('booking_click', { link_url: href || 'embedded_booking_toggle', link_text: text });
+    }
+  });
+
+  document.addEventListener('submit', (e) => {
+    const form = e.target;
+    if (!(form instanceof HTMLFormElement)) return;
+
+    if (form.id === 'contact-form') {
+      trackConversion('contact_form_submit', { form_id: form.id, form_source: 'contact_page' });
+      return;
+    }
+
+    if (form.id === 'lead-magnet-form' || form.id === 'exit-popup-form' || form.classList.contains('checklist-form')) {
+      const source = form.querySelector('[name="_source"]')?.value || form.id || 'checklist_form';
+      trackConversion('checklist_download', { form_id: form.id || 'checklist-form', form_source: source });
+    }
+  }, true);
 }
 
 /* ── Helper: resolve relative paths ─────────────────────── */
@@ -589,6 +637,7 @@ function injectBreadcrumbSchema() {
 
 /* ── Init ───────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
+  setupConversionTracking();
   renderNav();
   renderFooter();
   renderMobileCTA();

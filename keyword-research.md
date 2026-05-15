@@ -3,6 +3,8 @@
 **Market:** San Francisco Bay Area (SF, San Jose, Oakland + surrounding cities)
 **Niche:** Dental IT Managed Services, HIPAA Compliance, Cybersecurity for Dental Practices
 
+> **May 15, 2026 update:** Several recommendations in this research have now been implemented, including dedicated pages for managed IT, cybersecurity, backup, network infrastructure, VoIP, vCIO, AI, Dentrix, Eaglesoft, Open Dental, and DSO/multi-location support. Use `seo-keyword-tracking-2026.md` as the current working keyword tracker and content backlog.
+
 ---
 
 ## Current FlossByte Site Inventory

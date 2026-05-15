@@ -82,8 +82,8 @@ These are the best next targets because they are commercial, specific, and likel
 | 1 | dental IT support near me | Local/commercial | Google Business Profile, homepage, location pages, local citations |
 | 1 | dental office IT support | Commercial | Strengthen /services/managed-it-support and homepage anchor text |
 | 1 | IT support for dentists | Commercial | Add internal links from blog and service pages |
-| 1 | dental IT support vs general IT | Comparison/commercial | Expand /why-flossbyte and related blog links |
-| 1 | switching dental IT provider | Commercial/problem | Create blog guide and link to /why-flossbyte |
+| 1 | dental IT support vs general IT | Comparison/commercial | Completed: refreshed comparison blog, /why-flossbyte link, homepage link, FAQ schema |
+| 1 | switching dental IT provider | Commercial/problem | Completed: created blog guide and linked from /why-flossbyte, homepage, service page |
 | 1 | Dentrix running slow | Problem/software | Create troubleshooting blog linked to /services/dentrix-support |
 | 1 | dental office network down | Urgent/problem | Update outage blog and add emergency CTA |
 | 2 | HIPAA risk assessment dental practice | Commercial/informational | Create or expand HIPAA risk assessment guide |
@@ -104,19 +104,20 @@ These are the best next targets because they are commercial, specific, and likel
 - Updated homepage featured blog links toward commercial-intent articles: cost, new-practice IT setup, and best Bay Area dental IT companies.
 - Changed the homepage and Why FlossByte primary CTAs to direct booking links to reduce friction.
 - Added competitor-aware buyer comparison content to /why-flossbyte.
+- Created the switching dental IT provider guide and added sitemap, homepage, blog index, /why-flossbyte, and managed IT internal links.
+- Refreshed the dental IT vs general IT article with exact-match SEO title/meta/H1, comparison table, FAQ schema, homepage link, /why-flossbyte link, and alias redirects.
 
 ## Next Content Backlog
 
-1. Switching Your Dental IT Provider: Complete Guide for Dental Offices
-2. Dentrix Running Slow? Troubleshooting Guide for Dental Practices
-3. Dental Office Network Down? Emergency IT Response Checklist
-4. HIPAA Risk Assessment for Dental Practices: What to Prepare
-5. Dental Cyber Insurance Requirements for Bay Area Practices
-6. Dexis and Dental Imaging IT Support Guide
-7. HIPAA-Compliant Email for Dental Practices
-8. Windows 11 Upgrade Guide for Dentrix, Eaglesoft, and Imaging Workstations
-9. Orthodontic IT Support Bay Area
-10. Oral Surgery IT Support Bay Area
+1. Dentrix Running Slow? Troubleshooting Guide for Dental Practices
+2. Dental Office Network Down? Emergency IT Response Checklist
+3. HIPAA Risk Assessment for Dental Practices: What to Prepare
+4. Dental Cyber Insurance Requirements for Bay Area Practices
+5. Dexis and Dental Imaging IT Support Guide
+6. HIPAA-Compliant Email for Dental Practices
+7. Windows 11 Upgrade Guide for Dentrix, Eaglesoft, and Imaging Workstations
+8. Orthodontic IT Support Bay Area
+9. Oral Surgery IT Support Bay Area
 
 ## Technical SEO Watchlist
 

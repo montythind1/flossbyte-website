@@ -21,6 +21,7 @@ Business and conversion readout:
 
 - The website now has a stronger dental-only footprint than a generic MSP site: dental IT support, HIPAA, cybersecurity, backup, software support, imaging IT, local city pages, comparison pages, and proof content.
 - The biggest traffic opportunity is still local intent: "dental IT support near me," city searches, and urgent/problem searches such as "Dentrix running slow" and "dental office network down."
+- Google Search Console early impressions show the strongest active cluster is new-practice setup: "new dental office it setup," "dental office network setup," "new dental office technology setup," "IT checklist for opening a new dental office," and "IT setup for new dental office."
 - The biggest trust opportunity is real-world proof: Google reviews, before/after rack photos, screenshots of organized documentation/process, and case studies based on actual dental office projects.
 - The biggest conversion opportunity is to make the next step more specific than "contact us": promote a "Dental IT Assessment" with fields for number of operatories, workstations, practice software, imaging systems, and current pain point.
 
@@ -109,6 +110,8 @@ These are the best next targets because they are commercial, specific, and likel
 | 1 | dental IT support near me | Local/commercial | Google Business Profile, homepage, location pages, local citations |
 | 1 | dental office IT support | Commercial | Strengthen /services/managed-it-support and homepage anchor text |
 | 1 | IT support for dentists | Commercial | Add internal links from blog and service pages |
+| 1 | new dental office IT setup | Commercial/project | Completed: optimized /blog/new-dental-practice-it-setup-checklist title, meta, H1, intro, FAQ, CTA, and internal links |
+| 1 | dental office network setup | Commercial/project | Completed: expanded setup checklist with a dedicated network setup section and links from network/hardware/VoIP pages |
 | 1 | dental IT support vs general IT | Comparison/commercial | Completed: refreshed comparison blog, /why-flossbyte link, homepage link, FAQ schema |
 | 1 | switching dental IT provider | Commercial/problem | Completed: created blog guide and linked from /why-flossbyte, homepage, service page |
 | 1 | Dentrix running slow | Problem/software | Completed: /blog/dentrix-running-slow linked to /services/dentrix-support |

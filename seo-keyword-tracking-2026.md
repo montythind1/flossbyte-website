@@ -27,7 +27,7 @@ Business and conversion readout:
 Next highest-impact actions:
 
 1. Reply to the first Google review, add a project photo, and publish the Google Business post. Google's own Business Profile guidance emphasizes complete information, review replies, photos/videos, and prominence signals such as reviews and links.
-2. Create the next problem-intent article: "Dentrix Running Slow? Dental IT Troubleshooting Guide." This is likely to attract more qualified leads than broad educational content.
+2. Completed: created "Dentrix Running Slow? Dental IT Troubleshooting Guide" as a problem-intent blog article linked from the blog index, Dentrix service page, Dentrix guide, and sitemap.
 3. Add a visible "Book a Dental IT Assessment" conversion block to high-intent service pages and blog posts.
 4. Shorten title tags and meta descriptions on the highest-value service/location pages first, especially pages that receive impressions in Google Search Console.
 5. Build local authority outside the site through dental association mentions, Chamber/local business citations, vendor listings, and dental community posts.
@@ -111,7 +111,7 @@ These are the best next targets because they are commercial, specific, and likel
 | 1 | IT support for dentists | Commercial | Add internal links from blog and service pages |
 | 1 | dental IT support vs general IT | Comparison/commercial | Completed: refreshed comparison blog, /why-flossbyte link, homepage link, FAQ schema |
 | 1 | switching dental IT provider | Commercial/problem | Completed: created blog guide and linked from /why-flossbyte, homepage, service page |
-| 1 | Dentrix running slow | Problem/software | Create troubleshooting blog linked to /services/dentrix-support |
+| 1 | Dentrix running slow | Problem/software | Completed: /blog/dentrix-running-slow linked to /services/dentrix-support |
 | 1 | dental office network down | Urgent/problem | Update outage blog and add emergency CTA |
 | 2 | HIPAA risk assessment dental practice | Commercial/informational | Create or expand HIPAA risk assessment guide |
 | 2 | dental cyber insurance requirements | Informational/commercial | Create blog post linked to cybersecurity service |
@@ -136,15 +136,14 @@ These are the best next targets because they are commercial, specific, and likel
 
 ## Next Content Backlog
 
-1. Dentrix Running Slow? Troubleshooting Guide for Dental Practices
-2. Dental Office Network Down? Emergency IT Response Checklist
-3. HIPAA Risk Assessment for Dental Practices: What to Prepare
-4. Dental Cyber Insurance Requirements for Bay Area Practices
-5. Dexis and Dental Imaging IT Support Guide
-6. HIPAA-Compliant Email for Dental Practices
-7. Windows 11 Upgrade Guide for Dentrix, Eaglesoft, and Imaging Workstations
-8. Orthodontic IT Support Bay Area
-9. Oral Surgery IT Support Bay Area
+1. Dental Office Network Down? Emergency IT Response Checklist
+2. HIPAA Risk Assessment for Dental Practices: What to Prepare
+3. Dental Cyber Insurance Requirements for Bay Area Practices
+4. Dexis and Dental Imaging IT Support Guide
+5. HIPAA-Compliant Email for Dental Practices
+6. Windows 11 Upgrade Guide for Dentrix, Eaglesoft, and Imaging Workstations
+7. Orthodontic IT Support Bay Area
+8. Oral Surgery IT Support Bay Area
 
 ## Technical SEO Watchlist
 

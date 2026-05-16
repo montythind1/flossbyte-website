@@ -111,7 +111,7 @@ These are the best next targets because they are commercial, specific, and likel
 | 1 | dental office IT support | Commercial | Strengthen /services/managed-it-support and homepage anchor text |
 | 1 | IT support for dentists | Commercial | Add internal links from blog and service pages |
 | 1 | new dental office IT setup | Commercial/project | Completed: optimized /blog/new-dental-practice-it-setup-checklist title, meta, H1, intro, FAQ, CTA, and internal links |
-| 1 | dental office network setup | Commercial/project | Completed: expanded setup checklist with a dedicated network setup section and links from network/hardware/VoIP pages |
+| 1 | dental office network setup | Commercial/project | Completed: created /services/dental-office-network-setup and linked it from setup, services, and network pages |
 | 1 | dental IT support vs general IT | Comparison/commercial | Completed: refreshed comparison blog, /why-flossbyte link, homepage link, FAQ schema |
 | 1 | switching dental IT provider | Commercial/problem | Completed: created blog guide and linked from /why-flossbyte, homepage, service page |
 | 1 | Dentrix running slow | Problem/software | Completed: /blog/dentrix-running-slow linked to /services/dentrix-support |

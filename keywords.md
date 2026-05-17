@@ -39,8 +39,8 @@ These are real queries that have already produced impressions.
 | dental software companies | 0 | 1 | Research/noisy | Software support pages | Monitor |
 | voip phone systems for dentistry | 0 | 1 | Commercial/VoIP | `/services/dental-voip-phone-systems` | Active |
 | dental it services | 0 | 1 | Commercial | `/services` and `/` | Active |
-| dental office server issues | 0 | 1 | Problem/commercial | Future page/blog | Strong next topic |
-| dental server support | 0 | 1 | Commercial/problem | Future service/blog | Strong next topic |
+| dental office server issues | 0 | 1 | Problem/commercial | `/blog/dental-office-server-issues` | Active |
+| dental server support | 0 | 1 | Commercial/problem | `/blog/dental-office-server-issues` | Active |
 | hosted voip for dental offices | 0 | 1 | Commercial/VoIP | `/services/dental-voip-phone-systems` | Active |
 | technology setup for dental startups | 0 | 1 | Commercial/project | `/blog/new-dental-practice-it-setup-checklist` | Active |
 | it infrastructure for dental practices | 0 | 1 | Commercial | `/services/dental-network-infrastructure` | Active |
@@ -203,9 +203,9 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | dental data backup and recovery | Commercial/informational | `/blog/dental-data-backup-recovery-guide` | Active |
 | dental disaster recovery | Commercial/informational | `/services/dental-data-backup` | Active |
 | dental practice disaster recovery plan | Informational/commercial | `/blog/dental-data-backup-recovery-guide` or future template | Backlog |
-| dental office server issues | Problem/commercial | Future page/blog | Backlog |
-| dental server support | Commercial/problem | Future page/blog | Backlog |
-| dental practice server crash | Urgent/problem | Future page/blog | Backlog |
+| dental office server issues | Problem/commercial | `/blog/dental-office-server-issues` | Active |
+| dental server support | Commercial/problem | `/blog/dental-office-server-issues` | Active |
+| dental practice server crash | Urgent/problem | `/blog/dental-office-server-issues` | Active supporting keyword |
 | dental office lost patient data | Urgent/problem | `/services/dental-data-backup` or future recovery content | Backlog |
 
 ## VoIP / Phone Keywords

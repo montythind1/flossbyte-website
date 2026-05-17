@@ -74,9 +74,19 @@ function setupConversionTracking() {
 
 /* ── Helper: resolve relative paths ─────────────────────── */
 function rootPath(path) {
-  // Use absolute paths from the site root for reliability across all hosting platforms
-  const base = document.querySelector('base')?.href || '/';
-  return '/' + path;
+  // Keep root-relative URLs in production, but make file:// previews work locally.
+  if (window.location.protocol !== 'file:') return '/' + path;
+
+  const normalized = window.location.pathname.replace(/\\/g, '/');
+  const marker = '/website/';
+  const markerIndex = normalized.toLowerCase().lastIndexOf(marker);
+  const localPath = markerIndex >= 0
+    ? normalized.slice(markerIndex + marker.length)
+    : normalized.replace(/^\/+/, '');
+  const parts = localPath.split('/').filter(Boolean);
+  const depth = localPath.endsWith('/') ? parts.length : Math.max(0, parts.length - 1);
+
+  return '../'.repeat(depth) + path;
 }
 
 /* ── Navigation HTML ─────────────────────────────────────── */

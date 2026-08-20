@@ -1,10 +1,57 @@
 # FlossByte SEO Keywords
 
-Last updated: 2026-05-17
+Last updated: 2026-05-18
 
 Purpose: Track keywords that can improve qualified traffic, rankings, and leads for FlossByte. Use this as the active keyword tracker. Add new Google Search Console queries here when they appear. Keep completed/page-targeted keywords in place so we can monitor performance over time.
 
 Primary goal: rank for dental IT buyer-intent searches in the San Francisco Bay Area and convert visitors into booked dental IT assessments.
+
+## Latest Google Search Console Snapshot
+
+Date: 2026-05-18
+
+These are today's observed queries. Priority is based on buyer intent plus current position. Queries already ranking in positions 1-10 with zero clicks are CTR opportunities.
+
+| Query | Clicks | Impressions | CTR | Position | Intent | Status / Next Action |
+|---|---:|---:|---:|---:|---|---|
+| flossbyte | 0 | 6 | 0% | 1.8 | Branded | Improve GBP/reviews/photos so branded searches convert |
+| dental office it support | 0 | 1 | 0% | 2.0 | Commercial | Strong CTR opportunity; reinforce homepage/managed IT snippets |
+| done-for-you hipaa compliance setup service dental small business 2026 | 0 | 3 | 0% | 4.7 | Commercial/HIPAA | Strong page opportunity for HIPAA setup/service intent |
+| dental it roadmaps | 0 | 1 | 0% | 5.0 | Strategic/commercial | Support with vCIO/roadmap content |
+| new dental office it setup | 0 | 11 | 0% | 6.9 | Commercial/project | Strong CTR opportunity; monitor title/meta and booking CTA |
+| new dental office technology setup | 0 | 2 | 0% | 7.0 | Commercial/project | Active setup page/blog cluster |
+| dentrix server migration | 0 | 1 | 0% | 8.0 | Software/project | Add to Dentrix migration backlog |
+| it setup for new dental office | 0 | 1 | 0% | 8.0 | Commercial/project | Active setup page/blog cluster |
+| dental it support san jose | 0 | 3 | 0% | 8.3 | Local/commercial | Add proof/local trust to San Jose page over time |
+| it checklist for opening a new dental office | 0 | 1 | 0% | 9.0 | Informational/commercial | Active setup checklist |
+| infrastructure upgrades for dental practices | 0 | 2 | 0% | 10.0 | Commercial/project | Strengthen network infrastructure/service copy |
+| dental office network setup | 0 | 4 | 0% | 11.0 | Commercial/project | Service page created; request indexing and monitor CTR |
+| firewall and antivirus for dental | 0 | 2 | 0% | 12.5 | Commercial/security | Add security checklist/FAQ support |
+| dental office cybersecurity checklist | 0 | 2 | 0% | 15.0 | Informational/commercial | Good future checklist/download topic |
+| dental practice setup checklist | 0 | 1 | 0% | 15.0 | Setup/informational | Active setup checklist supporting keyword |
+| secure cloud hosting for eaglesoft | 0 | 1 | 0% | 18.0 | Software/cloud | Future Eaglesoft/cloud hosting content |
+| dental data backup | 0 | 4 | 0% | 20.0 | Commercial | Active backup page |
+| dental data backup and recovery | 0 | 3 | 0% | 21.7 | Commercial/informational | Active backup guide |
+| dental it companies | 0 | 1 | 0% | 22.0 | Commercial/comparison | Active comparison blog |
+| best dental it support | 0 | 1 | 0% | 28.0 | Commercial/comparison | Strengthen comparison/trust content |
+| dental dentrix support | 0 | 1 | 0% | 30.0 | Software/commercial | Add as Dentrix support variant |
+| dental it company | 0 | 3 | 0% | 35.3 | Commercial | Homepage/why page target |
+| easy dental vs dentrix | 0 | 2 | 0% | 36.0 | Software comparison | Watch; may fit software comparison content |
+| over denture east bay | 0 | 1 | 0% | 37.0 | Noise | Patient dental procedure query; do not target |
+| dental office server issues | 0 | 1 | 0% | 39.0 | Problem/commercial | Active server issues topic |
+| phone systems for dental office | 0 | 1 | 0% | 42.0 | Commercial/VoIP | Add to VoIP variants |
+| dental technology companies | 0 | 1 | 0% | 43.0 | Commercial/research | Watch; may support homepage/why page |
+| dental server support | 0 | 1 | 0% | 47.0 | Commercial/problem | Active server support topic |
+| dental software companies | 0 | 2 | 0% | 48.0 | Research/noisy | Monitor; may support software support pages |
+| dentist phone system solutions | 0 | 1 | 0% | 48.0 | Commercial/VoIP | Add to VoIP variants |
+| cybersecurity dental service organization | 0 | 1 | 0% | 51.0 | DSO/security | Add DSO cybersecurity variant |
+| dental it services | 0 | 1 | 0% | 51.0 | Commercial | Homepage/services target |
+| hosted voip for dental offices | 0 | 1 | 0% | 57.0 | Commercial/VoIP | Active VoIP target |
+| 3d dental scans redwood city | 0 | 1 | 0% | 58.0 | Noise | Patient dental/imaging query; do not target |
+| technology setup for dental startups | 0 | 1 | 0% | 69.0 | Commercial/project | Active setup cluster |
+| it infrastructure for dental practices | 0 | 1 | 0% | 72.0 | Commercial | Network infrastructure target |
+| dental office it solutions | 0 | 1 | 0% | 77.0 | Commercial | Add to managed IT/homepage copy if natural |
+| dental msp checklist | 0 | 1 | 0% | 92.0 | Commercial/research | Future checklist/supporting content |
 
 ## Search Console Queries Seen
 
@@ -60,6 +107,8 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | teeth bonding redwood city | Patient dental procedure, not IT |
 | invisalign foster city | Patient dental procedure, not IT |
 | dental bridges livermore | Patient dental procedure, not IT |
+| over denture east bay | Patient dental procedure, not IT |
+| 3d dental scans redwood city | Patient dental/imaging service, not IT |
 
 ## Primary Commercial Keywords
 
@@ -68,16 +117,19 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | dental IT support Bay Area | Commercial/local | `/` | Active primary target |
 | dental IT services Bay Area | Commercial/local | `/services` and `/` | Active |
 | dental IT company Bay Area | Commercial/local | `/` and `/why-flossbyte` | Active |
+| dental office IT support | Commercial | `/services/managed-it-support` | Active; ranking in top 3 on 2026-05-18 |
 | dental managed services provider | Commercial | `/services/managed-it-support` | Active |
 | dental IT consulting | Commercial | `/services/managed-it-support` or future consulting page | Watch |
-| dental office IT support | Commercial | `/services/managed-it-support` | Active |
+| dental office IT solutions | Commercial | `/services/managed-it-support` and `/` | Watch |
 | dental office computer support | Commercial/transactional | `/services/managed-it-support` | Watch |
 | dental practice technology support | Commercial | `/services/managed-it-support` | Watch |
+| dental technology companies | Commercial/research | `/why-flossbyte` or comparison content | Watch |
 | managed IT for dental practices | Commercial | `/services/managed-it-support` | Active |
 | IT support for dentists | Commercial | `/services/managed-it-support` | Active |
 | dental IT support near me | Local/commercial | GBP + location pages | Needs GBP/reviews/citations |
 | dental IT support companies | Commercial/comparison | `/blog/best-dental-it-companies-bay-area` | Active |
 | best dental IT companies Bay Area | Commercial/comparison | `/blog/best-dental-it-companies-bay-area` | Active |
+| best dental IT support | Commercial/comparison | `/blog/best-dental-it-companies-bay-area` and `/why-flossbyte` | Watch |
 | best managed IT services for dental offices | Commercial/comparison | `/services/managed-it-support` | Watch |
 | top dental IT companies California | Commercial/comparison | `/blog/best-dental-it-companies-bay-area` | Watch |
 | dental IT support vs general IT | Comparison/commercial | `/blog/dental-it-support-why-general-it-fails-dentists` | Active |
@@ -95,6 +147,7 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | new dental office technology setup | Commercial/project | `/blog/new-dental-practice-it-setup-checklist` | Active |
 | IT checklist for opening a new dental office | Informational/commercial | `/blog/new-dental-practice-it-setup-checklist` | Active |
 | IT setup for new dental office | Commercial/project | `/blog/new-dental-practice-it-setup-checklist` | Active |
+| dental practice setup checklist | Informational/commercial | `/blog/new-dental-practice-it-setup-checklist` | Active supporting keyword |
 | dental practice startups California | Startup/project | `/blog/new-dental-practice-it-setup-checklist` | Active |
 | technology setup for dental startups | Startup/project | `/blog/new-dental-practice-it-setup-checklist` | Active |
 | dental office relocation IT support | Commercial/project | Future page or blog | Backlog |
@@ -125,7 +178,9 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | Keyword | Intent | Target Page | Status |
 |---|---|---|---|
 | Dentrix IT support | Commercial/software | `/services/dentrix-support` | Active |
+| dental Dentrix support | Commercial/software | `/services/dentrix-support` | Watch |
 | Dentrix not working | Problem/software | `/services/dentrix-support` or future troubleshooting content | Watch |
+| Dentrix server migration | Commercial/project | `/services/dentrix-support` or future migration guide | Backlog |
 | Dentrix running slow | Problem/software | `/blog/dentrix-running-slow` | Active |
 | Dentrix slow on workstations | Problem/software | `/blog/dentrix-running-slow` | Active |
 | Dentrix server performance | Problem/software | `/blog/dentrix-running-slow` | Active |
@@ -148,6 +203,7 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | Open Dental cloud hosting | Commercial/software | `/services/open-dental-support` or future cloud guide | Backlog |
 | Open Dental MySQL performance | Problem/software | `/services/open-dental-support` or future guide | Backlog |
 | Open Dental vs Dentrix IT requirements | Informational/software | Software comparison blog | Active supporting keyword |
+| Easy Dental vs Dentrix | Software comparison | `/blog/dentrix-vs-eaglesoft-vs-open-dental` or future comparison content | Watch |
 | dental software support | Commercial/software | Software pages | Active |
 | dental software management near me | Local/software | Software pages | Watch |
 
@@ -176,6 +232,7 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | dental office ransomware attack | Urgent/problem | `/blog/dental-office-ransomware-prevention` or future response guide | Watch |
 | dental practice data breach what to do | Urgent/problem | Future breach response guide | Backlog |
 | firewall and antivirus for dental | Commercial/security | `/services/dental-cybersecurity` | Watch |
+| dental office cybersecurity checklist | Informational/commercial | Future checklist or cybersecurity page section | Backlog |
 | HIPAA compliance dental offices | Commercial/informational | `/hipaa-compliance` | Active |
 | HIPAA compliance for dental offices | Commercial/informational | `/hipaa-compliance` | Active |
 | HIPAA compliant IT services | Commercial/HIPAA | `/hipaa-compliance` and service pages | Active |
@@ -220,6 +277,8 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | cloud-based phone for dental practice | Commercial | `/services/dental-voip-phone-systems` | Active |
 | cloud-based phone for dental clinics | Commercial | `/services/dental-voip-phone-systems` | Active |
 | hosted VoIP for dental offices | Commercial | `/services/dental-voip-phone-systems` | Active |
+| phone systems for dental office | Commercial | `/services/dental-voip-phone-systems` | Watch |
+| dentist phone system solutions | Commercial | `/services/dental-voip-phone-systems` | Watch |
 
 ## DSO / Specialty Practice Keywords
 
@@ -228,6 +287,7 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | DSO IT support Bay Area | Commercial | `/services/dso-multi-location` | Active |
 | multi-location dental IT management | Commercial | `/services/dso-multi-location` | Active |
 | dental group practice IT services | Commercial | `/services/dso-multi-location` | Watch |
+| cybersecurity dental service organization | DSO/security | `/services/dso-multi-location` and `/services/dental-cybersecurity` | Watch |
 | multi-office dental network setup | Commercial/project | `/services/dso-multi-location` and network pages | Watch |
 | orthodontic IT support Bay Area | Commercial/specialty | Future specialty page if target market | Backlog |
 | oral surgery IT support Bay Area | Commercial/specialty | Future specialty page if target market | Backlog |

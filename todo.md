@@ -1,6 +1,6 @@
 # FlossByte SEO / Business TODO
 
-Last updated: 2026-05-17
+Last updated: 2026-05-18
 
 Purpose: Track unfinished improvements for FlossByte. When a task is completed, remove it from this file instead of moving it to a completed section. Keep this list actionable and current.
 
@@ -20,6 +20,7 @@ Purpose: Track unfinished improvements for FlossByte. When a task is completed, 
 - Add at least one real project photo to Google Business Profile, ideally network rack cleanup, organized cabling, workstation/server setup, or dental technology setup.
 - Publish a Google Business Profile post for dental office network setup and link to `https://flossbyte.com/services/dental-office-network-setup`.
 - Check Google Search Console again in 7-14 days and add any new query impressions to `keywords.md`.
+- Review snippets for top-10, zero-click queries from 2026-05-18: `dental office it support`, `done-for-you hipaa compliance setup service dental small business 2026`, `new dental office it setup`, `new dental office technology setup`, `dentrix server migration`, and `dental it support san jose`.
 
 ## Reviews / Trust
 
@@ -33,10 +34,14 @@ Purpose: Track unfinished improvements for FlossByte. When a task is completed, 
 
 - Create or optimize content for `dental office server issues` and `dental server support`.
 - Optimize the dental VoIP page for query variants: `cloud-based phone for dentistry`, `hosted VoIP for dental offices`, and `VoIP phone systems for dental clinics`.
+- Add VoIP copy/FAQ variants for `phone systems for dental office` and `dentist phone system solutions`.
 - Update the dental office network down/outage blog with an emergency-response CTA and stronger links to managed IT/network services.
 - Create a HIPAA risk assessment guide or page targeting `HIPAA risk assessment dental practice`.
+- Create or expand a HIPAA setup/service section targeting `done-for-you HIPAA compliance setup service dental small business 2026`.
 - Create a dental cyber insurance requirements blog linked from cybersecurity services.
+- Create or add a dental office cybersecurity checklist section targeting `dental office cybersecurity checklist`.
 - Create a Dexis / dental imaging IT guide targeting `Dexis IT support`, `Dexis sensor not working`, and `dental imaging software slow`.
+- Create or expand Dentrix migration content targeting `Dentrix server migration`.
 - Create a HIPAA-compliant email guide targeting `HIPAA compliant email for dentists` and `dental office email encryption`.
 - Create a BAA / HIPAA vendor guide targeting `dental BAA requirements`.
 - Create a Windows 11 dental compatibility guide for Dentrix, Eaglesoft, Open Dental, imaging workstations, and dental hardware.
@@ -60,3 +65,10 @@ Purpose: Track unfinished improvements for FlossByte. When a task is completed, 
 - Build or update citations with consistent NAP: Google Business Profile, Bing Places, Apple Business Connect, Yelp, local Chamber, and relevant dental/vendor directories.
 - Look for local dental association, study club, or vendor partner opportunities that can mention or link to FlossByte.
 - Consider a practical educational post or webinar for local dental practices around HIPAA, network setup, or Dentrix performance.
+
+## Future Market Expansion
+
+- Evaluate Colorado expansion after Bay Area proof improves: target 3-5 Google reviews, project photos, and steady Google Search Console impressions/clicks before building Colorado SEO pages.
+- Research Colorado dental IT competitors and keyword demand for `dental IT support Colorado`, `dental IT support Denver`, `dental IT support Colorado Springs`, and `dental IT support Fort Collins`.
+- Define Colorado onsite support coverage before launching location pages: travel plan, local low-voltage partner, or local onsite technician for racks, cabling, imaging, and workstation work.
+- Create one test Colorado landing page only after support coverage is clear; do not create multiple Colorado city pages or a Google Business Profile unless there is legitimate local presence/service capacity.

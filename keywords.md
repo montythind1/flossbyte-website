@@ -1,6 +1,6 @@
 # FlossByte SEO Keywords
 
-Last updated: 2026-05-18
+Last updated: 2026-08-20
 
 Purpose: Track keywords that can improve qualified traffic, rankings, and leads for FlossByte. Use this as the active keyword tracker. Add new Google Search Console queries here when they appear. Keep completed/page-targeted keywords in place so we can monitor performance over time.
 
@@ -168,6 +168,8 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | dental network infrastructure Bay Area | Commercial/local | `/services/dental-network-infrastructure` | Active |
 | dental office network management | Commercial | `/services/dental-network-infrastructure` | Watch |
 | dental network security | Commercial/security | `/services/dental-cybersecurity` | Watch |
+| secure dental office network | Commercial/security | `/services/dental-office-network-setup` and `/services/dental-cybersecurity` | Added from real Google review proof |
+| dental practice network security | Commercial/security | `/services/dental-office-network-setup` and `/services/dental-cybersecurity` | Added from real Google review proof |
 | IT infrastructure for dental practices | Commercial | `/services/dental-network-infrastructure` | Active |
 | infrastructure upgrades for dental practices | Commercial/project | `/services/dental-network-infrastructure` | Watch |
 | dental office network down | Urgent/problem | `/blog/dental-it-support-bay-area-outage` | Needs update/emergency CTA |
@@ -257,6 +259,10 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 | dental data backup | Commercial | `/services/dental-data-backup` | Active |
 | dental data backup services | Commercial | `/services/dental-data-backup` | Active |
 | dental cloud backup | Commercial | `/services/dental-data-backup` | Watch |
+| dental practice cloud migration | Commercial/project | `/services/dental-data-backup` and `/services/dental-office-network-setup` | Added from real Google review proof |
+| dental office cloud migration | Commercial/project | `/services/dental-data-backup` and future cloud migration content | Watch |
+| dental practice transition IT support | Commercial/project | `/services/managed-it-support` and `/services/dental-office-network-setup` | Added from real Google review proof |
+| dental practice acquisition IT support | Commercial/project | Future practice transition/M&A IT section | Backlog |
 | dental data backup and recovery | Commercial/informational | `/blog/dental-data-backup-recovery-guide` | Active |
 | dental disaster recovery | Commercial/informational | `/services/dental-data-backup` | Active |
 | dental practice disaster recovery plan | Informational/commercial | `/blog/dental-data-backup-recovery-guide` or future template | Backlog |
@@ -296,7 +302,6 @@ These are dental patient-service searches, not IT buyer intent. Do not optimize 
 
 | Keyword | Intent | Target Page | Status |
 |---|---|---|---|
-| dental practice cloud migration | Informational/commercial | Future cloud migration guide | Backlog |
 | dental practice cloud computing | Informational/commercial | Future cloud migration guide | Backlog |
 | dental server vs cloud | Informational/commercial | Future server vs cloud guide | Backlog |
 | dental office remote access HIPAA | Informational/commercial | Future remote access guide | Backlog |

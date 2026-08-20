@@ -1,6 +1,6 @@
 # FlossByte SEO / Business TODO
 
-Last updated: 2026-05-18
+Last updated: 2026-08-20
 
 Purpose: Track unfinished improvements for FlossByte. When a task is completed, remove it from this file instead of moving it to a completed section. Keep this list actionable and current.
 
@@ -24,6 +24,7 @@ Purpose: Track unfinished improvements for FlossByte. When a task is completed, 
 
 ## Reviews / Trust
 
+- Verify remaining named testimonials on service and location pages are real and approved for public use. Replace any placeholder/unverifiable testimonial with real Google reviews, anonymized case study language, or remove it.
 - Ask the next happy client for a Google review when there is a natural support win or project completion.
 - Aim for one real Google review every 2-4 weeks if client activity supports it.
 - Add 2-3 real project photos to the website if client permission allows.
@@ -52,7 +53,9 @@ Purpose: Track unfinished improvements for FlossByte. When a task is completed, 
 
 ## Technical / Conversion Improvements
 
+- Shorten long title tags and meta descriptions on high-value pages first: Dentrix guide, HIPAA setup blog, dental server issues blog, managed IT, network infrastructure, FAQ, city pages, and location hub pages.
 - Add a visible "Book a Dental IT Assessment" conversion block to high-intent service pages and blog posts.
+- Add stronger inline CTAs to older high-intent pages that currently rely mostly on shared navigation/footer CTAs: services hub, blog hub, FAQ, dental IT cost, data backup, AI, technology roadmap, and Dentrix comparison.
 - Review high-impression pages in Search Console for CTR and rewrite titles/meta descriptions where impressions appear but clicks stay at zero.
 - Improve internal links from blog posts to region/city pages where natural.
 - Add local proof to top city pages over time so they are less generic and more credible.

@@ -597,6 +597,225 @@ function injectBlogServiceAreas() {
   }
 }
 
+/* ── Related content (blog posts): contextual internal links ── */
+function injectRelatedContent() {
+  // Only on blog post pages (not the blog index)
+  const path = window.location.pathname;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  const r = rootPath;
+  const slug = path.toLowerCase();
+
+  // [keywords] -> related services, related posts, related city pages
+  const MAP = [
+    { k: ['dentrix'], services: [
+        ['services/dentrix-support.html', 'Dentrix IT Support'],
+        ['services/dental-network-infrastructure.html', 'Dental Network & Server Infrastructure'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/dentrix-it-support-guide.html', 'Dentrix IT Support: The Complete Guide'],
+        ['blog/dentrix-running-slow.html', 'Dentrix Running Slow? How to Fix It'],
+        ['blog/dentrix-vs-eaglesoft-vs-open-dental.html', 'Dentrix vs Eaglesoft vs Open Dental'] ],
+      cities: [] },
+    { k: ['eaglesoft', 'open-dental'], services: [
+        ['services/eaglesoft-support.html', 'Eaglesoft IT Support'],
+        ['services/open-dental-support.html', 'Open Dental IT Support'],
+        ['services/dentrix-support.html', 'Dentrix IT Support'] ],
+      posts: [
+        ['blog/dentrix-vs-eaglesoft-vs-open-dental.html', 'Dentrix vs Eaglesoft vs Open Dental'] ],
+      cities: [] },
+    { k: ['hipaa'], services: [
+        ['hipaa-compliance.html', 'HIPAA Compliance for Dental Practices'],
+        ['services/dental-cybersecurity.html', 'Dental Cybersecurity'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/done-for-you-hipaa-compliance-setup-dental.html', 'Done-for-You HIPAA Compliance Setup'],
+        ['blog/hipaa-compliance-for-dental-practices.html', 'HIPAA Compliance for Dental Practices'],
+        ['blog/hipaa-it-requirements-dental-offices.html', 'HIPAA IT Requirements for Dental Offices'] ],
+      cities: [] },
+    { k: ['backup', 'recovery'], services: [
+        ['services/dental-data-backup.html', 'Dental Data Backup & Disaster Recovery'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/dental-data-backup-recovery-guide.html', 'Dental Data Backup & Recovery Guide'],
+        ['blog/dental-data-backup-cost-risks.html', 'Dental Data Backup: Costs & Risks'] ],
+      cities: [] },
+    { k: ['ransomware', 'cybersecurity', 'antivirus', 'firewall'], services: [
+        ['services/dental-cybersecurity.html', 'Dental Cybersecurity & HIPAA Security'],
+        ['services/dental-data-backup.html', 'Dental Data Backup & Disaster Recovery'] ],
+      posts: [
+        ['blog/dental-office-ransomware-prevention.html', 'Dental Office Ransomware Prevention'],
+        ['blog/dental-cybersecurity-antivirus.html', 'Antivirus & Cybersecurity for Dental Offices'] ],
+      cities: [] },
+    { k: ['voip', 'phone'], services: [
+        ['services/dental-voip-phone-systems.html', 'Dental VoIP Phone Systems'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [],
+      cities: [] },
+    { k: ['network', 'server', 'wifi', 'wi-fi', 'cabling'], services: [
+        ['services/dental-network-infrastructure.html', 'Dental Network & Infrastructure'],
+        ['services/dental-office-network-setup.html', 'Dental Office Network Setup'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/dental-office-server-issues.html', 'Dental Office Server Issues: Diagnosis Guide'],
+        ['blog/dental-it-support-common-issues.html', 'Common Dental IT Issues & Fixes'] ],
+      cities: [] },
+    { k: ['vcio', 'roadmap', 'strategy'], services: [
+        ['services/dental-vcio.html', 'Dental vCIO & Technology Strategy'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/what-is-dental-vcio.html', 'What Is a Dental vCIO?'],
+        ['blog/dental-practice-technology-roadmap.html', 'Dental Practice Technology Roadmap'] ],
+      cities: [] },
+    { k: ['cost', 'pricing', 'price'], services: [
+        ['pricing.html', 'Dental IT Pricing Plans'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/dental-it-support-cost-2026.html', 'How Much Does Dental IT Support Cost?'] ],
+      cities: [] },
+    { k: ['ai-'], services: [
+        ['services/ai-dental-technology.html', 'AI Integration for Dental Practices'],
+        ['services/dental-vcio.html', 'Dental vCIO & Technology Strategy'] ],
+      posts: [
+        ['blog/ai-transforming-dental-practices-2026.html', 'How AI Is Transforming Dental Practices'] ],
+      cities: [] },
+    { k: ['new-dental-practice', 'startup', 'opening'], services: [
+        ['services/dental-office-network-setup.html', 'New Dental Office IT Setup'],
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+      posts: [
+        ['blog/new-dental-practice-it-setup-checklist.html', 'New Dental Practice IT Setup Checklist'] ],
+      cities: [
+        ['locations/south-bay/san-jose.html', 'Dental IT Support in San Jose'],
+        ['locations/peninsula/san-francisco.html', 'Dental IT Support in San Francisco'] ] },
+    { k: ['dso', 'multi-location', 'group-practice'], services: [
+        ['services/dso-multi-location.html', 'DSO & Multi-Location Dental IT'],
+        ['services/dental-vcio.html', 'Dental vCIO & Technology Strategy'] ],
+      posts: [],
+      cities: [] },
+    { k: ['imaging', 'dexis', 'x-ray', 'cbct'], services: [
+        ['services/dental-imaging-it-support.html', 'Dental Imaging IT Support'],
+        ['services/dental-network-infrastructure.html', 'Dental Network & Infrastructure'] ],
+      posts: [],
+      cities: [] },
+    { k: ['outage', 'downtime', 'emergency'], services: [
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'],
+        ['services/dental-network-infrastructure.html', 'Dental Network & Infrastructure'] ],
+      posts: [
+        ['blog/dental-it-support-bay-area-outage.html', 'Dental IT Outage: Emergency Response'],
+        ['blog/dental-downtime-revenue-loss.html', 'What Dental Downtime Really Costs'] ],
+      cities: [] },
+    { k: ['switching', 'best-dental-it', 'why-general-it-fails', 'need-specialized'], services: [
+        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'],
+        ['why-flossbyte.html', 'Why Dental Practices Choose FlossByte'] ],
+      posts: [
+        ['blog/best-dental-it-companies-bay-area.html', 'Best Dental IT Companies in the Bay Area'],
+        ['blog/switching-dental-it-provider.html', 'Switching Your Dental IT Provider'] ],
+      cities: [] }
+  ];
+
+  const seen = new Set();
+  const base = (h) => h.toLowerCase().split('/').pop().replace(/\.html$/, '');
+  seen.add(base(slug)); // never link a page to itself
+  const services = [];
+  const posts = [];
+  const cities = [];
+  const pushUnique = (arr, href, label, cap) => {
+    const key = base(href);
+    if (arr.length >= cap || seen.has(key)) return;
+    seen.add(key);
+    arr.push([href, label]);
+  };
+
+  MAP.forEach(entry => {
+    if (!entry.k.some(k => slug.includes(k))) return;
+    entry.services.forEach(([href, label]) => pushUnique(services, href, label, 3));
+    entry.posts.forEach(([href, label]) => pushUnique(posts, href, label, 3));
+    entry.cities.forEach(([href, label]) => pushUnique(cities, href, label, 2));
+  });
+
+  // Fallback: every post gets at least the core conversion links
+  if (!services.length) {
+    pushUnique(services, 'services/managed-it-support.html', 'Managed IT Support for Dental Practices', 3);
+    pushUnique(services, 'services/dental-cybersecurity.html', 'Dental Cybersecurity & HIPAA Security', 3);
+  }
+
+  const linkList = (items) => items.map(([href, label]) =>
+    `<li style="margin-bottom:8px"><a href="${r(href)}" style="color:var(--color-teal);font-weight:600;text-decoration:none">${label} →</a></li>`
+  ).join('');
+
+  let html = `<div class="container" style="max-width:800px">
+    <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:16px">Related Reading</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px">`;
+  if (services.length) {
+    html += `<div><p style="font-weight:700;color:var(--color-navy);margin-bottom:10px;font-size:0.95rem">Our Services</p><ul style="list-style:none;padding:0;margin:0;font-size:0.95rem">${linkList(services)}</ul></div>`;
+  }
+  if (posts.length || cities.length) {
+    html += `<div><p style="font-weight:700;color:var(--color-navy);margin-bottom:10px;font-size:0.95rem">More Guides</p><ul style="list-style:none;padding:0;margin:0;font-size:0.95rem">${linkList(posts.concat(cities))}</ul></div>`;
+  }
+  html += `</div></div>`;
+
+  const section = document.createElement('section');
+  section.style.cssText = 'padding:0 0 40px';
+  section.setAttribute('aria-label', 'Related reading');
+  section.innerHTML = html;
+
+  // Insert before the service-areas block if present, else before last light section
+  const svcAreas = Array.from(main.querySelectorAll('section')).find(s => s.textContent.includes('Dental IT Support Across the Bay Area'));
+  if (svcAreas) {
+    main.insertBefore(section, svcAreas);
+  } else {
+    const lastSection = main.querySelector('section.section-light:last-of-type');
+    if (lastSection) main.insertBefore(section, lastSection);
+    else main.appendChild(section);
+  }
+}
+
+/* ── City pages: service link grid (local SEO) ───────────────── */
+function injectCityServices() {
+  // Only on individual city pages: /locations/<region>/<city>
+  const path = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+  const m = path.match(/\/locations\/([^/]+)\/([^/]+)$/);
+  if (!m) return;
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  const r = rootPath;
+  const city = m[2].split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+  const services = [
+    ['services/managed-it-support.html', 'Managed IT Support', 'Help desk, monitoring & proactive maintenance'],
+    ['hipaa-compliance.html', 'HIPAA Compliance', 'Risk assessments, hardening & audit readiness'],
+    ['services/dental-cybersecurity.html', 'Cybersecurity', 'Threat monitoring & ransomware protection'],
+    ['services/dentrix-support.html', 'Dentrix, Eaglesoft & Open Dental', 'Practice management software experts'],
+    ['services/dental-data-backup.html', 'Backup & Recovery', 'Encrypted backups & disaster recovery'],
+    ['services/dental-network-infrastructure.html', 'Network & Wi-Fi', 'Infrastructure for imaging & X-ray systems'],
+    ['services/dental-voip-phone-systems.html', 'VoIP Phone Systems', 'Modern phones with scheduling integrations'],
+    ['services/dental-vcio.html', 'vCIO & Strategy', 'Technology roadmapping & IT budgeting']
+  ];
+
+  const cards = services.map(([href, label, desc]) => `
+    <a href="${r(href)}" style="display:block;padding:18px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+      <p style="font-weight:700;color:var(--color-navy);margin:0 0 6px;font-size:1rem">${label} in ${city}</p>
+      <p style="color:var(--color-text-muted);margin:0;font-size:0.88rem">${desc}</p>
+    </a>`).join('');
+
+  const section = document.createElement('section');
+  section.style.cssText = 'padding:24px 0 48px';
+  section.setAttribute('aria-label', 'Services in ' + city);
+  section.innerHTML = `
+    <div class="container" style="max-width:1000px">
+      <h2 style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--color-navy);margin-bottom:8px">Dental IT Services in ${city}</h2>
+      <p style="color:var(--color-text-muted);font-size:0.95rem;margin-bottom:24px">Every service below is delivered by our Bay Area dental technology team — HIPAA-compliant from day one.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">${cards}</div>
+    </div>`;
+
+  const lastSection = main.querySelector('section.section-light:last-of-type');
+  if (lastSection) main.insertBefore(section, lastSection);
+  else main.appendChild(section);
+}
+
 /* ── BreadcrumbList Schema ──────────────────────────────────── */
 function injectBreadcrumbSchema() {
   // Match breadcrumb nav by class or by aria-label, or by content pattern (Home › ...)
@@ -657,4 +876,6 @@ document.addEventListener('DOMContentLoaded', () => {
   injectBreadcrumbSchema();
   injectBlogEmailSignup();
   injectBlogServiceAreas();
+  injectRelatedContent();
+  injectCityServices();
 });

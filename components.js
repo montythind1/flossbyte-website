@@ -97,7 +97,7 @@ function renderNav() {
   nav.setAttribute('aria-label', 'Main navigation');
   nav.innerHTML = `
     <div class="nav-inner">
-      <a class="nav-logo" href="${r('index.html')}" aria-label="FlossByte Home"
+      <a class="nav-logo" href="${r('')}" aria-label="FlossByte Home"
          style="display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;">
         <img src="${r('assets/logo-icon.png')}" alt="" width="38" height="49" aria-hidden="true" loading="eager" style="flex-shrink:0;object-fit:contain;" />
         <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:0.85rem;
@@ -107,46 +107,46 @@ function renderNav() {
       </a>
 
       <div class="nav-links" id="nav-links">
-        <a href="${r('index.html')}" id="nav-home">Home</a>
+        <a href="${r('')}" id="nav-home">Home</a>
         <div class="nav-dropdown">
-          <a href="${r('services.html')}" id="nav-services" class="nav-dropdown-toggle">Services
+          <a href="${r('services')}" id="nav-services" class="nav-dropdown-toggle">Services
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </a>
           <div class="nav-dropdown-menu">
-            <a href="${r('services/dental-vcio.html')}">Technology Strategy &amp; vCIO</a>
-            <a href="${r('services/ai-dental-technology.html')}">AI Integration</a>
-            <a href="${r('services/managed-it-support.html')}">Managed IT Support</a>
-            <a href="${r('services/dental-cybersecurity.html')}">Cybersecurity</a>
-            <a href="${r('services/dental-data-backup.html')}">Backup &amp; Recovery</a>
-            <a href="${r('services/dental-network-infrastructure.html')}">Network &amp; Infrastructure</a>
-            <a href="${r('services/dental-voip-phone-systems.html')}">VoIP &amp; Phone Systems</a>
-            <a href="${r('services/dental-hardware-management.html')}">Hardware Management</a>
-            <a href="${r('services/dentrix-support.html')}">Dentrix Support</a>
-            <a href="${r('services/eaglesoft-support.html')}">Eaglesoft Support</a>
-            <a href="${r('services/open-dental-support.html')}">Open Dental Support</a>
-            <a href="${r('services/dso-multi-location.html')}">DSO &amp; Multi-Location</a>
-            <a href="${r('services.html')}">All Services →</a>
+            <a href="${r('services/dental-vcio')}">Technology Strategy &amp; vCIO</a>
+            <a href="${r('services/ai-dental-technology')}">AI Integration</a>
+            <a href="${r('services/managed-it-support')}">Managed IT Support</a>
+            <a href="${r('services/dental-cybersecurity')}">Cybersecurity</a>
+            <a href="${r('services/dental-data-backup')}">Backup &amp; Recovery</a>
+            <a href="${r('services/dental-network-infrastructure')}">Network &amp; Infrastructure</a>
+            <a href="${r('services/dental-voip-phone-systems')}">VoIP &amp; Phone Systems</a>
+            <a href="${r('services/dental-hardware-management')}">Hardware Management</a>
+            <a href="${r('services/dentrix-support')}">Dentrix Support</a>
+            <a href="${r('services/eaglesoft-support')}">Eaglesoft Support</a>
+            <a href="${r('services/open-dental-support')}">Open Dental Support</a>
+            <a href="${r('services/dso-multi-location')}">DSO &amp; Multi-Location</a>
+            <a href="${r('services')}">All Services →</a>
           </div>
         </div>
-        <a href="${r('pricing.html')}" id="nav-pricing">Pricing</a>
-        <a href="${r('about.html')}" id="nav-about">About</a>
-        <a href="${r('why-flossbyte.html')}" id="nav-why">Why FlossByte</a>
+        <a href="${r('pricing')}" id="nav-pricing">Pricing</a>
+        <a href="${r('about')}" id="nav-about">About</a>
+        <a href="${r('why-flossbyte')}" id="nav-why">Why FlossByte</a>
         <div class="nav-dropdown">
           <span class="nav-dropdown-toggle">Resources
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </span>
           <div class="nav-dropdown-menu">
-            <a href="${r('blog/index.html')}">Blog</a>
-            <a href="${r('hipaa-compliance.html')}">HIPAA Compliance</a>
-            <a href="${r('faqs.html')}">FAQs</a>
+            <a href="${r('blog/')}">Blog</a>
+            <a href="${r('hipaa-compliance')}">HIPAA Compliance</a>
+            <a href="${r('faqs')}">FAQs</a>
           </div>
         </div>
-        <a href="${r('contact.html')}" id="nav-contact">Contact</a>
+        <a href="${r('contact')}" id="nav-contact">Contact</a>
       </div>
 
       <div class="nav-cta">
         <a class="nav-phone" href="${SITE.phoneHref}">${SITE.phone}</a>
-        <a class="btn btn-primary btn-sm" href="${r('contact.html')}">Free Assessment</a>
+        <a class="btn btn-primary btn-sm" href="${r('contact')}">Free Assessment</a>
       </div>
 
       <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
@@ -156,26 +156,26 @@ function renderNav() {
 
     <!-- Mobile Navigation -->
     <div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
-      <a href="${r('index.html')}">Home</a>
-      <a href="${r('services.html')}">All Services</a>
-      <a href="${r('services/dental-vcio.html')}" style="padding-left:24px;font-size:0.875rem">Technology Strategy &amp; vCIO</a>
-      <a href="${r('services/ai-dental-technology.html')}" style="padding-left:24px;font-size:0.875rem">AI Integration</a>
-      <a href="${r('services/managed-it-support.html')}" style="padding-left:24px;font-size:0.875rem">Managed IT Support</a>
-      <a href="${r('services/dental-cybersecurity.html')}" style="padding-left:24px;font-size:0.875rem">Cybersecurity</a>
-      <a href="${r('services/dental-network-infrastructure.html')}" style="padding-left:24px;font-size:0.875rem">Network &amp; Infrastructure</a>
-      <a href="${r('services/dental-voip-phone-systems.html')}" style="padding-left:24px;font-size:0.875rem">VoIP &amp; Phone Systems</a>
-      <a href="${r('services/dental-hardware-management.html')}" style="padding-left:24px;font-size:0.875rem">Hardware Management</a>
-      <a href="${r('services/dso-multi-location.html')}" style="padding-left:24px;font-size:0.875rem">DSO &amp; Multi-Location</a>
-      <a href="${r('pricing.html')}">Pricing</a>
-      <a href="${r('about.html')}">About</a>
-      <a href="${r('why-flossbyte.html')}">Why FlossByte</a>
+      <a href="${r('')}">Home</a>
+      <a href="${r('services')}">All Services</a>
+      <a href="${r('services/dental-vcio')}" style="padding-left:24px;font-size:0.875rem">Technology Strategy &amp; vCIO</a>
+      <a href="${r('services/ai-dental-technology')}" style="padding-left:24px;font-size:0.875rem">AI Integration</a>
+      <a href="${r('services/managed-it-support')}" style="padding-left:24px;font-size:0.875rem">Managed IT Support</a>
+      <a href="${r('services/dental-cybersecurity')}" style="padding-left:24px;font-size:0.875rem">Cybersecurity</a>
+      <a href="${r('services/dental-network-infrastructure')}" style="padding-left:24px;font-size:0.875rem">Network &amp; Infrastructure</a>
+      <a href="${r('services/dental-voip-phone-systems')}" style="padding-left:24px;font-size:0.875rem">VoIP &amp; Phone Systems</a>
+      <a href="${r('services/dental-hardware-management')}" style="padding-left:24px;font-size:0.875rem">Hardware Management</a>
+      <a href="${r('services/dso-multi-location')}" style="padding-left:24px;font-size:0.875rem">DSO &amp; Multi-Location</a>
+      <a href="${r('pricing')}">Pricing</a>
+      <a href="${r('about')}">About</a>
+      <a href="${r('why-flossbyte')}">Why FlossByte</a>
       <div class="mobile-divider"></div>
-      <a href="${r('blog/index.html')}">Blog</a>
-      <a href="${r('hipaa-compliance.html')}">HIPAA Compliance</a>
-      <a href="${r('faqs.html')}">FAQs</a>
+      <a href="${r('blog/')}">Blog</a>
+      <a href="${r('hipaa-compliance')}">HIPAA Compliance</a>
+      <a href="${r('faqs')}">FAQs</a>
       <div class="mobile-divider"></div>
       <a href="${SITE.phoneHref}" style="color: var(--color-teal)">${SITE.phone}</a>
-      <a class="mobile-cta" href="${r('contact.html')}">Get Free Technology Assessment</a>
+      <a class="mobile-cta" href="${r('contact')}">Get Free Technology Assessment</a>
     </div>
   `;
   document.body.insertBefore(nav, document.body.firstChild);
@@ -208,8 +208,8 @@ function renderNav() {
     const href = link.getAttribute('href') || '';
     if (!href) return;
     const linkBase = href.split('/').pop().split('#')[0].toLowerCase();
-    const currentBase = currentPath.split('/').pop().split('#')[0].toLowerCase() || 'index.html';
-    if (linkBase === currentBase || (linkBase === 'index.html' && currentBase === '')) {
+    const currentBase = currentPath.split('/').pop().split('#')[0].toLowerCase() || './';
+    if (linkBase === currentBase || (linkBase === './' && currentBase === '')) {
       link.classList.add('active');
     }
   });
@@ -227,7 +227,7 @@ function renderFooter() {
 
         <!-- Brand -->
         <div class="footer-brand">
-          <a href="${r('index.html')}" style="display:inline-block;text-decoration:none;margin-bottom:12px;">
+          <a href="${r('')}" style="display:inline-block;text-decoration:none;margin-bottom:12px;">
             <img src="${r('assets/logo-icon.png')}" alt="FlossByte" width="42" height="54" loading="lazy" style="object-fit:contain;" />
           </a>
           <p class="footer-tagline">HIPAA-compliant managed IT services built exclusively for dental practices across the Peninsula, East Bay, and South Bay.</p>
@@ -247,9 +247,9 @@ function renderFooter() {
         <div>
           <p class="footer-heading">Company</p>
           <div class="footer-links">
-            <a href="${r('about.html')}">About FlossByte</a>
-            <a href="${r('why-flossbyte.html')}">Why FlossByte</a>
-            <a href="${r('contact.html')}">Contact Us</a>
+            <a href="${r('about')}">About FlossByte</a>
+            <a href="${r('why-flossbyte')}">Why FlossByte</a>
+            <a href="${r('contact')}">Contact Us</a>
           </div>
         </div>
 
@@ -257,13 +257,13 @@ function renderFooter() {
         <div>
           <p class="footer-heading">Services</p>
           <div class="footer-links">
-            <a href="${r('services.html')}">All Services</a>
-            <a href="${r('services/dental-vcio.html')}">Technology Strategy &amp; vCIO</a>
-            <a href="${r('services/ai-dental-technology.html')}">AI Integration</a>
-            <a href="${r('services/dental-cybersecurity.html')}">Cybersecurity</a>
-            <a href="${r('services/dso-multi-location.html')}">DSO &amp; Multi-Location</a>
-            <a href="${r('hipaa-compliance.html')}">HIPAA Compliance</a>
-            <a href="${r('pricing.html')}">Pricing</a>
+            <a href="${r('services')}">All Services</a>
+            <a href="${r('services/dental-vcio')}">Technology Strategy &amp; vCIO</a>
+            <a href="${r('services/ai-dental-technology')}">AI Integration</a>
+            <a href="${r('services/dental-cybersecurity')}">Cybersecurity</a>
+            <a href="${r('services/dso-multi-location')}">DSO &amp; Multi-Location</a>
+            <a href="${r('hipaa-compliance')}">HIPAA Compliance</a>
+            <a href="${r('pricing')}">Pricing</a>
           </div>
         </div>
 
@@ -271,9 +271,9 @@ function renderFooter() {
         <div>
           <p class="footer-heading">Service Areas</p>
           <div class="footer-links">
-            <a href="${r('locations/peninsula.html')}">Peninsula & SF</a>
-            <a href="${r('locations/east-bay.html')}">East Bay</a>
-            <a href="${r('locations/south-bay.html')}">South Bay</a>
+            <a href="${r('locations/peninsula')}">Peninsula & SF</a>
+            <a href="${r('locations/east-bay')}">East Bay</a>
+            <a href="${r('locations/south-bay')}">South Bay</a>
           </div>
         </div>
 
@@ -291,11 +291,11 @@ function renderFooter() {
       <div class="footer-bar">
         <p class="footer-bar-copy">© ${SITE.year} FlossByte | Dental IT Support | Peninsula, East Bay & South Bay, CA. All Rights Reserved.</p>
         <div class="footer-bar-links">
-          <a href="${r('blog/index.html')}">Blog</a>
-          <a href="${r('hipaa-compliance.html')}">HIPAA</a>
-          <a href="${r('contact.html')}">Contact</a>
-          <a href="${r('privacy.html')}">Privacy Policy</a>
-          <a href="${r('terms.html')}">Terms</a>
+          <a href="${r('blog/')}">Blog</a>
+          <a href="${r('hipaa-compliance')}">HIPAA</a>
+          <a href="${r('contact')}">Contact</a>
+          <a href="${r('privacy')}">Privacy Policy</a>
+          <a href="${r('terms')}">Terms</a>
         </div>
       </div>
     </div>
@@ -368,7 +368,7 @@ function initExitIntent() {
             <span style="font-size:0.75rem;color:var(--color-text-muted)">Covers encryption, backups, access controls &amp; more</span>
           </div>
         </div>
-        <p style="margin-top:10px;font-size:0.8125rem;color:var(--color-text-muted)">Want a full assessment instead? <a href="${r('contact.html')}" style="color:var(--color-teal);font-weight:600">Book free IT assessment</a></p>
+        <p style="margin-top:10px;font-size:0.8125rem;color:var(--color-text-muted)">Want a full assessment instead? <a href="${r('contact')}" style="color:var(--color-teal);font-weight:600">Book free IT assessment</a></p>
       </div>
     </div>
   `;
@@ -418,7 +418,7 @@ function initExitIntent() {
       await fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
     } catch (err) { /* still show success — we'll get the data */ }
     // Redirect to thank-you/download page
-    window.location.href = '/thank-you.html';
+    window.location.href = '/thank-you';
   });
 
   function showPopup() {
@@ -475,7 +475,7 @@ function renderMobileCTA() {
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       Call Now
     </a>
-    <a class="sticky-assess" href="${r('contact.html')}">Free Assessment</a>
+    <a class="sticky-assess" href="${r('contact')}">Free Assessment</a>
   `;
   document.body.appendChild(bar);
 }
@@ -507,7 +507,7 @@ function createSignupCTA(source) {
 
 function injectBlogEmailSignup() {
   const path = window.location.pathname;
-  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/')) return;
 
   const main = document.querySelector('main');
   if (!main) return;
@@ -548,14 +548,14 @@ document.addEventListener('submit', async (e) => {
       headers: { 'Accept': 'application/json' }
     });
   } catch (err) { /* redirect anyway */ }
-  window.location.href = '/thank-you.html';
+  window.location.href = '/thank-you';
 });
 
 /* ── Blog: Service Area Links ──────────────────────────────── */
 function injectBlogServiceAreas() {
   // Only on blog post pages (not the blog index)
   const path = window.location.pathname;
-  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/')) return;
 
   const r = rootPath;
   const main = document.querySelector('main');
@@ -568,22 +568,22 @@ function injectBlogServiceAreas() {
       <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:16px">Dental IT Support Across the Bay Area</h2>
       <p style="color:var(--color-text-muted);font-size:0.95rem;margin-bottom:20px">FlossByte serves dental practices throughout the Bay Area. Find IT support near you:</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="${r('locations/peninsula.html')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <a href="${r('locations/peninsula')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
           <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Peninsula & SF
         </a>
-        <a href="${r('locations/east-bay.html')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <a href="${r('locations/east-bay')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
           <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           East Bay
         </a>
-        <a href="${r('locations/south-bay.html')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <a href="${r('locations/south-bay')}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:var(--color-gray-50);border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;color:var(--color-navy);transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
           <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           South Bay
         </a>
       </div>
       <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;font-size:0.85rem">
-        <a href="${r('services.html')}" style="color:var(--color-teal);text-decoration:none;font-weight:600">View All Services →</a>
-        <a href="${r('pricing.html')}" style="color:var(--color-teal);text-decoration:none;font-weight:600">See Pricing →</a>
+        <a href="${r('services')}" style="color:var(--color-teal);text-decoration:none;font-weight:600">View All Services →</a>
+        <a href="${r('pricing')}" style="color:var(--color-teal);text-decoration:none;font-weight:600">See Pricing →</a>
       </div>
     </div>
   `;
@@ -601,7 +601,7 @@ function injectBlogServiceAreas() {
 function injectRelatedContent() {
   // Only on blog post pages (not the blog index)
   const path = window.location.pathname;
-  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/index.html')) return;
+  if (!path.includes('/blog/') || path.endsWith('/blog/') || path.endsWith('/blog/')) return;
   const main = document.querySelector('main');
   if (!main) return;
 
@@ -611,107 +611,107 @@ function injectRelatedContent() {
   // [keywords] -> related services, related posts, related city pages
   const MAP = [
     { k: ['dentrix'], services: [
-        ['services/dentrix-support.html', 'Dentrix IT Support'],
-        ['services/dental-network-infrastructure.html', 'Dental Network & Server Infrastructure'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['services/dentrix-support', 'Dentrix IT Support'],
+        ['services/dental-network-infrastructure', 'Dental Network & Server Infrastructure'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/dentrix-it-support-guide.html', 'Dentrix IT Support: The Complete Guide'],
-        ['blog/dentrix-running-slow.html', 'Dentrix Running Slow? How to Fix It'],
-        ['blog/dentrix-vs-eaglesoft-vs-open-dental.html', 'Dentrix vs Eaglesoft vs Open Dental'] ],
+        ['blog/dentrix-it-support-guide', 'Dentrix IT Support: The Complete Guide'],
+        ['blog/dentrix-running-slow', 'Dentrix Running Slow? How to Fix It'],
+        ['blog/dentrix-vs-eaglesoft-vs-open-dental', 'Dentrix vs Eaglesoft vs Open Dental'] ],
       cities: [] },
     { k: ['eaglesoft', 'open-dental'], services: [
-        ['services/eaglesoft-support.html', 'Eaglesoft IT Support'],
-        ['services/open-dental-support.html', 'Open Dental IT Support'],
-        ['services/dentrix-support.html', 'Dentrix IT Support'] ],
+        ['services/eaglesoft-support', 'Eaglesoft IT Support'],
+        ['services/open-dental-support', 'Open Dental IT Support'],
+        ['services/dentrix-support', 'Dentrix IT Support'] ],
       posts: [
-        ['blog/dentrix-vs-eaglesoft-vs-open-dental.html', 'Dentrix vs Eaglesoft vs Open Dental'] ],
+        ['blog/dentrix-vs-eaglesoft-vs-open-dental', 'Dentrix vs Eaglesoft vs Open Dental'] ],
       cities: [] },
     { k: ['hipaa'], services: [
-        ['hipaa-compliance.html', 'HIPAA Compliance for Dental Practices'],
-        ['services/dental-cybersecurity.html', 'Dental Cybersecurity'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['hipaa-compliance', 'HIPAA Compliance for Dental Practices'],
+        ['services/dental-cybersecurity', 'Dental Cybersecurity'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/done-for-you-hipaa-compliance-setup-dental.html', 'Done-for-You HIPAA Compliance Setup'],
-        ['blog/hipaa-compliance-for-dental-practices.html', 'HIPAA Compliance for Dental Practices'],
-        ['blog/hipaa-it-requirements-dental-offices.html', 'HIPAA IT Requirements for Dental Offices'] ],
+        ['blog/done-for-you-hipaa-compliance-setup-dental', 'Done-for-You HIPAA Compliance Setup'],
+        ['blog/hipaa-compliance-for-dental-practices', 'HIPAA Compliance for Dental Practices'],
+        ['blog/hipaa-it-requirements-dental-offices', 'HIPAA IT Requirements for Dental Offices'] ],
       cities: [] },
     { k: ['backup', 'recovery'], services: [
-        ['services/dental-data-backup.html', 'Dental Data Backup & Disaster Recovery'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['services/dental-data-backup', 'Dental Data Backup & Disaster Recovery'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/dental-data-backup-recovery-guide.html', 'Dental Data Backup & Recovery Guide'],
-        ['blog/dental-data-backup-cost-risks.html', 'Dental Data Backup: Costs & Risks'] ],
+        ['blog/dental-data-backup-recovery-guide', 'Dental Data Backup & Recovery Guide'],
+        ['blog/dental-data-backup-cost-risks', 'Dental Data Backup: Costs & Risks'] ],
       cities: [] },
     { k: ['ransomware', 'cybersecurity', 'antivirus', 'firewall'], services: [
-        ['services/dental-cybersecurity.html', 'Dental Cybersecurity & HIPAA Security'],
-        ['services/dental-data-backup.html', 'Dental Data Backup & Disaster Recovery'] ],
+        ['services/dental-cybersecurity', 'Dental Cybersecurity & HIPAA Security'],
+        ['services/dental-data-backup', 'Dental Data Backup & Disaster Recovery'] ],
       posts: [
-        ['blog/dental-office-ransomware-prevention.html', 'Dental Office Ransomware Prevention'],
-        ['blog/dental-cybersecurity-antivirus.html', 'Antivirus & Cybersecurity for Dental Offices'] ],
+        ['blog/dental-office-ransomware-prevention', 'Dental Office Ransomware Prevention'],
+        ['blog/dental-cybersecurity-antivirus', 'Antivirus & Cybersecurity for Dental Offices'] ],
       cities: [] },
     { k: ['voip', 'phone'], services: [
-        ['services/dental-voip-phone-systems.html', 'Dental VoIP Phone Systems'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['services/dental-voip-phone-systems', 'Dental VoIP Phone Systems'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [],
       cities: [] },
     { k: ['network', 'server', 'wifi', 'wi-fi', 'cabling'], services: [
-        ['services/dental-network-infrastructure.html', 'Dental Network & Infrastructure'],
-        ['services/dental-office-network-setup.html', 'Dental Office Network Setup'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['services/dental-network-infrastructure', 'Dental Network & Infrastructure'],
+        ['services/dental-office-network-setup', 'Dental Office Network Setup'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/dental-office-server-issues.html', 'Dental Office Server Issues: Diagnosis Guide'],
-        ['blog/dental-it-support-common-issues.html', 'Common Dental IT Issues & Fixes'] ],
+        ['blog/dental-office-server-issues', 'Dental Office Server Issues: Diagnosis Guide'],
+        ['blog/dental-it-support-common-issues', 'Common Dental IT Issues & Fixes'] ],
       cities: [] },
     { k: ['vcio', 'roadmap', 'strategy'], services: [
-        ['services/dental-vcio.html', 'Dental vCIO & Technology Strategy'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['services/dental-vcio', 'Dental vCIO & Technology Strategy'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/what-is-dental-vcio.html', 'What Is a Dental vCIO?'],
-        ['blog/dental-practice-technology-roadmap.html', 'Dental Practice Technology Roadmap'] ],
+        ['blog/what-is-dental-vcio', 'What Is a Dental vCIO?'],
+        ['blog/dental-practice-technology-roadmap', 'Dental Practice Technology Roadmap'] ],
       cities: [] },
     { k: ['cost', 'pricing', 'price'], services: [
-        ['pricing.html', 'Dental IT Pricing Plans'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['pricing', 'Dental IT Pricing Plans'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/dental-it-support-cost-2026.html', 'How Much Does Dental IT Support Cost?'] ],
+        ['blog/dental-it-support-cost-2026', 'How Much Does Dental IT Support Cost?'] ],
       cities: [] },
     { k: ['ai-'], services: [
-        ['services/ai-dental-technology.html', 'AI Integration for Dental Practices'],
-        ['services/dental-vcio.html', 'Dental vCIO & Technology Strategy'] ],
+        ['services/ai-dental-technology', 'AI Integration for Dental Practices'],
+        ['services/dental-vcio', 'Dental vCIO & Technology Strategy'] ],
       posts: [
-        ['blog/ai-transforming-dental-practices-2026.html', 'How AI Is Transforming Dental Practices'] ],
+        ['blog/ai-transforming-dental-practices-2026', 'How AI Is Transforming Dental Practices'] ],
       cities: [] },
     { k: ['new-dental-practice', 'startup', 'opening'], services: [
-        ['services/dental-office-network-setup.html', 'New Dental Office IT Setup'],
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'] ],
+        ['services/dental-office-network-setup', 'New Dental Office IT Setup'],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'] ],
       posts: [
-        ['blog/new-dental-practice-it-setup-checklist.html', 'New Dental Practice IT Setup Checklist'] ],
+        ['blog/new-dental-practice-it-setup-checklist', 'New Dental Practice IT Setup Checklist'] ],
       cities: [
-        ['locations/south-bay/san-jose.html', 'Dental IT Support in San Jose'],
-        ['locations/peninsula/san-francisco.html', 'Dental IT Support in San Francisco'] ] },
+        ['locations/south-bay/san-jose', 'Dental IT Support in San Jose'],
+        ['locations/peninsula/san-francisco', 'Dental IT Support in San Francisco'] ] },
     { k: ['dso', 'multi-location', 'group-practice'], services: [
-        ['services/dso-multi-location.html', 'DSO & Multi-Location Dental IT'],
-        ['services/dental-vcio.html', 'Dental vCIO & Technology Strategy'] ],
+        ['services/dso-multi-location', 'DSO & Multi-Location Dental IT'],
+        ['services/dental-vcio', 'Dental vCIO & Technology Strategy'] ],
       posts: [],
       cities: [] },
     { k: ['imaging', 'dexis', 'x-ray', 'cbct'], services: [
-        ['services/dental-imaging-it-support.html', 'Dental Imaging IT Support'],
-        ['services/dental-network-infrastructure.html', 'Dental Network & Infrastructure'] ],
+        ['services/dental-imaging-it-support', 'Dental Imaging IT Support'],
+        ['services/dental-network-infrastructure', 'Dental Network & Infrastructure'] ],
       posts: [],
       cities: [] },
     { k: ['outage', 'downtime', 'emergency'], services: [
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'],
-        ['services/dental-network-infrastructure.html', 'Dental Network & Infrastructure'] ],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'],
+        ['services/dental-network-infrastructure', 'Dental Network & Infrastructure'] ],
       posts: [
-        ['blog/dental-it-support-bay-area-outage.html', 'Dental IT Outage: Emergency Response'],
-        ['blog/dental-downtime-revenue-loss.html', 'What Dental Downtime Really Costs'] ],
+        ['blog/dental-it-support-bay-area-outage', 'Dental IT Outage: Emergency Response'],
+        ['blog/dental-downtime-revenue-loss', 'What Dental Downtime Really Costs'] ],
       cities: [] },
     { k: ['switching', 'best-dental-it', 'why-general-it-fails', 'need-specialized'], services: [
-        ['services/managed-it-support.html', 'Managed IT Support for Dental Practices'],
-        ['why-flossbyte.html', 'Why Dental Practices Choose FlossByte'] ],
+        ['services/managed-it-support', 'Managed IT Support for Dental Practices'],
+        ['why-flossbyte', 'Why Dental Practices Choose FlossByte'] ],
       posts: [
-        ['blog/best-dental-it-companies-bay-area.html', 'Best Dental IT Companies in the Bay Area'],
-        ['blog/switching-dental-it-provider.html', 'Switching Your Dental IT Provider'] ],
+        ['blog/best-dental-it-companies-bay-area', 'Best Dental IT Companies in the Bay Area'],
+        ['blog/switching-dental-it-provider', 'Switching Your Dental IT Provider'] ],
       cities: [] }
   ];
 
@@ -737,8 +737,8 @@ function injectRelatedContent() {
 
   // Fallback: every post gets at least the core conversion links
   if (!services.length) {
-    pushUnique(services, 'services/managed-it-support.html', 'Managed IT Support for Dental Practices', 3);
-    pushUnique(services, 'services/dental-cybersecurity.html', 'Dental Cybersecurity & HIPAA Security', 3);
+    pushUnique(services, 'services/managed-it-support', 'Managed IT Support for Dental Practices', 3);
+    pushUnique(services, 'services/dental-cybersecurity', 'Dental Cybersecurity & HIPAA Security', 3);
   }
 
   const linkList = (items) => items.map(([href, label]) =>
@@ -785,14 +785,14 @@ function injectCityServices() {
   const city = m[2].split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
   const services = [
-    ['services/managed-it-support.html', 'Managed IT Support', 'Help desk, monitoring & proactive maintenance'],
-    ['hipaa-compliance.html', 'HIPAA Compliance', 'Risk assessments, hardening & audit readiness'],
-    ['services/dental-cybersecurity.html', 'Cybersecurity', 'Threat monitoring & ransomware protection'],
-    ['services/dentrix-support.html', 'Dentrix, Eaglesoft & Open Dental', 'Practice management software experts'],
-    ['services/dental-data-backup.html', 'Backup & Recovery', 'Encrypted backups & disaster recovery'],
-    ['services/dental-network-infrastructure.html', 'Network & Wi-Fi', 'Infrastructure for imaging & X-ray systems'],
-    ['services/dental-voip-phone-systems.html', 'VoIP Phone Systems', 'Modern phones with scheduling integrations'],
-    ['services/dental-vcio.html', 'vCIO & Strategy', 'Technology roadmapping & IT budgeting']
+    ['services/managed-it-support', 'Managed IT Support', 'Help desk, monitoring & proactive maintenance'],
+    ['hipaa-compliance', 'HIPAA Compliance', 'Risk assessments, hardening & audit readiness'],
+    ['services/dental-cybersecurity', 'Cybersecurity', 'Threat monitoring & ransomware protection'],
+    ['services/dentrix-support', 'Dentrix, Eaglesoft & Open Dental', 'Practice management software experts'],
+    ['services/dental-data-backup', 'Backup & Recovery', 'Encrypted backups & disaster recovery'],
+    ['services/dental-network-infrastructure', 'Network & Wi-Fi', 'Infrastructure for imaging & X-ray systems'],
+    ['services/dental-voip-phone-systems', 'VoIP Phone Systems', 'Modern phones with scheduling integrations'],
+    ['services/dental-vcio', 'vCIO & Strategy', 'Technology roadmapping & IT budgeting']
   ];
 
   const cards = services.map(([href, label, desc]) => `

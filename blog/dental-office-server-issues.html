@@ -69,9 +69,9 @@
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(0,191,165,0.08) 0%,transparent 70%)"></div>
   <div class="container" style="position:relative;z-index:2;max-width:800px">
     <nav style="display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
-      <a href="../index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
+      <a href="../" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
       <span>&rsaquo;</span>
-      <a href="index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
+      <a href="./" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
       <span>&rsaquo;</span>
       <span style="color:var(--color-teal)">Dental Office Server Issues</span>
     </nav>
@@ -109,12 +109,12 @@
     <h3>1. Slow Dentrix, Eaglesoft, or Open Dental Performance</h3>
     <p>If every workstation is slow, the server should be checked first. Database services, CPU usage, memory pressure, disk latency, storage space, and event logs all affect dental software performance. A workstation reboot will not fix a server that is underpowered or overloaded.</p>
 
-    <p>For Dentrix-specific troubleshooting, read our <a href="dentrix-running-slow.html" style="color:var(--color-teal);font-weight:600">Dentrix running slow guide</a>. If the slowness is broader than Dentrix, keep the server, network, storage, and backups in the investigation.</p>
+    <p>For Dentrix-specific troubleshooting, read our <a href="dentrix-running-slow" style="color:var(--color-teal);font-weight:600">Dentrix running slow guide</a>. If the slowness is broader than Dentrix, keep the server, network, storage, and backups in the investigation.</p>
 
     <h3>2. Backups Are Failing or Untested</h3>
     <p>A dental server without verified backups is a business risk. It is not enough to see a backup icon or assume a vendor is handling it. The backup must include the right databases, imaging folders, shared files, system state, and retention policy. It must also be tested with a real restore process.</p>
 
-    <p>If nobody can answer "what would we restore if the server died today?", the practice needs a backup review before any server repair or migration. Our <a href="dental-data-backup-recovery-guide.html" style="color:var(--color-teal);font-weight:600">dental data backup and recovery guide</a> explains the baseline.</p>
+    <p>If nobody can answer "what would we restore if the server died today?", the practice needs a backup review before any server repair or migration. Our <a href="dental-data-backup-recovery-guide" style="color:var(--color-teal);font-weight:600">dental data backup and recovery guide</a> explains the baseline.</p>
 
     <h3>3. Low Storage or Failing Disks</h3>
     <p>Dental servers fill up faster than many practices expect. Imaging archives, CBCT files, attachments, exports, backups, scans, and old software installers can consume storage over time. When server volumes get too full, performance and backup reliability both suffer.</p>
@@ -129,7 +129,7 @@
     <h3>5. Imaging Files Load Slowly</h3>
     <p>Dental imaging is storage and network heavy. Large X-rays, panoramic images, and CBCT files can expose weak server disks, overloaded network shares, poor permissions, slow switches, or antivirus scanning paths that should be excluded carefully.</p>
 
-    <p>If imaging is slow in multiple rooms, do not assume the sensor or camera is the only issue. The server, shared image path, network switch, cabling, and workstation performance all need to be checked. FlossByte handles <a href="../services/dental-imaging-it-support.html" style="color:var(--color-teal);font-weight:600">dental imaging IT support</a> alongside server and network troubleshooting.</p>
+    <p>If imaging is slow in multiple rooms, do not assume the sensor or camera is the only issue. The server, shared image path, network switch, cabling, and workstation performance all need to be checked. FlossByte handles <a href="../services/dental-imaging-it-support" style="color:var(--color-teal);font-weight:600">dental imaging IT support</a> alongside server and network troubleshooting.</p>
 
     <h3>6. Workstations Randomly Disconnect</h3>
     <p>Mapped drives that disappear, dental software that drops connection, or workstations that intermittently lose access to shared folders can point to server, DNS, switch, cabling, firewall, or Windows service problems. The pattern matters: one workstation points local; many workstations point infrastructure.</p>
@@ -144,7 +144,7 @@
       <li><strong>Likely imaging path issue:</strong> large files load slowly, CBCT viewing stalls, image folders are scanned by antivirus, or acquisition computers lose access to shared storage.</li>
     </ul>
 
-    <p>For buildouts, moves, and network cleanup, see our <a href="../services/dental-office-network-setup.html" style="color:var(--color-teal);font-weight:600">dental office network setup</a> service. For existing environments, a server and network assessment together is usually the cleanest path.</p>
+    <p>For buildouts, moves, and network cleanup, see our <a href="../services/dental-office-network-setup" style="color:var(--color-teal);font-weight:600">dental office network setup</a> service. For existing environments, a server and network assessment together is usually the cleanest path.</p>
 
     <h2>Warning Signs Your Dental Server Needs Attention</h2>
 
@@ -236,15 +236,15 @@
   <div class="container" style="max-width:800px">
     <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:20px">Related Articles</h2>
     <div style="display:flex;flex-direction:column;gap:12px">
-      <a href="dentrix-running-slow.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+      <a href="dentrix-running-slow" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
         <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">&rarr;</span>
         <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dentrix Running Slow? Troubleshooting Guide</span>
       </a>
-      <a href="dental-data-backup-recovery-guide.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+      <a href="dental-data-backup-recovery-guide" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
         <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">&rarr;</span>
         <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery Guide</span>
       </a>
-      <a href="../services/dental-network-infrastructure.html" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+      <a href="../services/dental-network-infrastructure" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
         <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">&rarr;</span>
         <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Network Infrastructure Services</span>
       </a>
@@ -260,12 +260,12 @@
         <div style="font-family:var(--font-heading);font-weight:700;color:var(--color-navy);margin-bottom:4px">Written by the FlossByte Team</div>
         <div style="font-size:0.9rem;color:var(--color-text-muted)">FlossByte supports dental servers, backups, networks, imaging systems, cybersecurity, and daily dental workflows for Bay Area practices.</div>
       </div>
-      <a class="btn btn-primary" href="../services/managed-it-support.html" style="flex-shrink:0">Get Server Support</a>
+      <a class="btn btn-primary" href="../services/managed-it-support" style="flex-shrink:0">Get Server Support</a>
     </div>
   </div>
 </section>
 
 </main>
-<script src="../components.min.js?v=3" defer></script>
+<script src="../components.min.js?v=4" defer></script>
 </body>
 </html>

@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dentrix Server Migration Checklist: Beat the Windows Server 2016 End-of-Life (Jan 2027) | FlossByte</title>
-  <meta name="description" content="A step-by-step Dentrix server migration checklist for dental practices facing the Windows Server 2016 end-of-life in January 2027 — inventory, verified backups, after-hours cutover sequencing, imaging reconnection, rollback planning, and first-morning verification." />
+  <meta name="description" content="A step-by-step Dentrix server migration checklist for dental practices facing the Windows Server 2016 end-of-life in January 2027: inventory, verified backups, after-hours cutover sequencing, imaging reconnection, rollback planning, and first-morning verification." />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Dentrix Server Migration Checklist: Beat the Windows Server 2016 End-of-Life (Jan 2027)" />
-  <meta property="og:description" content="A step-by-step Dentrix server migration checklist for dental practices facing the Windows Server 2016 end-of-life in January 2027 — inventory, verified backups, after-hours cutover sequencing, imaging reconnection, rollback planning, and first-morning verification." />
+  <meta property="og:description" content="A step-by-step Dentrix server migration checklist for dental practices facing the Windows Server 2016 end-of-life in January 2027: inventory, verified backups, after-hours cutover sequencing, imaging reconnection, rollback planning, and first-morning verification." />
   <meta property="og:url" content="https://flossbyte.com/blog/dentrix-server-migration-checklist" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://flossbyte.com/assets/og-image.jpg" />
@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Dentrix Server Migration Checklist: Beat the Windows Server 2016 End-of-Life (Jan 2027)",
-    "description": "A step-by-step Dentrix server migration checklist for dental practices facing the Windows Server 2016 end-of-life in January 2027 — inventory, verified backups, after-hours cutover sequencing, imaging reconnection, rollback planning, and first-morning verification.",
+    "description": "A step-by-step Dentrix server migration checklist for dental practices facing the Windows Server 2016 end-of-life in January 2027: inventory, verified backups, after-hours cutover sequencing, imaging reconnection, rollback planning, and first-morning verification.",
     "author": {"@type": "Organization", "name": "FlossByte"},
     "publisher": {"@type": "Organization", "name": "FlossByte", "logo": {"@type": "ImageObject", "url": "https://flossbyte.com/assets/favicon.png"}},
     "datePublished": "2026-10-20",
@@ -36,17 +36,17 @@
       {
         "@type": "Question",
         "name": "When does Windows Server 2016 support end?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Microsoft ends extended support for Windows Server 2016 on January 12, 2027. After that date there are no more security patches outside of a paid Extended Security Update agreement, which is a short-term bridge — it doesn't address aging hardware or Dentrix platform support."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Microsoft ends extended support for Windows Server 2016 on January 12, 2027. After that date there are no more security patches outside of a paid Extended Security Update agreement, which is a short-term bridge. It doesn't address aging hardware or Dentrix platform support."}
       },
       {
         "@type": "Question",
         "name": "How long does a Dentrix server migration take?",
-        "acceptedAnswer": {"@type": "Answer", "text": "With staging and data pre-seeding done ahead of time, the cutover itself is typically one evening for a single-location practice, with verification before the next morning's patients. Imaging archive size is the main variable — large archives are copied across in the days before, so cutover night only moves the final changes."}
+        "acceptedAnswer": {"@type": "Answer", "text": "With staging and data pre-seeding done ahead of time, the cutover itself is typically one evening for a single-location practice, with verification before the next morning's patients. Imaging archive size is the main variable: large archives are copied across in the days before, so cutover night only moves the final changes."}
       },
       {
         "@type": "Question",
         "name": "Will we lose patient data or images during a migration?",
-        "acceptedAnswer": {"@type": "Answer", "text": "The process above is built so the original data is never the only copy at any point: a verified backup, a restore test, and an old server that stays intact and untouched until the new one is proven. Data-loss stories from server migrations almost always trace back to a backup that was never restore-tested or an image folder nobody knew about — both are Step 1 and Step 2 problems, and both are preventable."}
+        "acceptedAnswer": {"@type": "Answer", "text": "The process above is built so the original data is never the only copy at any point: a verified backup, a restore test, and an old server that stays intact and untouched until the new one is proven. Data-loss stories from server migrations almost always trace back to a backup that was never restore-tested or an image folder nobody knew about. Both are Step 1 and Step 2 problems, and both are preventable."}
       },
       {
         "@type": "Question",
@@ -56,7 +56,7 @@
       {
         "@type": "Question",
         "name": "Can a Dentrix migration happen without closing the practice?",
-        "acceptedAnswer": {"@type": "Answer", "text": "That's how it's designed to run: staging during business hours (the old server keeps working), cutover after close, verification before open. The practice's exposure is the first morning, which is why the verification checklist in Step 8 — and someone who knows the migration being available at open — matters more than the cutover itself."}
+        "acceptedAnswer": {"@type": "Answer", "text": "That's how it's designed to run: staging during business hours (the old server keeps working), cutover after close, verification before open. The practice's exposure is the first morning, which is why the verification checklist in Step 8, and someone who knows the migration being available at open, matters more than the cutover itself."}
       },
       {
         "@type": "Question",
@@ -114,7 +114,7 @@
       </span>
     </div>
     <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px">Dentrix Server Migration Checklist: Beat the Windows Server 2016 End-of-Life (Jan 2027)</h1>
-    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Windows Server 2016 support ends January 12, 2027. If your Dentrix server still runs on it, a migration is already on your calendar — this is the checklist for doing it in the right order, after hours, with zero patient hours lost.</p>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Windows Server 2016 support ends January 12, 2027. If your Dentrix server still runs on it, a migration is already on your calendar, this is the checklist for doing it in the right order, after hours, with zero patient hours lost.</p>
   </div>
 </header>
 
@@ -122,18 +122,18 @@
 <section style="padding:64px 0">
   <div class="blog-post-content">
 
-    <p>If your Dentrix server is running Windows Server 2016, it has an expiration date: <strong>January 12, 2027</strong>. That's the day Microsoft ends extended support for Server 2016. The server won't stop booting on January 13. What stops is the security patches — and that's where the trouble starts.</p>
+    <p>If your Dentrix server is running Windows Server 2016, it has an expiration date: <strong>January 12, 2027</strong>. That's the day Microsoft ends extended support for Server 2016. The server won't stop booting on January 13. What stops is the security patches, and that's where the trouble starts.</p>
 
     <p>An unpatched server holding patient records is a problem your HIPAA risk analysis can't wave away. Cyber insurance applications ask about end-of-life operating systems by name. And Henry Schein One has moved on: current Dentrix releases are built and supported for newer Windows Server versions, and Windows 10 has dropped off the supported list for workstations, which means a server move now tends to drag a round of workstation upgrades along with it.</p>
 
-    <p>So if your practice is on Server 2016, a Dentrix server migration is already on your calendar whether you've scheduled it or not. The only real choice is whether it happens on a planned evening with a tested backup — or as an emergency when the old hardware finally quits on a Tuesday.</p>
+    <p>So if your practice is on Server 2016, a Dentrix server migration is already on your calendar whether you've scheduled it or not. The only real choice is whether it happens on a planned evening with a tested backup, or as an emergency when the old hardware finally quits on a Tuesday.</p>
 
     <p>This is the checklist version of how the migration actually runs when it's done in the right order. Hand it to whoever is doing yours and make them walk you through every line. This checklist is the migration companion to our full <a href="dentrix-it-support-guide" style="color:var(--color-teal);font-weight:600">Dentrix IT support guide</a>, which covers performance problems, database errors, and day-to-day troubleshooting.</p>
 
     <h2>What the Deadline Actually Means for a Dental Practice</h2>
 
     <ul>
-      <li><strong>No more security patches after January 12, 2027.</strong> Microsoft sells Extended Security Updates for Server 2016, but it's a short, per-core-priced bridge — schedule insurance, not a strategy. It does nothing for 9-year-old hardware.</li>
+      <li><strong>No more security patches after January 12, 2027.</strong> Microsoft sells Extended Security Updates for Server 2016, but it's a short, per-core-priced bridge: schedule insurance, not a strategy. It does nothing for 9-year-old hardware.</li>
       <li><strong>Your hardware is the real deadline.</strong> A server purchased for Server 2016 is typically 8–10 years old now. Disks, RAID batteries, and power supplies fail on their own schedule, and they don't check yours first.</li>
       <li><strong>Dentrix support follows Microsoft's platforms.</strong> Running a current Dentrix version on an unsupported OS means that when something breaks, "your server OS is end-of-life" is where the support conversation starts and ends.</li>
       <li><strong>Workstations are part of this project.</strong> If your operatories are still on Windows 10, budget for those upgrades in the same window. A new server with unsupported workstations is a half-finished migration.</li>
@@ -145,9 +145,9 @@
 
     <ul>
       <li><strong>Current server specs:</strong> OS build, CPU, RAM, storage used vs. free, RAID health. If the RAID has been quietly degraded for a year, you want to know now.</li>
-      <li><strong>Exact Dentrix version and build number.</strong> Screenshot it from the old server. The new server gets the <em>same</em> version first — version upgrades are a separate step (more on that below).</li>
+      <li><strong>Exact Dentrix version and build number.</strong> Screenshot it from the old server. The new server gets the <em>same</em> version first. Version upgrades are a separate step (more on that below).</li>
       <li><strong>Every Dentrix data location:</strong> the database directory, the Document Center archive, letter and form templates. The database is the easy part. It's the folder somebody pointed to a custom path in 2019 that gets left behind.</li>
-      <li><strong>Imaging platform and image location:</strong> DEXIS, Apteryx, Carestream, Schick — which one, which version, what bridge type, and where the images physically live. Server? NAS? An operatory PC? It happens more often than you'd think, and nobody remembers until the images don't open.</li>
+      <li><strong>Imaging platform and image location:</strong> DEXIS, Apteryx, Carestream, Schick: which one, which version, what bridge type, and where the images physically live. Server? NAS? An operatory PC? It happens more often than you'd think, and nobody remembers until the images don't open.</li>
       <li><strong>Sensors and acquisition devices:</strong> every intraoral sensor by operatory, intraoral cameras, and the panoramic/CBCT acquisition workstation.</li>
       <li><strong>Peripherals:</strong> label printer, receipt printer, document scanner, signature pads, payment terminals.</li>
       <li><strong>Third-party integrations:</strong> eClaims and your clearinghouse connection, Dentrix eServices, patient communication platform (reminders/recalls), online scheduling, payment processing.</li>
@@ -164,10 +164,10 @@
     <p>Before a cutover date is even set:</p>
 
     <ul>
-      <li><strong>Take a full backup of everything on the inventory</strong> — database, image store, document archive, templates. A backup that captures the SQL database but skips the imaging folder is the most common incomplete backup we find, and imaging is usually the largest share of a practice's data.</li>
-      <li><strong>Restore it somewhere.</strong> Onto the new server or a test machine — restore the whole thing, open Dentrix, open real charts, and open images from two or three years ago, not just last week. Archived images live in different folders and fail differently.</li>
+      <li><strong>Take a full backup of everything on the inventory</strong>: database, image store, document archive, templates. A backup that captures the SQL database but skips the imaging folder is the most common incomplete backup we find, and imaging is usually the largest share of a practice's data.</li>
+      <li><strong>Restore it somewhere.</strong> Onto the new server or a test machine. Restore the whole thing, open Dentrix, open real charts, and open images from two or three years ago, not just last week. Archived images live in different folders and fail differently.</li>
       <li><strong>Measure the image store.</strong> Imaging archives in the hundreds of gigabytes are normal. A copy or restore you mentally budgeted an hour for can run all night if nobody checked the size first.</li>
-      <li><strong>Keep a second copy off the server</strong> — external drive or cloud — before cutover starts. The old server is not its own backup.</li>
+      <li><strong>Keep a second copy off the server</strong> (external drive or cloud) before cutover starts. The old server is not its own backup.</li>
       <li><strong>If the restore test fails, stop.</strong> Fix the backup first, then reschedule. Migrating on top of an unproven backup is how a planned server upgrade turns into a data-recovery job.</li>
     </ul>
 
@@ -175,14 +175,14 @@
       <p>⚠️ <strong>Do not let anyone start a migration with "the backup ran last night" as the only verification.</strong> The restore test is the whole ballgame.</p>
     </div>
 
-    <p>For what a complete dental backup has to capture — and how restore testing actually works — see our <a href="dental-data-backup-recovery-guide" style="color:var(--color-teal);font-weight:600">dental data backup and recovery guide</a>.</p>
+    <p>For what a complete dental backup has to capture, and how restore testing actually works, see our <a href="dental-data-backup-recovery-guide" style="color:var(--color-teal);font-weight:600">dental data backup and recovery guide</a>.</p>
 
     <h2>Step 3: Stage the New Server While the Old One Still Runs</h2>
 
     <p>The cutover night should be a final sync, not a first attempt. Everything that can be built and tested ahead of time, is:</p>
 
     <ul>
-      <li><strong>Build the new server on Windows Server 2022</strong>, fully patched, with antivirus exclusions set for the Dentrix data and imaging directories — real-time AV scanning of a live database is a performance problem at best.</li>
+      <li><strong>Build the new server on Windows Server 2022</strong>, fully patched, with antivirus exclusions set for the Dentrix data and imaging directories. Real-time AV scanning of a live database is a performance problem at best.</li>
       <li><strong>Install the same Dentrix version as the old server</strong> and restore the test copy from Step 2 onto it. Confirm Dentrix opens with your data before cutover is scheduled.</li>
       <li><strong>Recreate shares with identical names and permissions.</strong> Every workstation, bridge, and integration that points at <code>\\SERVER\DentrixData</code> should find the same path on the new box.</li>
       <li><strong>Pre-seed the big, static data.</strong> Copy the imaging archive and document folders across during the week. They barely change day to day, so on cutover night only the final delta has to move.</li>
@@ -192,21 +192,21 @@
 
     <h2>Step 4: Cutover Night, In Order</h2>
 
-    <p>Schedule it after hours — most practices use a Friday evening so Saturday is a buffer if anything runs long. Agree on a go/no-go time before you start: if verification isn't clean by that hour, you roll back while rolling back is still easy (Step 7).</p>
+    <p>Schedule it after hours, most practices use a Friday evening so Saturday is a buffer if anything runs long. Agree on a go/no-go time before you start: if verification isn't clean by that hour, you roll back while rolling back is still easy (Step 7).</p>
 
     <ol>
-      <li><strong>Last patient out. Everyone logs out of Dentrix — everywhere.</strong> That includes the doctor checking the schedule from home and the office manager's remote session. One open remote connection can hold the database open and stall the whole night.</li>
+      <li><strong>Last patient out. Everyone logs out of Dentrix, everywhere.</strong> That includes the doctor checking the schedule from home and the office manager's remote session. One open remote connection can hold the database open and stall the whole night.</li>
       <li><strong>Stop the Dentrix services on the old server</strong> so nothing else can write to it.</li>
       <li><strong>Run the final backup</strong>, then the final data sync: the database, plus any image and document changes since the pre-seed.</li>
       <li><strong>Sanity-check the new server before touching a workstation:</strong> open Dentrix, confirm tomorrow's schedule is there, open a handful of charts across different providers, check an account balance or two against the old server's numbers.</li>
       <li><strong>Make the swap:</strong> the name/IP change, or the start of workstation remapping, per the decision in Step 3.</li>
-      <li><strong>Take the old server out of circulation.</strong> Dentrix services stay off. Leave a note on it — an actual note, taped to the monitor: "OLD SERVER — DO NOT USE." Monday-morning habits are strong, and you do not want anyone charting into the old box.</li>
+      <li><strong>Take the old server out of circulation.</strong> Dentrix services stay off. Leave a note on it, an actual note, taped to the monitor: "OLD SERVER: DO NOT USE." Monday-morning habits are strong, and you do not want anyone charting into the old box.</li>
     </ol>
 
     <!-- Inline CTA -->
     <div style="margin:40px 0;padding:32px;background:linear-gradient(135deg,var(--color-navy) 0%,#1a304f 100%);border-radius:16px;text-align:center">
       <p style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px">Facing a Dentrix Server Migration?</p>
-      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte runs Dentrix migrations for Bay Area dental practices — staged during the week, cut over after hours, with a tested backup and a written rollback plan.</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte runs Dentrix migrations for Bay Area dental practices, staged during the week, cut over after hours, with a tested backup and a written rollback plan.</p>
       <a class="btn btn-primary" href="../services/dentrix-support" style="font-size:0.95rem;color:#fff">See Our Dentrix Support Services →</a>
     </div>
 
@@ -214,7 +214,7 @@
 
     <p>This is the step generic IT providers skip, and it's where dental migrations actually fail.</p>
 
-    <p>The classic morning-after scenario: patient records open fine, the schedule is fine — and every X-ray errors out, because the imaging bridge on each workstation still points at the old server's image path. Dentrix migrated. The images didn't.</p>
+    <p>The classic morning-after scenario: patient records open fine, the schedule is fine, and every X-ray errors out, because the imaging bridge on each workstation still points at the old server's image path. Dentrix migrated. The images didn't.</p>
 
     <ul>
       <li><strong>Update the imaging bridge/image path on every workstation</strong>, not just the one you tested at the front desk.</li>
@@ -228,14 +228,14 @@
     <p>Don't do them alphabetically or by whoever's standing closest. Order matters because each stage catches a different class of problem:</p>
 
     <ol>
-      <li><strong>The server itself</strong> — Dentrix already verified there in Step 4; this is your reference point for "working."</li>
-      <li><strong>One operatory workstation</strong> — the full test: staff login, open a chart, load images, fire the sensor.</li>
-      <li><strong>Front desk</strong> — schedule, check-in view, printing, payment terminal. Front desk finds problems faster than anyone, and the morning runs through them.</li>
+      <li><strong>The server itself</strong>: Dentrix already verified there in Step 4; this is your reference point for "working."</li>
+      <li><strong>One operatory workstation</strong>: the full test: staff login, open a chart, load images, fire the sensor.</li>
+      <li><strong>Front desk</strong>: schedule, check-in view, printing, payment terminal. Front desk finds problems faster than anyone, and the morning runs through them.</li>
       <li><strong>Remaining operatories.</strong></li>
-      <li><strong>Doctor's office and back office machines</strong> — least time-critical if something needs a second look.</li>
+      <li><strong>Doctor's office and back office machines</strong>: least time-critical if something needs a second look.</li>
     </ol>
 
-    <p>On every workstation, the test is the same: a staff member logs in with <strong>their own credentials</strong> (not the admin account — you need to know their permissions work), opens a real chart, opens images, prints one page to the correct printer, and checks the scanner and signature pad where fitted.</p>
+    <p>On every workstation, the test is the same: a staff member logs in with <strong>their own credentials</strong> (not the admin account, you need to know their permissions work), opens a real chart, opens images, prints one page to the correct printer, and checks the scanner and signature pad where fitted.</p>
 
     <h2>Step 7: Write the Rollback Plan Before You Need It</h2>
 
@@ -244,34 +244,34 @@
     <ul>
       <li><strong>The old server stays intact.</strong> Nothing gets wiped, repurposed, or "cleaned up." The entire sequence above is designed so the old box remains a complete, working copy of the practice as of Friday's close.</li>
       <li><strong>Rollback is a reconnection, not a restore.</strong> Point workstations back at the old server (or reverse the name/IP swap), staff work the day on the old system, and the migration gets rescheduled with a diagnosis instead of a deadline panic.</li>
-      <li><strong>Know the point of no return.</strong> Once patients are being charted on the new server, rolling back stops being simple — that new charting exists only on the new box and would have to be reconciled by hand. This is why verification happens the night before and again early the next morning, not at 8:15 with a full waiting room.</li>
+      <li><strong>Know the point of no return.</strong> Once patients are being charted on the new server, rolling back stops being simple: that new charting exists only on the new box and would have to be reconciled by hand. This is why verification happens the night before and again early the next morning, not at 8:15 with a full waiting room.</li>
       <li><strong>Keep the old server standing by for 30 days after a successful cutover</strong> before decommissioning it. Storage is cheap; regret is expensive.</li>
     </ul>
 
-    <h2>Step 8: Verify Everything the First Morning — and the First Night</h2>
+    <h2>Step 8: Verify Everything the First Morning, and the First Night</h2>
 
     <p>Cutover night ends when these are checked, not when the data finishes copying:</p>
 
     <div class="checklist-block">
       <ul>
-        <li>Every staff member can log in with their own account — no shared-login workarounds left behind</li>
+        <li>Every staff member can log in with their own account, no shared-login workarounds left behind</li>
         <li>Images open from multiple operatories, including archived images from prior years</li>
         <li>eServices work: run an eligibility check and confirm the claim connection is live</li>
         <li>The patient communication platform pulled today's schedule (reminders going out is your proof)</li>
         <li>Printing works everywhere it should: day sheet, statements, appointment cards, label printer, receipt printer</li>
         <li>A document scans into a chart correctly</li>
         <li>Audit logs are enabled on the new server</li>
-        <li><strong>That night: the backup job runs against the NEW server</strong> — and somebody confirms the job is actually capturing the new data locations. Backup agents will happily keep reporting success while pointing at last month's paths. This is the most-forgotten line in the whole process, and it matters more than everything else on this list combined.</li>
+        <li><strong>That night: the backup job runs against the NEW server</strong>, and somebody confirms the job is actually capturing the new data locations. Backup agents will happily keep reporting success while pointing at last month's paths. This is the most-forgotten line in the whole process, and it matters more than everything else on this list combined.</li>
       </ul>
     </div>
 
-    <p>Then do a one-week check-in. The complaints that surface in week one are usually one workstation with a stale path or a dying drive — not the server. Catch them while they're small.</p>
+    <p>Then do a one-week check-in. The complaints that surface in week one are usually one workstation with a stale path or a dying drive, not the server. Catch them while they're small.</p>
 
     <h2>How Long Does a Dentrix Server Migration Actually Take?</h2>
 
     <p>Honest answer: the data decides.</p>
 
-    <p>For a typical single-location practice with the staging and pre-seeding done ahead of time, the cutover itself is an evening's work, and the goal is zero patient hours lost — work happens after close, verification before open. What stretches the timeline is almost never Dentrix. It's volume: imaging archives in the hundreds of gigabytes don't move in an hour, which is exactly why they move the week before.</p>
+    <p>For a typical single-location practice with the staging and pre-seeding done ahead of time, the cutover itself is an evening's work, and the goal is zero patient hours lost: work happens after close, verification before open. What stretches the timeline is almost never Dentrix. It's volume: imaging archives in the hundreds of gigabytes don't move in an hour, which is exactly why they move the week before.</p>
 
     <p>What turns an evening into a weekend:</p>
 
@@ -279,10 +279,10 @@
       <li>A multi-terabyte imaging archive nobody measured</li>
       <li>A Dentrix version upgrade attempted in the same night (see below)</li>
       <li>Workstations still on Windows 10 that turn out to need replacing mid-project</li>
-      <li>A backup that fails its restore test the week before — which is the system working as intended, but it moves the date</li>
+      <li>A backup that fails its restore test the week before, which is the system working as intended, but it moves the date</li>
     </ul>
 
-    <p>And the part nobody budgets for: the risk window isn't the evening, it's the first two hours of the next morning. Whoever ran the migration should be covering that first morning — on-site or remote — when the first patients check in.</p>
+    <p>And the part nobody budgets for: the risk window isn't the evening, it's the first two hours of the next morning. Whoever ran the migration should be covering that first morning (on-site or remote) when the first patients check in.</p>
 
     <h2>Should You Upgrade Your Dentrix Version During the Migration?</h2>
 
@@ -293,11 +293,11 @@
     <p>Plenty of office managers are technical, and plenty of general IT folks know Windows Server cold. Neither is the gap. The gap is knowing which of the moving parts is dental. Don't DIY if any of these are true:</p>
 
     <ul>
-      <li><strong>Your backups have never been test-restored.</strong> Then you don't have a backup — you have a hope and a green checkmark.</li>
+      <li><strong>Your backups have never been test-restored.</strong> Then you don't have a backup: you have a hope and a green checkmark.</li>
       <li><strong>Your Dentrix version is several releases behind.</strong> Big version jumps can require intermediate steps and vendor involvement mid-upgrade.</li>
       <li><strong>Nobody can say exactly where the images live.</strong> See Step 1. This gets discovered eventually; the only question is when.</li>
       <li><strong>The practice can't absorb a rough morning.</strong> If your schedule is wall-to-wall surgeries, your margin for improvisation is zero.</li>
-      <li><strong>The migration would be your IT person's first Dentrix migration.</strong> Windows skills transfer. Knowing that the backup job needs repointing, that the bridge paths live on each workstation, that one open remote session can freeze the night — that's Dentrix-specific, and it's learned by doing migrations, preferably someone else's first, not yours.</li>
+      <li><strong>The migration would be your IT person's first Dentrix migration.</strong> Windows skills transfer. Knowing that the backup job needs repointing, that the bridge paths live on each workstation, that one open remote session can freeze the night: that's Dentrix-specific, and it's learned by doing migrations, preferably someone else's first, not yours.</li>
     </ul>
 
     <p>A failed DIY migration doesn't save the cost of hiring help. It converts a planned evening project into emergency recovery at emergency rates, with patients sitting in the middle of it.</p>
@@ -308,13 +308,13 @@
 
     <ul>
       <li><strong>Assessment and inventory first.</strong> The Step 1 inventory, done with your team, before any date is proposed.</li>
-      <li><strong>Restore test before scheduling.</strong> Your backup gets restored and opened before a cutover date goes on the calendar — not the night of.</li>
+      <li><strong>Restore test before scheduling.</strong> Your backup gets restored and opened before a cutover date goes on the calendar, not the night of.</li>
       <li><strong>Staged build and pre-seeding.</strong> The new server is built, loaded, and synced during the week so cutover night is a final delta, not a marathon.</li>
-      <li><strong>After-hours cutover with a written rollback plan.</strong> The work happens after close, so the practice loses zero patient hours — you close on the old server and open on the new one. The old server stays untouched and on standby for 30 days after the move.</li>
-      <li><strong>First-morning verification.</strong> Logins, imaging, claims, printing, and that night's backup job — checked with your team, not assumed. We cover that first morning on-site or remotely, with the person who ran the cutover.</li>
+      <li><strong>After-hours cutover with a written rollback plan.</strong> The work happens after close, so the practice loses zero patient hours: you close on the old server and open on the new one. The old server stays untouched and on standby for 30 days after the move.</li>
+      <li><strong>First-morning verification.</strong> Logins, imaging, claims, printing, and that night's backup job, checked with your team, not assumed. We cover that first morning on-site or remotely, with the person who ran the cutover.</li>
     </ul>
 
-    <p>For a typical single-location practice, the cutover itself runs about 3–5 hours on the night — the heavy lifting (staging, pre-seeding the imaging archive) happens during the week before, so the evening is a final sync and verification, not a marathon.</p>
+    <p>For a typical single-location practice, the cutover itself runs about 3–5 hours on the night. The heavy lifting (staging, pre-seeding the imaging archive) happens during the week before, so the evening is a final sync and verification, not a marathon.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -322,19 +322,19 @@
       <div class="accordion-item">
         <button class="accordion-trigger">When does Windows Server 2016 support end?</button>
         <div class="accordion-content">
-          <p>Microsoft ends extended support for Windows Server 2016 on January 12, 2027. After that date there are no more security patches outside of a paid Extended Security Update agreement, which is a short-term bridge — it doesn't address aging hardware or Dentrix platform support.</p>
+          <p>Microsoft ends extended support for Windows Server 2016 on January 12, 2027. After that date there are no more security patches outside of a paid Extended Security Update agreement, which is a short-term bridge. It doesn't address aging hardware or Dentrix platform support.</p>
         </div>
       </div>
       <div class="accordion-item">
         <button class="accordion-trigger">How long does a Dentrix server migration take?</button>
         <div class="accordion-content">
-          <p>With staging and data pre-seeding done ahead of time, the cutover itself is typically one evening for a single-location practice, with verification before the next morning's patients. Imaging archive size is the main variable — large archives are copied across in the days before, so cutover night only moves the final changes.</p>
+          <p>With staging and data pre-seeding done ahead of time, the cutover itself is typically one evening for a single-location practice, with verification before the next morning's patients. Imaging archive size is the main variable: large archives are copied across in the days before, so cutover night only moves the final changes.</p>
         </div>
       </div>
       <div class="accordion-item">
         <button class="accordion-trigger">Will we lose patient data or images during a migration?</button>
         <div class="accordion-content">
-          <p>The process above is built so the original data is never the only copy at any point: a verified backup, a restore test, and an old server that stays intact and untouched until the new one is proven. Data-loss stories from server migrations almost always trace back to a backup that was never restore-tested or an image folder nobody knew about — both are Step 1 and Step 2 problems, and both are preventable.</p>
+          <p>The process above is built so the original data is never the only copy at any point: a verified backup, a restore test, and an old server that stays intact and untouched until the new one is proven. Data-loss stories from server migrations almost always trace back to a backup that was never restore-tested or an image folder nobody knew about. Both are Step 1 and Step 2 problems, and both are preventable.</p>
         </div>
       </div>
       <div class="accordion-item">
@@ -346,7 +346,7 @@
       <div class="accordion-item">
         <button class="accordion-trigger">Can a Dentrix migration happen without closing the practice?</button>
         <div class="accordion-content">
-          <p>That's how it's designed to run: staging during business hours (the old server keeps working), cutover after close, verification before open. The practice's exposure is the first morning, which is why the verification checklist in Step 8 — and someone who knows the migration being available at open — matters more than the cutover itself.</p>
+          <p>That's how it's designed to run: staging during business hours (the old server keeps working), cutover after close, verification before open. The practice's exposure is the first morning, which is why the verification checklist in Step 8, and someone who knows the migration being available at open, matters more than the cutover itself.</p>
         </div>
       </div>
       <div class="accordion-item">

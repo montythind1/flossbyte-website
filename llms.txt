@@ -1,0 +1,44 @@
+# FlossByte
+
+> FlossByte is a dental IT support company based in San Jose, California, serving dental practices across the Bay Area. FlossByte provides HIPAA-compliant managed IT services built specifically for dental practices, including Dentrix, Eaglesoft, and Open Dental support, cybersecurity, data backup and disaster recovery, VoIP phone systems, and network infrastructure. Managed IT plans start at $59 per device per month, with monitoring, help desk support, patching, and HIPAA compliance hardening included.
+
+## Services
+
+- [Managed IT Support](https://flossbyte.com/services/managed-it-support): Managed IT support built for dental practices, from $59 per device per month.
+- [Dentrix Support](https://flossbyte.com/services/dentrix-support): Dentrix troubleshooting, server migration, performance optimization, and upgrades.
+- [Eaglesoft Support](https://flossbyte.com/services/eaglesoft-support): Eaglesoft server configuration, database maintenance, imaging setup, and troubleshooting.
+- [Open Dental Support](https://flossbyte.com/services/open-dental-support): Open Dental IT support for Bay Area dental practices.
+- [Dental Cybersecurity](https://flossbyte.com/services/dental-cybersecurity): Cybersecurity and HIPAA network security for dental practices.
+- [Dental Data Backup](https://flossbyte.com/services/dental-data-backup): Backup and disaster recovery for dental practice data.
+- [Dental vCIO](https://flossbyte.com/services/dental-vcio): Virtual CIO and technology strategy for dental practices.
+- [AI Dental Technology](https://flossbyte.com/services/ai-dental-technology): AI integration and advisory for dental practices, implemented with HIPAA compliance.
+- [Dental VoIP Phone Systems](https://flossbyte.com/services/dental-voip-phone-systems): VoIP and cloud phone systems for dental offices.
+- [Dental Network Infrastructure](https://flossbyte.com/services/dental-network-infrastructure): Network infrastructure, Wi-Fi, and cabling for dental practices.
+- [Dental Office Network Setup](https://flossbyte.com/services/dental-office-network-setup): Network design and setup for new and existing dental offices.
+- [Dental Imaging IT Support](https://flossbyte.com/services/dental-imaging-it-support): Imaging and CBCT IT support, including sensor and PACS integration.
+- [Dental Hardware Management](https://flossbyte.com/services/dental-hardware-management): Hardware and IT equipment management and procurement for dental practices.
+- [DSO and Multi-Location IT](https://flossbyte.com/services/dso-multi-location): Managed IT for DSOs and multi-location dental groups.
+- [All Services](https://flossbyte.com/services): Full list of FlossByte dental IT services.
+
+## Guides and Blog
+
+- [Blog](https://flossbyte.com/blog): Guides, cost breakdowns, and checklists for Bay Area dental practices.
+- [Dentrix IT Support Guide](https://flossbyte.com/blog/dentrix-it-support-guide): Server migration, performance, and troubleshooting for Dentrix practices.
+- [Dentrix Server Migration Checklist](https://flossbyte.com/blog/dentrix-server-migration-checklist): Step-by-step Dentrix server migration checklist, including the Windows Server 2016 end-of-life deadline of January 12, 2027.
+- [Dental Data Backup and Recovery Guide](https://flossbyte.com/blog/dental-data-backup-recovery-guide): Complete guide to backup and recovery for dental practices.
+- [HIPAA IT Requirements for Dental Offices](https://flossbyte.com/blog/hipaa-it-requirements-dental-offices): Technical safeguards checklist for dental office HIPAA compliance.
+- [HIPAA IT Checklist](https://flossbyte.com/hipaa-it-checklist): HIPAA IT checklist for dental practices.
+- [Dental IT Support Cost in 2026](https://flossbyte.com/blog/dental-it-support-cost-2026): What dental IT support costs, with per-device pricing and plan comparisons.
+- [New Dental Practice IT Setup Checklist](https://flossbyte.com/blog/new-dental-practice-it-setup-checklist): IT setup checklist for opening a new dental practice.
+- [What Is a Dental vCIO?](https://flossbyte.com/blog/what-is-dental-vcio): What a dental vCIO does and why growing practices add one.
+- [Dental Practice Technology Roadmap](https://flossbyte.com/blog/dental-practice-technology-roadmap): How to build a technology roadmap for a dental practice.
+
+## Company
+
+- [About FlossByte](https://flossbyte.com/about): About the FlossByte team and how we work with dental practices.
+- [Why FlossByte](https://flossbyte.com/why-flossbyte): Why dental practices choose FlossByte over general IT providers.
+- [Pricing](https://flossbyte.com/pricing): Plan pricing. Essentials from $59 per device per month, Professional from $99 per device per month.
+- [HIPAA Compliance](https://flossbyte.com/hipaa-compliance): How FlossByte handles HIPAA compliance for dental practices.
+- [Locations](https://flossbyte.com/locations/south-bay/san-jose): Service areas across the Bay Area, including San Jose, the Peninsula, and the East Bay.
+- [FAQs](https://flossbyte.com/faqs): Answers to common questions about support, onboarding, and coverage.
+- [Contact](https://flossbyte.com/contact): Contact FlossByte or book a free technology assessment. Phone: (669) 237-2264.

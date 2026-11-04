@@ -246,3 +246,8 @@ https://www.flossbyte.com/*                     https://flossbyte.com/:splat    
 # Old privacy-policy URL -> /privacy
 /privacy-policy/                                    /privacy                                            301
 /privacy-policy                                     /privacy                                            301
+
+# ------------------------------------------------------------
+# Remote support page (Splashtop SOS)
+# ------------------------------------------------------------
+/remote.html                                        /remote                                             301

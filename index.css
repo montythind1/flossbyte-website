@@ -1467,3 +1467,22 @@ section { padding: var(--space-20) 0; }
   body { padding-bottom: 70px; }
   .site-footer { margin-bottom: 0; }
 }
+
+/* ============================================================
+   MOBILE HERO FIT (phones)
+   The single-column hero grid track could size itself to the
+   widest content inside it, which pushed the centered headline
+   and subtitle past the right edge of the screen. Cap the track
+   at the container width and let the text column shrink, and
+   run the headline a size smaller on small phones.
+   ============================================================ */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: minmax(0, 1fr); width: 100%; }
+  .hero-text { min-width: 0; }
+  .hero-subtitle { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .hero-title { font-size: clamp(2rem, 9vw, 2.5rem); }
+  .hero-badge { max-width: 100%; white-space: normal; justify-content: center; text-align: center; }
+  .hero-actions .btn { max-width: 100%; white-space: normal; }
+}

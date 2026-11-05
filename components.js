@@ -146,6 +146,7 @@ function renderNav() {
 
       <div class="nav-cta">
         <a class="nav-phone" href="${SITE.phoneHref}">${SITE.phone}</a>
+        <a class="btn btn-outline btn-sm" href="https://portal.flossbyte.com">Client Login</a>
         <a class="btn btn-primary btn-sm" href="${r('contact')}">Free Assessment</a>
       </div>
 
@@ -175,6 +176,7 @@ function renderNav() {
       <a href="${r('faqs')}">FAQs</a>
       <div class="mobile-divider"></div>
       <a href="${SITE.phoneHref}" style="color: var(--color-teal)">${SITE.phone}</a>
+      <a href="https://portal.flossbyte.com">Client Login</a>
       <a class="mobile-cta" href="${r('contact')}">Get Free Technology Assessment</a>
     </div>
   `;

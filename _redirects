@@ -251,3 +251,9 @@ https://www.flossbyte.com/*                     https://flossbyte.com/:splat    
 # Remote support page (Splashtop SOS)
 # ------------------------------------------------------------
 /remote.html                                        /remote                                             301
+
+# ------------------------------------------------------------
+# Client portal login (portal.flossbyte.com)
+# ------------------------------------------------------------
+/login                                              https://portal.flossbyte.com                        302
+/login.html                                         https://portal.flossbyte.com                        302

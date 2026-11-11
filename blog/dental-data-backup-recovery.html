@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental Data Backup and Recovery: How It Works, What It Costs Your Practice When It Fails, and How to Know Yours Actually Restores | FlossByte</title>
+  <meta name="description" content="How dental data backup and recovery actually works: what to back up for Dentrix, Open Dental, and Eaglesoft, image vs file vs cloud backup, the 3-2-1 pattern, RPO and RTO in plain terms, restore testing, ransomware recovery, HIPAA's contingency plan rule, and a 15-minute backup audit checklist." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Dental Data Backup and Recovery: How It Works, What It Costs Your Practice When It Fails, and How to Know Yours Actually Restores" />
+  <meta property="og:description" content="How dental data backup and recovery actually works: what to back up for Dentrix, Open Dental, and Eaglesoft, image vs file vs cloud backup, the 3-2-1 pattern, RPO and RTO in plain terms, restore testing, ransomware recovery, HIPAA's contingency plan rule, and a 15-minute backup audit checklist." />
+  <meta property="og:url" content="https://flossbyte.com/blog/dental-data-backup-recovery" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://flossbyte.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="FlossByte" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://flossbyte.com/blog/dental-data-backup-recovery" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Dental Data Backup and Recovery: How It Works, What It Costs Your Practice When It Fails, and How to Know Yours Actually Restores",
+  "description": "How dental data backup and recovery actually works: what to back up for Dentrix, Open Dental, and Eaglesoft, image vs file vs cloud backup, the 3-2-1 pattern, RPO and RTO in plain terms, restore testing, ransomware recovery, HIPAA's contingency plan rule, and a 15-minute backup audit checklist.",
+  "author": {
+    "@type": "Organization",
+    "name": "FlossByte"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "FlossByte",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://flossbyte.com/assets/favicon.png"
+    }
+  },
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "url": "https://flossbyte.com/blog/dental-data-backup-recovery",
+  "keywords": [
+    "dental data backup and recovery",
+    "dental data backup",
+    "dentrix backup",
+    "open dental backup",
+    "dental disaster recovery",
+    "backup restore testing",
+    "hipaa contingency plan"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often should a dental office back up its data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nightly is the floor, not the target. The right frequency comes from your RPO: how many hours of charting, imaging, and payments could you stand to re-create? For most offices the answer lands between an hour and a full day, and the schedule should match. Imaging-heavy practices often run image-level jobs more than once a day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a cloud backup by itself enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It covers building-level disasters, and every office needs an offsite copy. But restoring a full server and a large imaging archive over the internet is slow, and slow is what you cannot afford mid-incident. Most offices need a local image copy for same-day recovery plus the cloud copy for disaster. Either alone leaves a hole."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is OneDrive or Google Drive a backup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Sync tools mirror whatever happens to your files, including deletions and ransomware encryption, and they do not capture a running practice database or a whole server. Useful for office documents; not a recovery system for Dentrix, Open Dental, or Eaglesoft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a practice keep old backups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep enough restore points to catch a problem discovered late: daily points for about a month, then monthly points kept longer. Legal retention duties for patient records are separate; the backup is a recovery tool, not your archive of record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we know our backup works if we have never tested it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do not, and there is no shortcut. A restore test, run and timed, is the only evidence a backup works. Until one has been done, treat the backup as unverified."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://flossbyte.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://flossbyte.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Dental Data Backup and Recovery",
+      "item": "https://flossbyte.com/blog/dental-data-backup-recovery"
+    }
+  ]
+}
+  </script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../index.min.css?v=8" />
+  <style>
+    .blog-header { background:var(--color-navy); padding: calc(var(--nav-height) + 64px) 0 64px; }
+    .blog-meta-bar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+    .blog-reading-time { display:flex; align-items:center; gap:6px; font-size:0.875rem; color:rgba(255,255,255,0.5); }
+    .checklist-block { background:var(--color-gray-50); border:1px solid var(--color-gray-200); border-radius:var(--radius-lg); padding:32px; margin:32px 0; }
+    .checklist-block ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .checklist-block ul li { display:flex; align-items:flex-start; gap:10px; font-size:0.9375rem; color:var(--color-text-muted); line-height:1.6; }
+    .checklist-block ul li::before { content:'✓'; color:var(--color-teal); font-weight:700; flex-shrink:0; margin-top:1px; }
+  </style>
+</head>
+<body>
+<main>
+
+<!-- Blog Post Header -->
+<header class="blog-header" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(0,191,165,0.08) 0%,transparent 70%)"></div>
+  <div class="container" style="position:relative;z-index:2;max-width:800px">
+    <nav style="display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
+      <a href="../" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
+      <span>›</span>
+      <a href="./" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
+      <span>›</span>
+      <span style="color:var(--color-teal)">Dental Data Backup and Recovery</span>
+    </nav>
+    <div class="blog-meta-bar">
+      <span class="badge badge-teal">Backup &amp; Data Security</span>
+      <span class="blog-reading-time">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        11 min read
+      </span>
+    </div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px">Dental Data Backup and Recovery: How It Works, What It Costs Your Practice When It Fails, and How to Know Yours Actually Restores</h1>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Every practice owner says they back up their data. Far fewer can say when that backup last restored a chart. This post explains how dental backup and recovery actually works, in plain terms, and ends with a 15-minute audit that tells you whether yours is real.</p>
+  </div>
+</header>
+
+<!-- Blog Content -->
+<section style="padding:64px 0">
+  <div class="blog-post-content">
+
+    <p>Ask a room full of practice owners whether they back up their data and every hand goes up. Ask when that backup last restored a patient chart, and the room goes quiet.</p>
+
+    <p>A backup is not a product you bought once. It is a process, finished only when a restore has been run, timed, and written down. Most practices have the first half. Very few have the proof.</p>
+
+    <p>Here is how the system actually works, in plain terms, and how to find out whether yours does.</p>
+
+    <h2>What Has to Be Backed Up in a Dental Office</h2>
+
+    <p>"Dental data" is not one thing, and a backup that captures some of it can still leave you stranded.</p>
+
+    <p><strong>The practice management database.</strong> Dentrix, Open Dental, or Eaglesoft: the schedule, charts, treatment plans, ledger, and claims. The trap is how it gets copied. A live database has open files that change all day, and a plain file copy taken while the system is running can produce a database that will not open on restore, or opens with damage you find weeks later. The backup has to snapshot it properly, through volume shadow copy or the method your PMS vendor supports. For Dentrix that means the data directory including the Document Center. For Open Dental, the MySQL database plus the AtoZ folder where images live. For Eaglesoft, the database plus its image data.</p>
+
+    <p><strong>Imaging, which is two things, not one.</strong> There are the image files themselves: intraoral X-rays, panoramic images, and CBCT volumes, usually the practice's largest data. Then there is the imaging database that indexes those files to patients. Back up the files without the index and you own a very large folder of pictures no chart can pull up. Back up the index without the files and the chart points at images that are not there. Both halves travel together or neither counts.</p>
+
+    <p><strong>Documents and the server itself.</strong> Scanned insurance cards and IDs, referrals, signed consent forms, EOBs, and shared office documents. If the backup skipped the server itself, a dead server means rebuilding its settings, shares, and permissions from memory first.</p>
+
+    <h2>The Three Kinds of Backup, in Plain Terms</h2>
+
+    <p><strong>File backup</strong> copies selected files and folders on a schedule. It is simple, cheap, and fine for office documents. For a running practice database it is the weakest option, because of the open-file problem above, and recovery means restoring files onto a system somebody still has to rebuild.</p>
+
+    <p><strong>Image-level backup</strong> captures the entire server as one recoverable image: operating system, programs, data, and settings. Restoring means bringing the whole server back, on new hardware or as a virtual machine on a backup device. This is the difference between "the server died" being a bad afternoon and it being a lost week.</p>
+
+    <p><strong>Cloud or offsite backup</strong> stores a copy away from the building. It survives fire, flood, theft, and ransomware that reaches everything on the office network. CBCT-heavy offices generate large daily changes, the first upload of an imaging archive can take days, and pulling a whole server back down over the internet during an emergency is slow.</p>
+
+    <h2>The 3-2-1 Pattern, Translated</h2>
+
+    <p>The rule is 3-2-1: three copies of your data, on two different kinds of storage, with one copy offsite. In a dental office: the live data on the server, the image backup on a local device, and the replicated copy in the cloud.</p>
+
+    <p>One hardening step is worth knowing: an immutable copy cannot be edited or deleted for a set period, even with admin credentials. Attackers hunt for backups they can destroy, and a copy they cannot alter is the one that saves the practice. Three copies in the same room, on the same network, under the same credentials, are really one failure domain with extra steps.</p>
+
+    <h2>RPO and RTO: The Two Numbers That Decide Your Worst Day</h2>
+
+    <p><strong>RPO, recovery point objective, is how much data you can afford to lose, measured in time.</strong> Say your server dies at 3:40 on a Tuesday afternoon and the last successful backup finished Monday at 11 p.m. Everything charted, imaged, scheduled, and paid on Tuesday is gone unless somebody rebuilds it. The X-rays taken Tuesday morning on a patient who may not sit in your chair again for six months cannot be rebuilt at all. That gap is your RPO. A nightly backup makes it a full working day.</p>
+
+    <p><strong>RTO, recovery time objective, is how long you can afford to be down.</strong> With a file backup on an external drive, recovery means sourcing hardware, installing Windows, installing your PMS, restoring data, and reconfiguring every workstation. That is days. With an image-level backup that can boot as a virtual machine, the practice can be charting again the same day. That is hours.</p>
+
+    <p>Ask whoever runs your IT for both numbers, in writing. A vague answer is an answer. We have written separately about <a href="dental-data-backup-cost-risks" style="color:var(--color-teal);font-weight:600">what a failed recovery costs a practice</a> when these numbers go wrong. This post is about how the system works and how to prove yours does.</p>
+
+    <h2>Why Backups That Report Success Fail at Restore Time</h2>
+
+    <p>A job that reports "completed" proves a job ran, not that your data opens. These are the patterns that surface during an emergency:</p>
+
+
+    <div class="blog-callout">
+      <p>⚠️ <strong>Do not accept "the job ran last night" as proof of anything.</strong> The restore test is the proof.</p>
+    </div>
+
+    <ul>
+        <li><strong>The job is not capturing what you think.</strong> The imaging archive moved to a bigger drive last year and the job still points at the old path, backing up an empty folder and reporting success every night. Or the job skips open files, and the database is quietly excluded night after night.</li>
+        <li><strong>The backup lived on the thing it was protecting.</strong> A backup drive plugged into the server, or backup data on the same RAID array. When the server dies, both copies die holding hands.</li>
+        <li><strong>Nobody reads the alerts.</strong> The job has been erroring for weeks, and the alerts go to a former office manager's email address.</li>
+        <li><strong>The chain is broken.</strong> Incremental backups build on each other. One damaged link makes every later restore point unusable.</li>
+        <li><strong>The keys are gone.</strong> The cloud account sits under a departed employee's email, or the encryption password exists nowhere on paper. A backup you cannot log into is a rumor.</li>
+    </ul>
+
+
+    <!-- Inline CTA -->
+    <div style="margin:40px 0;padding:32px;background:linear-gradient(135deg,var(--color-navy) 0%,#1a304f 100%);border-radius:16px;text-align:center">
+      <p style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px">Not Sure Your Backup Would Survive a Restore?</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte builds monitored, test-verified backup into managed IT for Bay Area dental practices: image-level server backup, local and cloud copies, and scheduled restore tests with documented results.</p>
+      <a class="btn btn-primary" href="../services/dental-data-backup" style="font-size:0.95rem;color:#fff">See Our Dental Data Backup Service →</a>
+    </div>
+
+    <h2>How Restore Testing Actually Works</h2>
+
+    <p>A <strong>file-level test</strong> takes minutes: pick a restore point from a few weeks back, restore a handful of patient documents and images, and open them. It catches wrong folders, permission problems, and missing data early, while they are boring.</p>
+
+    <p>A <strong>full restore test</strong> is the proof. The server image gets restored to spare hardware or booted as a virtual machine, kept off the live network so nothing interferes. Then someone opens the practice management system, pulls up the next day's schedule, opens current charts, and opens archived images from a few years ago. Old images matter: archives often live on other paths than recent ones, and a restore that heals this month can leave years of history dark. Time it. That number is your actual RTO, measured instead of guessed.</p>
+
+    <p>Run file-level tests monthly. Run a full restore test a few times a year, and always after a server change, a PMS upgrade, or a migration, since those events leave jobs pointing at yesterday's paths, so the first job after any such change gets checked by hand. Then write it down: the date, what was restored, how long it took, what broke. That note is your proof, and it doubles as HIPAA documentation.</p>
+
+    <h2>Ransomware Recovery, the Honest Version</h2>
+
+    <p>Current ransomware goes looking for backups before it announces itself. It deletes Windows shadow copies, hunts for attached backup drives and network shares, and uses any stored credentials it finds. If your only backup is a drive that stays plugged into the server, plan on it being encrypted in the same event.</p>
+
+    <p>What holds up is a copy the office network cannot reach or change: a cloud copy with immutability turned on, or a drive rotated offline. Backup credentials should live in the backup system, not saved on the server the attackers just took over. Failed jobs should alert a human who responds.</p>
+
+    <p>When the backups survive, recovery looks like this: machines are isolated, workstations rebuilt from clean installs, the server restored from the last known-good copy from before the intrusion, and charts verified before workstations reconnect. With a tested image backup and an intact offsite copy, that is a rough couple of days. Without one, it becomes a rebuild-the-practice project. Paying a ransom is not a recovery plan; it is a negotiation with the people who broke in, with no guarantee the data comes back or stays private. And a clean recovery does not erase the incident: if data was taken, breach notification may still follow.</p>
+
+    <h2>What HIPAA Actually Requires Here</h2>
+
+    <p>Backup is one of the more concrete parts of the HIPAA Security Rule. The contingency plan standard requires a data backup plan: procedures to create and maintain retrievable, exact copies of electronic protected health information. The same standard requires a disaster recovery plan, plus emergency mode operations and testing procedures. You will find it at 45 CFR 164.310(d)(2).</p>
+
+    <p>Translated into practice: patient data backups encrypted in transit and at rest, access limited to the people who need it, restore tests performed and documented, and a written plan your team can find at 7 a.m. on the worst morning of the year. An auditor or cyber insurance reviewer asking to see your backup plan and your last restore test is one of the easiest questions in the rule to answer well, if you have been doing the work.</p>
+
+    <h2>The 15-Minute Backup Audit</h2>
+
+    <p>Ask whoever runs your IT to answer these in writing. A vague answer counts as a no.</p>
+
+    <div class="checklist-block">
+      <ul>
+        <li>When did the last backup complete successfully, and where is the log that shows it?</li>
+        <li>Exactly what is included: PMS database, imaging files and imaging database, Document Center and scanned documents?</li>
+        <li>How many copies exist, stored on what, and is at least one copy offsite or immutable?</li>
+        <li>When was the last full restore test, who ran it, and how long did it take?</li>
+        <li>If the server died at 3:40 this afternoon, how much charting would you lose, and when would you be charting again? (That is your RPO and RTO.)</li>
+        <li>Who gets alerted when a backup job fails, and when was an alert last answered?</li>
+        <li>Who holds the backup account credentials and the encryption password, and are they tied to one person's email address?</li>
+        <li>Is the backup encrypted in transit and at rest?</li>
+        <li>After your last server or PMS change, was the backup job repointed, and was the next job verified?</li>
+      </ul>
+    </div>
+
+    <p>If two or three of those come back fuzzy, the problem is knowledge, not technology, and it is cheaper to fix now than during an outage.</p>
+
+    <h2>How FlossByte Sets This Up</h2>
+
+    <p>For the practices we manage, backup is part of the routine. The server gets an image-level backup with a local copy for same-day recovery and a cloud copy offsite. Every job is monitored; a failure opens a ticket with us, not an email nobody reads. Restore tests run on a schedule, documented, and the first backup after any server work is verified by a person, not assumed. The design follows the rest of the office: Sophos for on-premise servers, UniFi for cloud-based setups. Our <a href="../services/dental-data-backup" style="color:var(--color-teal);font-weight:600">dental data backup service</a> page lays out what is included, inside managed IT that starts at $59 per device per month.</p>
+
+    <p>We run this for practices in <a href="../locations/south-bay/san-jose" style="color:var(--color-teal);font-weight:600">San Jose</a>, <a href="../locations/peninsula/palo-alto" style="color:var(--color-teal);font-weight:600">Palo Alto</a>, and <a href="../locations/east-bay/oakland" style="color:var(--color-teal);font-weight:600">Oakland</a>, and the first step is the audit above, run against what you have today. If your current backup passes it, we will say so.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">How often should a dental office back up its data?</button>
+        <div class="accordion-content">
+          <p>Nightly is the floor, not the target. The right frequency comes from your RPO: how many hours of charting, imaging, and payments could you stand to re-create? For most offices the answer lands between an hour and a full day, and the schedule should match. Imaging-heavy practices often run image-level jobs more than once a day.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Is a cloud backup by itself enough?</button>
+        <div class="accordion-content">
+          <p>It covers building-level disasters, and every office needs an offsite copy. But restoring a full server and a large imaging archive over the internet is slow, and slow is what you cannot afford mid-incident. Most offices need a local image copy for same-day recovery plus the cloud copy for disaster. Either alone leaves a hole.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Is OneDrive or Google Drive a backup?</button>
+        <div class="accordion-content">
+          <p>No. Sync tools mirror whatever happens to your files, including deletions and ransomware encryption, and they do not capture a running practice database or a whole server. Useful for office documents; not a recovery system for Dentrix, Open Dental, or Eaglesoft.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">How long should a practice keep old backups?</button>
+        <div class="accordion-content">
+          <p>Keep enough restore points to catch a problem discovered late: daily points for about a month, then monthly points kept longer. Legal retention duties for patient records are separate; the backup is a recovery tool, not your archive of record.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">How do we know our backup works if we have never tested it?</button>
+        <div class="accordion-content">
+          <p>You do not, and there is no shortcut. A restore test, run and timed, is the only evidence a backup works. Until one has been done, treat the backup as unverified.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Related Articles -->
+<section style="padding:0 0 48px">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:20px">Related Articles</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="dental-data-backup-recovery-guide" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery: The Complete Guide</span>
+      </a>
+      <a href="dentrix-server-migration-checklist" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dentrix Server Migration Checklist: Beat the Windows Server 2016 End-of-Life (Jan 2027)</span>
+      </a>
+      <a href="dental-office-server-issues" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Office Server Issues: Warning Signs and Fixes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-light" style="padding:48px 0">
+  <div class="container" style="max-width:800px">
+    <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border-radius:16px;padding:40px 32px;text-align:center">
+      <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.03em">BACKUP &amp; RECOVERY</div>
+      <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:12px">When Did Your Backup Last Restore Something?</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">If nobody in the office can answer that with a date, your backup is unverified. We will run the 15-minute audit against your current setup and tell you honestly what we find, whether you hire us or not.</p>
+      <a class="btn btn-primary" href="../contact" style="color:#fff;font-size:1rem">Get a Free Backup Check →</a>
+      <p style="margin-top:16px;font-size:0.8125rem;color:rgba(255,255,255,0.35)">Serving San Jose · San Francisco · East Bay · Peninsula</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="../components.min.js?v=5" defer></script>
+</body>
+</html>

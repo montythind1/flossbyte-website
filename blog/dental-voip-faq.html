@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental VoIP FAQ: What a VoIP Phone System Costs and How to Switch Without Breaking Your Front Desk | FlossByte</title>
+  <meta name="description" content="Dental VoIP FAQ: bundled-platform voice vs standalone VoIP, real per-user pricing, QoS and VLAN design, internet failover, PMS screen-pop, and a switch plan that keeps your front desk answering." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Dental VoIP FAQ: What a VoIP Phone System Costs and How to Switch Without Breaking Your Front Desk" />
+  <meta property="og:description" content="Bundled-platform voice vs standalone VoIP, real per-user pricing, QoS and VLAN design, internet failover, PMS screen-pop, and a switch plan that keeps your front desk answering." />
+  <meta property="og:url" content="https://flossbyte.com/blog/dental-voip-faq" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://flossbyte.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="FlossByte" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://flossbyte.com/blog/dental-voip-faq" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BlogPosting",
+    "headline":"Dental VoIP FAQ: What a VoIP Phone System Costs and How to Switch Without Breaking Your Front Desk",
+    "description":"Dental VoIP FAQ: bundled-platform voice vs standalone VoIP, real per-user pricing, QoS and VLAN design, internet failover, PMS screen-pop, and a switch plan that keeps your front desk answering.",
+    "author":{"@type":"Organization","name":"FlossByte"},
+    "publisher":{"@type":"Organization","name":"FlossByte","logo":{"@type":"ImageObject","url":"https://flossbyte.com/assets/favicon.png"}},
+    "datePublished":"2026-11-11",
+    "dateModified":"2026-11-11",
+    "url":"https://flossbyte.com/blog/dental-voip-faq",
+    "keywords":["dental VoIP","dental VoIP cost","VoIP phone system dental office","dental phone system switch","PMS screen pop","dental VoIP failover"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"How much does a dental VoIP phone system cost?","acceptedAnswer":{"@type":"Answer","text":"Standalone dental VoIP runs about $15 to $33 per user per month depending on the provider. Quo starts from $15 per user per month, and Mango Voice lists $22.95 to $32.95 per user per month. Add handsets, number porting, and one-time setup labor on top of the monthly fee."}},
+      {"@type":"Question","name":"Should a dental office use bundled-platform voice or standalone VoIP?","acceptedAnswer":{"@type":"Answer","text":"Bundled voice inside a patient communication platform is simpler: one vendor, one bill, and messaging tied to the patient record. Standalone VoIP is usually cheaper per seat and easier to move to another provider later, and it can integrate with Dentrix, Eaglesoft, or Open Dental for screen-pop. Pick bundled voice when your team lives in one platform all day, and standalone VoIP when you want lower cost and portability."}},
+      {"@type":"Question","name":"Do dental VoIP phones work when the internet goes down?","acceptedAnswer":{"@type":"Answer","text":"No, unless you plan for it. VoIP calls travel over your internet connection, so an outage takes the phones down with it. The fix is a second internet connection or an LTE or 5G backup, plus call forwarding rules that send inbound calls to a mobile number or answering service when the office line is unreachable."}},
+      {"@type":"Question","name":"What is PMS screen-pop for dental VoIP?","acceptedAnswer":{"@type":"Answer","text":"Screen-pop matches an inbound caller ID to the patient record in Dentrix, Eaglesoft, or Open Dental and opens that record on the front desk screen before the call is answered. It also supports click-to-call from inside the PMS and logs calls against the patient chart."}},
+      {"@type":"Question","name":"How long does it take to switch a dental office to VoIP?","acceptedAnswer":{"@type":"Answer","text":"Plan on two to four weeks from decision to cutover. Number porting takes the longest, usually 7 to 14 business days. The physical switch itself is done after hours, with the new phones tested and the old lines kept live until the port completes."}}
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../index.min.css?v=8" />
+  <style>
+    .blog-header { background:var(--color-navy); padding: calc(var(--nav-height) + 64px) 0 64px; }
+    .blog-meta-bar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+    .blog-reading-time { display:flex; align-items:center; gap:6px; font-size:0.875rem; color:rgba(255,255,255,0.5); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flossbyte.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://flossbyte.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Dental VoIP FAQ: What a VoIP Phone System Costs and How to Switch Without Breaking Your Front Desk", "item": "https://flossbyte.com/blog/dental-voip-faq"}
+    ]
+  }
+  </script>
+</head>
+<body>
+<main>
+
+<!-- Blog Post Header -->
+<header class="blog-header" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(0,191,165,0.08) 0%,transparent 70%)"></div>
+  <div class="container" style="position:relative;z-index:2;max-width:800px">
+    <nav style="display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
+      <a href="../index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
+      <span>›</span>
+      <a href="index.html" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
+      <span>›</span>
+      <span style="color:var(--color-teal)">Dental VoIP FAQ</span>
+    </nav>
+    <div class="blog-meta-bar">
+      <span class="badge badge-teal">VoIP &amp; Phone Systems</span>
+      <span class="blog-reading-time">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        10 min read
+      </span>
+    </div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px">Dental VoIP FAQ: What a VoIP Phone System Costs and How to Switch Without Breaking Your Front Desk</h1>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Your phone is the front door of the practice. A new patient who gets voicemail at 8:05 on a Monday morning calls the next office on the list. This FAQ answers the questions dental offices actually ask before switching to VoIP: what it costs, whether to buy voice bundled into your patient platform or as a standalone system, how to keep calls clear, what happens when the internet drops, and how the switch works without a day of missed calls.</p>
+  </div>
+</header>
+
+<!-- Blog Content -->
+<section style="padding:64px 0">
+  <div class="blog-post-content">
+
+    <p>Most dental offices still run on a phone setup installed years ago and never revisited: a landline box in a closet, a couple of cordless handsets, a voicemail greeting recorded by someone who left in 2021. It works until it does not, and the front desk finds out from a patient.</p>
+
+    <p>VoIP moves your phone system onto your internet connection. Calls become software: routing rules, voicemail transcription, call queues for the Monday morning rush, and a direct link into your practice management system. The monthly bill usually drops. The risk is that a phone system riding on your internet is only as reliable as the network underneath it.</p>
+
+    <div class="blog-callout">
+      <p><strong>Bottom line up front:</strong> Budget roughly $15 to $33 per user per month, plus handsets and one-time setup. Put voice traffic on its own VLAN with QoS before you port a single number, and keep a failover path for the internet. Switch after hours, with the old lines live until the port completes, and the front desk never misses a call.</p>
+    </div>
+
+    <h2>What Is VoIP, in Dental Terms?</h2>
+
+    <p>VoIP, or Voice over Internet Protocol, carries phone calls as data over your internet connection instead of over copper phone lines. The handset on the front desk looks the same. What changes is everything behind it. There is no phone closet box to maintain, and you manage the system from a web portal: add a line when you hire, change the after-hours greeting in two minutes, and route calls to a second office when one front desk is short staffed.</p>
+
+    <p>For a dental office, three features matter most. The auto-attendant greets callers and routes them to scheduling, billing, or the clinical side. Hunt groups and call queues ring several front desk phones in order on a busy morning instead of sending the third caller to voicemail. Voicemail transcription drops a readable message into email for triage between patients.</p>
+
+    <p>None of that helps if callers hear choppy audio or get cut off. That is a network problem, not a phone problem, and it is the part most offices skip.</p>
+
+    <h2>Bundled-Platform Voice vs Standalone VoIP</h2>
+
+    <p>This is the first decision, and it shapes everything else. Dental offices generally buy voice one of two ways.</p>
+
+    <h3>Bundled voice inside a patient communication platform</h3>
+
+    <p>Platforms built for dental practices sell messaging, reminders, online scheduling, and reviews, and many now include voice. The appeal is obvious: one vendor, one bill, one login, and the phone is already tied to the patient record.</p>
+
+    <p>The tradeoff is that you are buying a phone system from a company whose main product is not phones. Call quality controls are thinner, routing options are simpler, and the voice cost hides inside a platform fee. Leave the platform later, and the phone system goes with it.</p>
+
+    <h3>Standalone VoIP</h3>
+
+    <p>A standalone VoIP provider sells phones and nothing else. You get deeper call routing, better queue controls, per-extension settings, and call recording with retention rules you set yourself. The per-seat price is usually lower, and the system is portable: change providers and you keep your numbers and handsets. The tradeoff is one more vendor, and a PMS integration to link calls to the patient record.</p>
+
+    <h3>Which one fits your office?</h3>
+
+    <p>Pick bundled voice when your front desk lives in one patient platform all day and you value a single vendor over call control. Pick standalone VoIP when you want the lowest per-seat cost, deeper routing, and the freedom to change providers without rebuilding the phone system. Multi-location offices, and ones with a real Monday morning queue, usually get more from standalone VoIP.</p>
+
+    <p>Either way, ask one question before signing: who owns your phone numbers, and what does it cost to take them with you? If a vendor charges a steep exit fee to release your own numbers, that is the whole negotiation.</p>
+
+    <h2>What Does a Dental VoIP System Cost?</h2>
+
+    <p>VoIP pricing is per user, per month, and the ranges below are vendor list prices as of late 2026. Two providers dental offices ask about most often:</p>
+
+    <ul>
+      <li><strong>Mango Voice:</strong> $22.95 to $32.95 per user per month, depending on the plan tier. Mango Voice is built for dental offices, with PMS integration and dental-specific call handling included at the higher tiers.</li>
+      <li><strong>Quo:</strong> from $15 per user per month. Quo is a general business VoIP provider that dental offices use for straightforward phone service at a lower per-seat price.</li>
+    </ul>
+
+    <p>The monthly per-user fee is the headline, but it is not the whole bill. Handsets run roughly $100 to $200 each to buy outright, and you should keep one spare on the shelf. Number porting is usually free but takes 7 to 14 business days, and you must not cancel the old service until the port completes. Setup and configuration, the auto-attendant script, hunt groups, voicemail boxes, and PMS integration, is one-time labor. And if your switch cannot do VLANs, that network upgrade comes first.</p>
+
+    <p>Put it together for a typical single-location office with six phones. At $25 per user per month, the service runs about $150 a month. Six handsets at $150 each add about $900 one time. Setup labor varies, but a clean install with network configuration is usually a one-day job.</p>
+
+    <p>Two pricing traps to watch. First, a low per-user price that excludes voicemail transcription, call recording, or the PMS integration, which then appear as add-ons at $5 to $10 per user per month each. Ask for the price of the system you will actually run. Second, a multi-year contract with a large early termination fee. A one-year term is normal.</p>
+
+    <p>For a full picture of what dental IT costs across the board, see our <a href="dental-it-support-cost-2026">2026 dental IT support cost guide</a>. FlossByte managed IT runs $59 per device per month, and phone system setup is scoped as a one-time project on top of that.</p>
+
+    <h2>QoS and VLAN Design: The Part That Decides Call Quality</h2>
+
+    <p>VoIP calls are sensitive to delay in a way that email and web browsing are not. A 200 millisecond delay on a file download is invisible. The same delay on a call sounds like a bad cell connection. Two network settings fix this: QoS and a voice VLAN.</p>
+
+    <p>A VLAN, or virtual local area network, splits one physical network into separate logical networks. Voice traffic goes on its own voice VLAN, while workstations, imaging, printers, and guest WiFi stay on the data VLAN. The split keeps a large CBCT upload or a cloud backup from stepping on a live call, and it makes troubleshooting simple: if the phones are bad and the workstations are fine, the problem is in the voice VLAN. This needs a managed switch. FlossByte standard is a managed switch behind a Sophos firewall in on-prem offices, and UniFi in cloud-based offices.</p>
+
+    <p>QoS, or Quality of Service, tells the network to let voice packets go first when bandwidth gets tight. The phones mark their traffic with a DSCP value, and the switch and firewall honor that marking all the way to the internet connection. Confirm three settings: the voice VLAN is tagged on the phone ports, DSCP marking is trusted through the switch to the firewall, and the firewall prioritizes the voice VLAN over bulk traffic.</p>
+
+    <p>A single call uses about 100 Kbps with overhead, so six simultaneous calls use well under 1 Mbps. Bandwidth is rarely the problem. Consistency is. A connection that tests at 200 Mbps but drops packets under load will sound worse than a steady 50 Mbps connection. Test voice quality during a busy morning, not at 7 pm when the office is empty. That is the first step in our <a href="../services/dental-office-network-setup">dental office network setup</a> work.</p>
+
+    <h2>Internet Failover: What Happens When the Internet Drops?</h2>
+
+    <p>VoIP needs the internet. If the internet goes down and you have no backup, the phones go down with it. So you build a backup before you switch, not after the first outage teaches you the lesson.</p>
+
+    <p>The standard setup is a second internet connection or an LTE or 5G backup that the firewall fails over to automatically, and fails back on its own when the primary recovers. A cable connection backed by a 5G router covers most offices. Test it twice a year by unplugging the primary connection during lunch.</p>
+
+    <p>Failover at the network level is only half of it. The phone system needs rules for when the office is unreachable: forward inbound calls to a mobile number or an answering service when the office phones do not answer, and set the after-hours greeting to tell patients how to reach the office for a real emergency. Some providers offer a mobile app so the front desk can answer office calls from a cell phone during an outage.</p>
+
+    <p>Think of failover the same way you think about <a href="dental-data-backup-recovery-guide">data backup</a>: the point is not the hardware, it is the tested plan for the morning it is needed.</p>
+
+    <h2>PMS Screen-Pop: The Feature That Pays for the Switch</h2>
+
+    <p>Screen-pop is the integration between the phone system and the practice management system, and it is the feature the front desk notices first. When a patient calls, the phone system matches the caller ID against the patient database and opens that record on screen before the call is answered.</p>
+
+    <p>Dentrix, Eaglesoft, and Open Dental all support this through their CTI integrations, through a small connector on a workstation or the server. The same integration usually adds click-to-call from inside the PMS and call logging tied to the patient chart. Before you buy, confirm four things: support for your exact PMS and version, whether screen-pop is included in the per-user price, whether the connector runs on each workstation or the server, and how call recordings are stored, since recordings need a signed BAA, a retention policy, and limited access.</p>
+
+    <h2>How the Switch Works, Without Missing a Day of Calls</h2>
+
+    <p>The sequence that works has four stages. Week 1, audit and order: document every number, decide which numbers port and which retire, order handsets, and confirm the network can do a voice VLAN and QoS. Week 2, build and test: the new system is configured on a test number first, and the front desk tests it with real calls between rooms. Week 3, port the numbers: the port request takes 7 to 14 business days, with the old service live the whole time. Cutover night, after hours: the new phones go live, every line is test-called, and the office opens the next morning on the new system, with support on hand when the front desk arrives. FlossByte runs cutovers after hours and covers the first morning for exactly this reason.</p>
+
+    <p>For offices in San Jose, Palo Alto, Sunnyvale, and across the Bay Area, the sequence is the same. See our <a href="../services/dental-voip-phone-systems">dental VoIP phone systems</a> page, or the <a href="../locations/south-bay/san-jose">San Jose</a>, <a href="../locations/peninsula/palo-alto">Palo Alto</a>, and <a href="../locations/south-bay/sunnyvale">Sunnyvale</a> pages for local coverage.</p>
+
+    <h2>What to Ask a VoIP Vendor Before You Sign</h2>
+
+    <p>Five questions separate a good vendor from a contract you will regret. <strong>Will you sign a BAA?</strong> Recordings and transcriptions can contain protected health information. If the provider will not sign a Business Associate Agreement, stop there. For the rest of the HIPAA picture, see our <a href="hipaa-compliance-dental-practices-bay-area">HIPAA compliance guide for Bay Area dental practices</a>. <strong>What is included in the per-user price?</strong> Get the full list: voicemail transcription, call recording, PMS screen-pop, the mobile app, and the auto-attendant. <strong>What happens to my numbers if I leave?</strong> Porting out should be free. Ask for it in writing. <strong>How is 911 handled?</strong> Each handset needs a registered E911 address. <strong>Who answers the phone when the phones break?</strong> A phone outage at 8 am needs a person, not a ticket portal.</p>
+
+    <h2>Quick Answers</h2>
+
+    <p><strong>Can I keep my existing phone numbers?</strong> Yes, in almost every case. Start the port early and keep the old service live until it completes.</p>
+
+    <p><strong>Do I need new handsets?</strong> Usually yes, unless your current phones are already SIP compatible. Keep one spare per office.</p>
+
+    <p><strong>Will VoIP work with my fax machine?</strong> Traditional fax over VoIP is unreliable. Most offices move to an electronic fax service during the switch.</p>
+
+    <p><strong>Does VoIP work across two offices?</strong> Yes. Two offices on the same system share extensions and transfer calls between locations. Each office still needs its own internet connection and failover.</p>
+
+    <p><strong>What if a provider goes out of business?</strong> Your numbers port to the next provider, and standard SIP handsets move with you.</p>
+
+    <!-- Inline CTA -->
+    <div style="margin:40px 0;padding:32px;background:linear-gradient(135deg,var(--color-navy) 0%,#1a304f 100%);border-radius:16px;text-align:center">
+      <p style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px">Not Sure Which VoIP Setup Fits Your Office?</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte will look at your current phones, your network, and your call volume, then tell you what the switch costs and what it takes. No obligation.</p>
+      <a class="btn btn-primary" href="../contact.html" style="font-size:0.95rem;color:#fff">Book a Free Phone System Assessment →</a>
+    </div>
+
+    <h2>Getting Started</h2>
+
+    <p>The cheapest time to plan a VoIP switch is before the old system fails, not after. Start with the audit: how many lines, how many handsets, what the network can do, and what the front desk actually needs at 8 am on a Monday.</p>
+
+    <p>FlossByte offers a free 30-minute phone system assessment for Bay Area dental practices. We will review your current setup, test your network for voice quality, and lay out the switch, including cost, timeline, and the failover plan.</p>
+
+    <p><a href="../contact.html">Schedule your free phone system assessment</a> or call us at <a href="tel:+16692372264">(669) 237-2264</a> to get started.</p>
+
+  </div>
+</section>
+
+<!-- Related Articles -->
+<section style="padding:0 0 48px">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:20px">Related Articles</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="dental-it-support-cost-2026" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">How Much Does Dental IT Support Cost in 2026?</span>
+      </a>
+      <a href="dental-data-backup-recovery-guide" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery: A Complete Guide</span>
+      </a>
+      <a href="managed-it-services-for-dental-clinics" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Managed IT Services for Dental Clinics</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Author / CTA -->
+<section class="section-light" style="padding:48px 0">
+  <div class="container" style="max-width:800px">
+    <div class="card" style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+      <div class="testimonial-avatar" style="width:64px;height:64px;font-size:1.25rem;flex-shrink:0">FB</div>
+      <div style="flex:1">
+        <div style="font-family:var(--font-heading);font-weight:700;color:var(--color-navy);margin-bottom:4px">Written by the FlossByte Team</div>
+        <div style="font-size:0.9rem;color:var(--color-text-muted)">FlossByte is a managed IT provider built exclusively for dental practices in California's Bay Area. We help dental offices plan their technology strategically, protect their data, and stay ahead of the curve with modern IT infrastructure.</div>
+      </div>
+      <a class="btn btn-primary" href="../contact.html" style="flex-shrink:0">Book a Phone Assessment</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="../components.min.js?v=3" defer></script>
+</body>
+</html>

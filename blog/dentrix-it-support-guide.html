@@ -23,7 +23,7 @@
     "author": {"@type": "Organization", "name": "FlossByte"},
     "publisher": {"@type": "Organization", "name": "FlossByte", "logo": {"@type": "ImageObject", "url": "https://flossbyte.com/assets/favicon.png"}},
     "datePublished": "2026-05-14",
-    "dateModified": "2026-05-14",
+    "dateModified": "2026-11-26",
     "url": "https://flossbyte.com/blog/dentrix-it-support-guide",
     "keywords": ["dentrix it support", "dentrix server migration", "dentrix help", "dentrix software support", "dentrix slow performance", "dentrix database error", "dentrix enterprise support", "remote dentrix support"]
   }
@@ -172,6 +172,10 @@
 
     <p>If your server is more than 5–7 years old, it likely falls below these specs, particularly in RAM and storage speed. Upgrading the server is often more cost-effective than spending hours troubleshooting performance on outdated hardware.</p>
 
+    <div class="blog-callout">
+      <p>⚠️ <strong>Windows 10 deadline: June 30, 2026.</strong> Henry Schein One stops supporting Dentrix on Windows 10 after June 30, 2026. Workstations still on Windows 10 need a plan to move to Windows 11 before that date, or the next Dentrix update can leave them unsupported. If a server migration is already on the calendar, that is the right time to fold the workstation upgrades into the same plan.</p>
+    </div>
+
     <h2>Common Dentrix IT Problems (And How to Fix Them)</h2>
 
     <h3>Dentrix Running Slow</h3>
@@ -226,6 +230,8 @@
 
     <p>Migrating Dentrix to a new server is one of the highest-stakes IT projects a dental practice undertakes. Done correctly, it takes one evening and the practice opens the next morning without issues. Done incorrectly, it results in data loss, days of downtime, and corrupted patient records.</p>
 
+    <p>FlossByte runs Dentrix cutovers after hours, so the schedule never stops for IT work. A typical single-location cutover takes about 3 to 5 hours on cutover night, after staging and pre-seeding the new server the week before. We migrate version for version, so the Dentrix version stays the same on the new server and any Dentrix upgrade is a separate later step, never bundled into migration night. We cover the first morning, on site or remote, while the team opens, so the first patient of the day is never a test case.</p>
+
     <p>Here's what a proper Dentrix server migration involves:</p>
 
     <h3>Phase 1: Pre-Migration Planning (1–2 Weeks Before)</h3>
@@ -276,6 +282,91 @@
     <div class="blog-callout">
       <p>💡 <strong>Common migration mistake:</strong> Many IT providers migrate the Dentrix database but forget to update the imaging software paths on workstations. The practice opens the next morning, patient records load fine, but clicking on X-rays produces errors because the image path still points to the old server.</p>
     </div>
+
+    <h2>Dentrix Server Migration Checklist: What to Verify Before Cutover Night</h2>
+
+    <p>Most failed migrations are not caused by one big mistake. They are caused by a small check that never happened. This is the control list we run before cutover night. Every row needs an owner and a date, not a hope.</p>
+
+    <div style="overflow-x:auto;margin:24px 0">
+      <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
+        <thead>
+          <tr style="background:var(--color-navy);color:#fff">
+            <th style="padding:12px 16px;text-align:left;border-radius:8px 0 0 0">Task</th>
+            <th style="padding:12px 16px;text-align:left">Owner</th>
+            <th style="padding:12px 16px;text-align:left;border-radius:0 8px 0 0">Timing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Back up the full Dentrix database, image store, and Document Center, then verify the backup restores</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">1 week before, re-run on cutover night</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Confirm the new server meets Dentrix requirements: RAM, SSD storage, supported Windows Server</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">1 to 2 weeks before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Record the exact Dentrix version on the old server and plan a version-for-version install</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">1 to 2 weeks before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Confirm Dentrix and Windows Server licenses transfer to the new server</td>
+            <td style="padding:12px 16px">Practice owner with IT provider</td>
+            <td style="padding:12px 16px">1 to 2 weeks before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Map every data location: database files, image store, document archive, custom paths</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">1 to 2 weeks before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Confirm every workstation runs a supported Windows version, and plan the move off Windows 10 before June 30, 2026</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">2 weeks before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Test the network: every workstation reaches the new server over wired Gigabit Ethernet</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">Week before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Confirm imaging bridges, sensors, and scanners work against the new server paths</td>
+            <td style="padding:12px 16px">IT provider with imaging vendor</td>
+            <td style="padding:12px 16px">Week before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb">
+            <td style="padding:12px 16px;font-weight:600">Stage and pre-seed the new server, then run a test restore before cutover night</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">Week before</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e5e7eb;background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Pick the cutover night, after hours on a low-volume day, and tell the whole team</td>
+            <td style="padding:12px 16px">Practice manager</td>
+            <td style="padding:12px 16px">2 weeks before</td>
+          </tr>
+          <tr style="background:#f9fafb">
+            <td style="padding:12px 16px;font-weight:600">Keep the old server powered on and untouched as a fallback for 30 days</td>
+            <td style="padding:12px 16px">IT provider</td>
+            <td style="padding:12px 16px">Cutover night</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>If any row is still open on cutover night, the cutover waits. A delayed migration is an inconvenience. A migration with an unverified backup is a risk to the practice.</p>
+
+    <h2>Dentrix vs Dentrix Ascend: Stay or Move</h2>
+
+    <p>Dentrix Ascend is Henry Schein One's cloud practice management system, and it comes up in almost every Dentrix conversation now. It is a real option, not a sales pitch, and the right answer depends on the practice, not the software. Moving is also a data conversion, not a copy. Dentrix users moving to Ascend need their data converted, and historical images need a plan for how they will be viewed afterward.</p>
+
+    <p><strong>Staying on Dentrix usually makes sense when</strong> the practice has imaging hardware tied to local workstations, a large local imaging archive, or a setup that works and is well maintained. It also fits practices that want local control of their server, have unreliable internet, or run Dentrix Enterprise across multiple locations on a shared database.</p>
+
+    <p><strong>Ascend usually fits when</strong> the practice wants to retire the server entirely, has more than one location and wants one system everywhere, or needs staff to work from anywhere without VPN and remote desktop. It only works if the internet is reliable, with a failover connection, because the internet becomes the clinical lifeline. Capture computers still need local drivers, so the office does not go fully hardware free.</p>
+
+    <p>Neither choice is wrong, and neither is permanent. The mistake is moving for the wrong reason, or staying because no one priced the alternative. If you are weighing it, get the conversion scope, the imaging plan, and the monthly cost in writing before you decide.</p>
 
     <h2>Dentrix Backup: What You're Actually Backing Up</h2>
 

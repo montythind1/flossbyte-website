@@ -170,6 +170,8 @@ https://www.flossbyte.com/*                     https://flossbyte.com/:splat    
 # ------------------------------------------------------------
 # Old flat city URLs (dead since ~Aug 2025) -> new location pages
 # ------------------------------------------------------------
+/locations/dental-it-support-san-jose/    /locations/south-bay/san-jose    301
+/locations/dental-it-support-san-jose     /locations/south-bay/san-jose    301
 /dental-it-support-san-jose/                        /locations/south-bay/san-jose                       301
 /dental-it-support-san-jose                         /locations/south-bay/san-jose                       301
 /dental-it-support-santa-clara/                     /locations/south-bay/santa-clara                    301
@@ -242,6 +244,10 @@ https://www.flossbyte.com/*                     https://flossbyte.com/:splat    
 /dental-it-support-union-city                       /locations/east-bay/union-city                      301
 /dental-it-support-newark/                          /locations/east-bay/newark                          301
 /dental-it-support-newark                           /locations/east-bay/newark                          301
+
+# Wrong-region city URL -> correct region
+/locations/peninsula/los-altos/            /locations/south-bay/los-altos             301
+/locations/peninsula/los-altos             /locations/south-bay/los-altos             301
 
 # Old privacy-policy URL -> /privacy
 /privacy-policy/                                    /privacy                                            301

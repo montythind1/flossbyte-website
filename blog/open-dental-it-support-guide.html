@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Dental IT Support Guide: Multi-Location Replication, Sync, and Backup | FlossByte</title>
+  <meta name="description" content="How multi-location Open Dental replication works, how to keep offices in sync, and how to back up and restore Open Dental, from FlossByte's work setting up a five-office replication chain." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Open Dental IT Support Guide: Multi-Location Replication, Sync, and Backup" />
+  <meta property="og:description" content="How multi-location Open Dental replication works, how to keep offices in sync, and how to back up and restore Open Dental, from FlossByte's work setting up a five-office replication chain." />
+  <meta property="og:url" content="https://flossbyte.com/blog/open-dental-it-support-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://flossbyte.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="FlossByte" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://flossbyte.com/blog/open-dental-it-support-guide" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Open Dental IT Support Guide: Multi-Location Replication, Sync, and Backup",
+    "description": "How multi-location Open Dental replication works, how to keep offices in sync, and how to back up and restore Open Dental, from FlossByte's work setting up a five-office replication chain.",
+    "author": {"@type": "Organization", "name": "FlossByte"},
+    "publisher": {"@type": "Organization", "name": "FlossByte", "logo": {"@type": "ImageObject", "url": "https://flossbyte.com/assets/favicon.png"}},
+    "datePublished": "2026-11-26",
+    "dateModified": "2026-11-26",
+    "url": "https://flossbyte.com/blog/open-dental-it-support-guide",
+    "keywords": ["open dental it support", "open dental support", "open dental replication", "open dental multi-location", "open dental backup", "open dental sync"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Open Dental replication?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Open Dental replication copies database changes between the servers at each office, so every location sees the same patients, appointments, treatment plans, and billing. Each office keeps its own local copy of the data and stays usable even if the connection to another office drops."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can Open Dental run across multiple offices without replication?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes, by connecting every office to one central server over a VPN or remote desktop. That works for a small group, but the central server becomes a single point of failure. Replication gives each office a local copy, so a network outage at one site does not stop the others."}
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if one office goes offline in a replication setup?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The other offices keep working from their own local copies. Changes made while the link is down are held and sync across once the connection comes back. Do not treat the offline office as the source for new work until replication catches up and the data is checked."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I back up Open Dental?",
+        "acceptedAnswer": {"@type": "Answer", "text": "A complete Open Dental backup captures the MySQL database, the imaging files, scanned documents, and configuration. Each office should back up its own instance, with a copy kept off site or in the cloud, and restores tested on a regular schedule. A backup that has never been test-restored is an assumption, not a plan."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do all offices need the same Open Dental version?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every office in a replication setup must run the same Open Dental version, because version changes can alter the database structure. Upgrades should be planned for all offices together, done after hours, and verified at each location the next morning."}
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Open Dental IT support cost?",
+        "acceptedAnswer": {"@type": "Answer", "text": "FlossByte managed IT plans for Open Dental practices start at $59/device/mo, covering server monitoring, MySQL database maintenance, backup verification, and priority support. One-time projects like replication setup are quoted at a fixed price. See our pricing page for details."}
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flossbyte.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://flossbyte.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Open Dental IT Support Guide", "item": "https://flossbyte.com/blog/open-dental-it-support-guide"}
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="preload" href="../assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/plus-jakarta-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../index.min.css?v=2" />
+  <style>
+    .blog-header { background:var(--color-navy); padding: calc(var(--nav-height) + 64px) 0 64px; }
+    .blog-meta-bar { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:24px; }
+    .blog-reading-time { display:flex; align-items:center; gap:6px; font-size:0.875rem; color:rgba(255,255,255,0.5); }
+  </style>
+</head>
+<body>
+<main>
+
+<!-- Blog Post Header -->
+<header class="blog-header" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 50% 100%,rgba(0,191,165,0.08) 0%,transparent 70%)"></div>
+  <div class="container" style="position:relative;z-index:2;max-width:800px">
+    <nav style="display:flex;align-items:center;gap:8px;font-size:0.8125rem;color:rgba(255,255,255,0.4);margin-bottom:20px">
+      <a href="../" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Home</a>
+      <span>›</span>
+      <a href="./" style="color:rgba(255,255,255,0.4);transition:color 0.2s" onmouseover="this.style.color='var(--color-teal)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Blog</a>
+      <span>›</span>
+      <span style="color:var(--color-teal)">Open Dental IT Support Guide</span>
+    </nav>
+    <div class="blog-meta-bar">
+      <span class="badge badge-teal">Dental Software Support</span>
+      <span class="blog-reading-time">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        11 min read
+      </span>
+    </div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px">Open Dental IT Support Guide: Multi-Location Replication, Sync, and Backup</h1>
+    <p style="font-size:1.0625rem;color:rgba(255,255,255,0.6);line-height:1.7">Open Dental runs your schedule, your charts, and your billing. For one office, that is a server and a backup. For five offices, it is replication, sync, and a backup plan that has to work at every location. Here is how it all fits together.</p>
+  </div>
+</header>
+
+<!-- Blog Content -->
+<section style="padding:64px 0">
+  <div class="blog-post-content">
+
+    <p>Open Dental is open source practice management software, and it runs on a MySQL database. For a single office, the setup is straightforward: a server holds the database, workstations connect to it, and a backup copies the data off site. The software is flexible, the licensing is simple, and a small practice can run it well with basic IT support.</p>
+
+    <p>Multi-location is where the IT work gets real. Once a second office opens, staff need the same patients, schedules, and treatment plans from more than one building. That is a replication problem, a sync problem, and a backup problem, all at once. We set up Open Dental replication across five offices in a daisy chain, with the data syncing properly so every office saw the same data, and backups in place at each location. This guide is built on what that job taught us.</p>
+
+    <h2>What Open Dental Replication Is</h2>
+
+    <p>Replication copies database changes from one Open Dental server to another, automatically, as they happen. Each office runs its own Open Dental instance with its own MySQL database on its own server. When someone books an appointment at Office A, replication carries that change to Offices B, C, D, and E. When Office C posts a payment, the other offices see it too. Every office holds a full copy of the shared data.</p>
+
+    <p>That local copy is the point. If the internet link between two offices goes down, neither office stops working. Staff keep checking patients in and posting payments against the database in their own building. When the link comes back, the changes sync across. A single central server cannot do that. If it goes down, every office is stuck at once.</p>
+
+    <p>Replication is not cloud hosting, and it is not a VPN. Cloud hosting puts one database in a data center and every office connects to it. A VPN is just the secure tunnel between offices. Replication uses the tunnel, but the data lives at each office, not in one place.</p>
+
+    <h2>How the Daisy-Chain Setup Works</h2>
+
+    <p>In a daisy-chain setup, each office replicates to the next one in line. Office A sends its changes to Office B. Office B sends its own changes, plus the ones it received from A, on to Office C, and the chain runs through every office until the last one has the full picture. Changes flow in both directions, so an appointment made at the last office in the chain still reaches the first. The alternative is a hub-and-spoke layout, where every office replicates to one central server. A hub is simpler, but it becomes the single point everything depends on. A chain spreads that risk: losing a single link only isolates the offices past it until the link is fixed.</p>
+
+    <p>Here is what the setup actually involves:</p>
+
+    <h3>The pieces in place before replication starts</h3>
+    <ul>
+      <li><strong>A server at each office:</strong> Each location needs its own server running MySQL and Open Dental, reliable, on a UPS, and backed up. A workstation pulling double duty as a server is not a foundation for replication.</li>
+      <li><strong>Site-to-site VPN tunnels:</strong> The offices connect over encrypted tunnels between their firewalls, not over the open internet. For on-prem offices we standardize on Sophos firewalls, and for cloud-based offices we use UniFi. The tunnel has to be always on.</li>
+      <li><strong>The same Open Dental version everywhere:</strong> Version-for-version is a hard rule. An Open Dental update can change the database structure, and a server running a different version from the rest will stop replicating or, worse, replicate bad data. Upgrades are planned for all offices together.</li>
+    </ul>
+
+    <h3>Building the chain</h3>
+    <ol>
+      <li>Pick the order of the offices in the chain. Geography usually decides it.</li>
+      <li>Stand up the VPN tunnels and confirm each office can reach the next one. Each server needs a static internal address, since replication points at addresses and a server that moves breaks the chain.</li>
+      <li>Install the same Open Dental version on every server, and confirm each office works on its own first. Replication is not a fix for a broken single-office setup.</li>
+      <li>Configure MySQL replication office by office, starting at one end of the chain. Verify at each step that changes made at one office appear at the next, then test with real work: book an appointment at one end, check it shows at the other, post a payment, and check the same in the other direction.</li>
+    </ol>
+
+    <p>Cutover work like this happens after hours. The practice keeps seeing patients during the day, the replication work happens at night, and the offices open the next morning with first-morning coverage in place. Zero patient downtime is the standard, not a stretch goal.</p>
+
+    <h2>Keeping Instances in Sync Across Offices</h2>
+
+    <p>Replication is not set-and-forget. When it breaks, it usually breaks quietly. The front desk notices hours later, when an appointment booked at another office is missing. The job is to catch sync problems before staff do.</p>
+
+    <h3>What syncs</h3>
+    <p>Replication carries the database: patient demographics, appointments, treatment plans, charting, billing, payments, and notes. Files outside the database need their own plan. Imaging files, scanned documents, and letter templates sit on disk at each office and do not move through MySQL replication. If offices share imaging, the image folders need a separate sync or a shared location every office can reach.</p>
+
+    <h3>What to watch</h3>
+    <ul>
+      <li><strong>Replication lag:</strong> Changes should appear at the next office within seconds. If lag grows to minutes, something is wrong: a slow link, a struggling server, or a backlog of changes.</li>
+      <li><strong>Replication status:</strong> MySQL replication can stop on an error and sit stopped until someone restarts it. A daily check catches a stopped link the same day, not a week later.</li>
+      <li><strong>Disk space:</strong> A full disk stops MySQL from writing, and a stopped database stops replication. Disk space gets monitored at every office, not just the main one.</li>
+    </ul>
+
+    <h3>What breaks</h3>
+    <ul>
+      <li><strong>A VPN tunnel drops:</strong> The offices on either side keep working locally, and changes queue up until the tunnel is back. The fix is usually at the firewall or the internet connection, not in Open Dental.</li>
+      <li><strong>A MySQL service stops:</strong> A reboot, a failed update, or a disk error can stop the database service. Open Dental will not open at that office until the service is running again.</li>
+      <li><strong>One office gets upgraded alone:</strong> A version mismatch breaks replication between the upgraded office and the rest. The fix is to bring every office to the same version, then re-check sync.</li>
+    </ul>
+
+    <!-- Inline CTA -->
+    <div style="margin:40px 0;padding:32px;background:linear-gradient(135deg,var(--color-navy) 0%,#1a304f 100%);border-radius:16px;text-align:center">
+      <p style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px">Open Dental Running Across Multiple Offices?</p>
+      <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin:0 0 20px">FlossByte sets up and supports multi-location Open Dental, from replication and sync to backup and version upgrades.</p>
+      <a class="btn btn-primary" href="../services/open-dental-support" style="font-size:0.95rem;color:#fff">See Our Open Dental Support Services →</a>
+    </div>
+
+    <h2>Backup and Restore for Open Dental</h2>
+
+    <p>Replication is not a backup. That is the most important line in this guide. If a record gets deleted at one office, replication deletes it everywhere. If ransomware encrypts the database at one office, replication can carry the damage along the chain. Replication protects against an office going offline. Backup protects against data loss. A practice needs both.</p>
+
+    <h3>What a complete backup captures</h3>
+    <ul>
+      <li><strong>The MySQL database:</strong> Patient records, appointments, treatment plans, billing, and notes all live here. A database dump or a MySQL-aware backup tool captures it.</li>
+      <li><strong>Imaging files:</strong> X-rays and patient photos live in folders outside the database. They are often the largest part of the backup, and the part most often missed.</li>
+      <li><strong>Scanned documents:</strong> Referral letters, insurance forms, and other scanned paperwork in the document folders.</li>
+      <li><strong>Configuration:</strong> Open Dental settings, eConnector configuration, and custom templates. Small files, but rebuilding them after a loss costs hours.</li>
+    </ul>
+
+    <h3>How the backup should run</h3>
+    <p>Each office backs up its own instance. Each office holds a full copy of the shared data, so a backup from any one office can restore the whole practice. But do not back up from only one office and assume the rest are covered. If that office's backup fails silently for a week, the practice has no backup at all. Back up at every office, keep a copy off site or in the cloud, and keep enough history to recover from a problem found days later. Backups should run on a schedule nobody has to remember, and someone should check they completed. Read our full <a href="dental-data-backup-recovery-guide" style="color:var(--color-teal);font-weight:600">dental data backup and recovery guide</a> for backup types, retention, and recovery planning.</p>
+
+    <h3>Testing restores</h3>
+    <p>A backup that has never been restored is an assumption, not a plan. Test restores show whether the backup actually works, before the day it has to work.</p>
+    <ol>
+      <li>Restore the MySQL database to a test machine or a spare server, never to the live server.</li>
+      <li>Open Open Dental against the restored database. Check that patients, appointments, and recent payments are there.</li>
+      <li>Open a few images and documents to confirm the file backup restored alongside the database.</li>
+      <li>Time the restore. Knowing it takes two hours matters when the practice is waiting to reopen.</li>
+    </ol>
+
+    <p>Test restores should happen on a regular schedule, and right after any change to the backup setup. If the backup software changes, the server changes, or the imaging folder moves, test again at once.</p>
+
+    <div class="blog-callout">
+      <p>⚠️ <strong>Never test a restore on your live server.</strong> Restore to a spare machine or a test environment. A restore test that overwrites the live database turns a drill into a real incident.</p>
+    </div>
+
+    <h2>When a Practice Outgrows a Single Instance</h2>
+
+    <p>Most practices start on a single Open Dental instance, and for a long time that is the right setup. Replication adds moving parts, and moving parts need monitoring. There is no reason to take that on before the practice needs it. But there are clear signs a single instance has run its course.</p>
+
+    <h3>Signs it is time</h3>
+    <ul>
+      <li><strong>A second office is opening:</strong> The clearest trigger. Staff at the new office need the same patient records and schedules as the first, and phoning across to check a schedule does not scale.</li>
+      <li><strong>Staff keep calling another office to check the schedule:</strong> If the front desk regularly rings the other location to confirm an appointment or look up a patient, the offices already share data. They just do it by phone.</li>
+      <li><strong>Patients move between offices:</strong> When patients see a hygienist at one location and a specialist at another, both offices need the same chart. A single instance with remote access can cover this for a while, but it gets fragile as volume grows.</li>
+      <li><strong>One server is carrying too much:</strong> If every office connects to one slow server, the problem hits all of them at once. Replication spreads the load so each office leans on its own hardware.</li>
+    </ul>
+
+    <h3>Making the move</h3>
+    <p>The move to replication is a project, not a settings change. It starts with a plan: the order of the offices in the chain, the VPN tunnels between them, the server at each location, and a version check so every office runs the same Open Dental release. Data gets staged ahead of time where possible, and the cutover happens after hours so the practice never loses a patient day. The first morning after cutover gets on-site or remote coverage, so any sync issue is caught before the schedule fills up.</p>
+
+    <p>For a practice weighing the move, the question is whether the offices already share patients, staff, and schedules in practice. If they do, replication turns a workaround into infrastructure. If they operate as separate practices that happen to share an owner, separate instances with good backups may still be the right call. If you are comparing systems before the move, our <a href="dentrix-vs-eaglesoft-vs-open-dental" style="color:var(--color-teal);font-weight:600">Dentrix vs Eaglesoft vs Open Dental comparison</a> covers how the three handle multi-location work.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-trigger">What is Open Dental replication?</button>
+        <div class="accordion-content">
+          <p>Open Dental replication copies database changes between the servers at each office, so every location sees the same patients, appointments, treatment plans, and billing. Each office keeps its own local copy of the data and stays usable even if the connection to another office drops.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Can Open Dental run across multiple offices without replication?</button>
+        <div class="accordion-content">
+          <p>Yes, by connecting every office to one central server over a VPN or remote desktop. That works for a small group, but the central server becomes a single point of failure. Replication gives each office a local copy, so a network outage at one site does not stop the others.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">What happens if one office goes offline in a replication setup?</button>
+        <div class="accordion-content">
+          <p>The other offices keep working from their own local copies. Changes made while the link is down are held and sync across once the connection comes back. Do not treat the offline office as the source for new work until replication catches up and the data is checked.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">How do I back up Open Dental?</button>
+        <div class="accordion-content">
+          <p>A complete Open Dental backup captures the MySQL database, the imaging files, scanned documents, and configuration. Each office should back up its own instance, with a copy kept off site or in the cloud, and restores tested on a regular schedule. A backup that has never been test-restored is an assumption, not a plan.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">Do all offices need the same Open Dental version?</button>
+        <div class="accordion-content">
+          <p>Yes. Every office in a replication setup must run the same Open Dental version, because version changes can alter the database structure. Upgrades should be planned for all offices together, done after hours, and verified at each location the next morning.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-trigger">How much does Open Dental IT support cost?</button>
+        <div class="accordion-content">
+          <p>FlossByte managed IT plans for Open Dental practices start at $59/device/mo, covering server monitoring, MySQL database maintenance, backup verification, and priority support. One-time projects like replication setup are quoted at a fixed price. See our pricing page for details.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>FlossByte's Open Dental IT Support Services</h2>
+
+    <p>FlossByte provides dedicated <a href="../services/open-dental-support" style="color:var(--color-teal);font-weight:600">Open Dental IT support</a> for Bay Area dental practices, from a single office to a multi-location group:</p>
+
+    <ul>
+      <li><strong>Multi-location replication setup:</strong> We set up Open Dental replication across five offices in a daisy chain, with data syncing properly so every office saw the same data. We plan the chain, build the VPN tunnels, configure MySQL replication, and verify sync in both directions.</li>
+      <li><strong>Sync monitoring and repair:</strong> Daily replication checks, lag monitoring, and same-day fixes when a link drops or a sync error appears.</li>
+      <li><strong>Backup and restore testing:</strong> Complete backup coverage for the database, imaging, and documents at every office, with scheduled test restores.</li>
+      <li><strong>Version upgrades, version-for-version:</strong> Open Dental upgrades planned for all offices together, done after hours, with replication verified the next morning.</li>
+      <li><strong>Server and network setup:</strong> Sophos firewalls for on-prem offices, UniFi for cloud-based offices, and site-to-site VPNs that keep the replication chain connected.</li>
+      <li><strong>After-hours cutovers:</strong> Replication and migration work happens at night, with first-morning coverage, so the practice never loses a patient day.</li>
+    </ul>
+
+    <p>We serve practices across <a href="../locations/peninsula" style="color:var(--color-teal);font-weight:600">the Peninsula</a>, <a href="../locations/east-bay" style="color:var(--color-teal);font-weight:600">East Bay</a>, and <a href="../locations/south-bay" style="color:var(--color-teal);font-weight:600">South Bay</a>. If you run Open Dental across more than one office, or are planning a second location, reach out for a free assessment, or review our <a href="../services" style="color:var(--color-teal);font-weight:600">dental IT support services</a> for ongoing coverage.</p>
+
+  </div>
+</section>
+
+<!-- Related Articles -->
+<section style="padding:0 0 48px">
+  <div class="container" style="max-width:800px">
+    <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-navy);margin-bottom:20px">Related Articles</h2>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <a href="dentrix-vs-eaglesoft-vs-open-dental" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">&rarr;</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dentrix vs Eaglesoft vs Open Dental: Which Is Right for Your Practice?</span>
+      </a>
+      <a href="dental-data-backup-recovery-guide" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery: The Complete Guide</span>
+      </a>
+      <a href="dental-data-backup-recovery" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dental Data Backup and Recovery: How It Works, What Failure Costs, and How to Know Yours Restores</span>
+      </a>
+      <a href="dentrix-it-support-guide" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dentrix IT Support Guide: Server Migration, Performance &amp; Troubleshooting (2026)</span>
+      </a>
+      <a href="dentrix-server-migration-checklist" style="display:flex;align-items:center;gap:12px;padding:16px;background:var(--color-gray-50);border-radius:12px;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#e8f5f3'" onmouseout="this.style.background='var(--color-gray-50)'">
+        <span style="color:var(--color-teal);font-size:1.25rem;flex-shrink:0">→</span>
+        <span style="color:var(--color-navy);font-weight:600;font-size:0.95rem">Dentrix Server Migration Checklist: Beat the Windows Server 2016 End-of-Life (Jan 2027)</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-light" style="padding:48px 0">
+  <div class="container" style="max-width:800px">
+    <div style="background:linear-gradient(135deg,var(--color-navy),#1a2744);border-radius:16px;padding:40px 32px;text-align:center">
+      <div style="display:inline-block;background:rgba(0,191,165,0.1);color:var(--color-teal);font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.03em">OPEN DENTAL SPECIALISTS</div>
+      <h2 style="font-family:var(--font-heading);font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:12px">Need Open Dental IT Support in the Bay Area?</h2>
+      <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">Whether it is replication across offices, a sync problem, a backup that has never been tested, or a second location on the way, FlossByte has the Open Dental experience to fix it right the first time.</p>
+      <a class="btn btn-primary" href="../contact" style="color:#fff;font-size:1rem">Get Free Open Dental Assessment →</a>
+      <p style="margin-top:16px;font-size:0.8125rem;color:rgba(255,255,255,0.35)">Serving San Jose · San Francisco · East Bay · Peninsula</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="../components.min.js?v=5" defer></script>
+</body>
+</html>
